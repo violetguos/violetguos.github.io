@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Y Violet Guo on Y Violet Guo</title>
+    <link>/</link>
+    <description>Recent content in Y Violet Guo on Y Violet Guo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>External Project</title>
+      <link>/project/external-project/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Artificial Intelligence</title>
+      <link>/project/ai/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/project/ai/</guid>
+      <description>
+
+&lt;p&gt;Code available at Github repo &lt;a href=&#34;https://github.com/violetguos/AI_Pacman&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;csp&#34;&gt;CSP&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;csp&lt;/code&gt;: An abstract class of csp solvers. Used to solve n-queens and soduku.
+* Forward checking
+* Backpropagation&lt;/p&gt;
+
+&lt;h1 id=&#34;pacman-ai&#34;&gt;Pacman AI&lt;/h1&gt;
+
+&lt;h2 id=&#34;search&#34;&gt;Search&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Path finding
+
+&lt;ul&gt;
+&lt;li&gt;Depth first search, path checking&lt;/li&gt;
+&lt;li&gt;Breadth first search, full cycle checking&lt;/li&gt;
+&lt;li&gt;Uniform cost search&lt;/li&gt;
+&lt;li&gt;A star&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Corner problem&lt;/li&gt;
+&lt;li&gt;Food heuristic for max reward&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;multiagent&#34;&gt;multiagent&lt;/h2&gt;
+
+&lt;p&gt;Implemented mini-max game tree with alpha beta pruning and expectimax&lt;/p&gt;
+
+&lt;h2 id=&#34;tracking&#34;&gt;tracking&lt;/h2&gt;
+
+&lt;p&gt;Multi agent probabilistic Hidden Markov Model&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>/project/ece521/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/project/ece521/</guid>
+      <description>
+
+&lt;h1 id=&#34;ece521-inference-learning-algorithm&#34;&gt;ECE521 Inference Learning Algorithm&lt;/h1&gt;
+
+&lt;p&gt;Code available at Github repo &lt;a href=&#34;https://github.com/violetguos/inference-learning&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ECE521 was a grad/undergrad intro machine learning course, with an emphasis on tensorflow programming.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/violetguos/inference-learning/blob/master/A1/violetg_branch/a1-q3.ipynb&#34; target=&#34;_blank&#34;&gt;A1&lt;/a&gt;: knn in tensorflow&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/violetguos/inference-learning/blob/master/A2/vg-branch/classification.ipynb&#34; target=&#34;_blank&#34;&gt;A2&lt;/a&gt;: logistic regression in tensorflow&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;(https://github.com/violetguos/inference-learning/blob/master/A3/vg-branch/a3-vg.ipynb)&#34; target=&#34;_blank&#34;&gt;A3&lt;/a&gt;: fully connected NN in tensorflow&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;a3-fully-connected-nn&#34;&gt;A3: fully connected NN&lt;/h3&gt;
+
+&lt;p&gt;Implemented&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/violetguos/inference-learning/blob/master/A3/vg-branch/a3-vg.ipynb&#34; target=&#34;_blank&#34;&gt;Dropout&lt;/a&gt; - prevent overfitting&lt;/li&gt;
+&lt;li&gt;Xavier Initialization&lt;/li&gt;
+&lt;li&gt;Relu activation function&lt;/li&gt;
+&lt;li&gt;Early stopping&lt;/li&gt;
+&lt;li&gt;vectorized matrix multiplications&lt;/li&gt;
+&lt;li&gt;batch/epoch training&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+
+&lt;p&gt;Install Tensorflow with Conda&lt;/p&gt;
+
+&lt;p&gt;run &lt;code&gt;jupyter notebook&lt;/code&gt; or &lt;code&gt;python 3&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cv/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Y Violet Guo - Curriculum Vitae&lt;/title&gt;
+
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width&#34;/&gt;
+&lt;meta name=&#34;description&#34; content=&#34;The Curriculum Vitae of Joe Bloggs.&#34;/&gt;
+&lt;meta charset=&#34;UTF-8&#34;&gt;
+
+&lt;link type=&#34;text/css&#34; rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&gt;
+&lt;link href=&#39;http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+
+&lt;!--[if lt IE 9]&gt;
+&lt;script src=&#34;//html5shiv.googlecode.com/svn/trunk/html5.js&#34;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body id=&#34;top&#34;&gt;
+&lt;div id=&#34;cv&#34; class=&#34;instaFade&#34;&gt;
+	&lt;div class=&#34;mainDetails&#34;&gt;
+		&lt;div id=&#34;headshot&#34; class=&#34;quickFade&#34;&gt;
+			&lt;img src=&#34;headshot.jpg&#34; alt=&#34;Alan Smith&#34; /&gt;
+		&lt;/div&gt;
+
+		&lt;div id=&#34;name&#34;&gt;
+			&lt;h1 class=&#34;quickFade delayTwo&#34;&gt;Y Violet Guo&lt;/h1&gt;
+			&lt;h2 class=&#34;quickFade delayThree&#34;&gt;MS Candidate in Machine Learning&lt;/h2&gt;
+		&lt;/div&gt;
+
+		&lt;div id=&#34;contactDetails&#34; class=&#34;quickFade delayFour&#34;&gt;
+			&lt;ul&gt;
+				&lt;li&gt;e: &lt;a href=&#34;mailto:violetyueguo@gmail.com&#34; target=&#34;_blank&#34;&gt;violetyueguo@gmail.com&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;w: &lt;a href=&#34;https://violetguos.github.io&#34;&gt;violetguos.github.io&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;m: Available upon request&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div id=&#34;mainArea&#34; class=&#34;quickFade delayFive&#34;&gt;
+		&lt;section&gt;
+			&lt;article&gt;
+				&lt;div class=&#34;sectionTitle&#34;&gt;
+					&lt;h1&gt;Personal Profile&lt;/h1&gt;
+				&lt;/div&gt;
+
+				&lt;div class=&#34;sectionContent&#34;&gt;
+					&lt;p&gt;Computer engineer, machine learning researcher&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/article&gt;
+			&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+		&lt;/section&gt;
+
+
+		&lt;section&gt;
+			&lt;div class=&#34;sectionTitle&#34;&gt;
+				&lt;h1&gt;Work Experience&lt;/h1&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&#34;sectionContent&#34;&gt;
+				&lt;article&gt;
+					&lt;h2&gt;Test Intern, Under NDA&lt;/h2&gt;
+					&lt;p class=&#34;subDetails&#34;&gt;April 2017 - July 2017&lt;/p&gt;
+					&lt;p&gt;Wrote test cases and technical reports&lt;/p&gt;
+				&lt;/article&gt;
+
+				&lt;article&gt;
+					&lt;h2&gt;Summer Research Student, Sunnybrook Research Institute&lt;/h2&gt;
+					&lt;p class=&#34;subDetails&#34;&gt;May 2016 - August 2016&lt;/p&gt;
+					&lt;p&gt;Programmed in MATLAB to analyze medical data&lt;/p&gt;
+					&lt;p&gt;Built a circuit to mimic in-vivo experiments&lt;/p&gt;
+				&lt;/article&gt;
+
+
+			&lt;/div&gt;
+			&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+		&lt;/section&gt;
+
+
+		&lt;section&gt;
+			&lt;div class=&#34;sectionTitle&#34;&gt;
+				&lt;h1&gt;Key Skills&lt;/h1&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&#34;sectionContent&#34;&gt;
+				&lt;ul class=&#34;keySkills&#34;&gt;
+					&lt;li&gt;Python&lt;/li&gt;
+					&lt;li&gt;C&lt;/li&gt;
+					&lt;li&gt;C++&lt;/li&gt;
+					&lt;li&gt;MATLAB&lt;/li&gt;
+					&lt;li&gt;Tensorflow&lt;/li&gt;
+					&lt;li&gt;Scikit-learn&lt;/li&gt;
+					&lt;li&gt;Signal Processing&lt;/li&gt;
+					&lt;li&gt;Algorithm and Data Structure&lt;/li&gt;
+					&lt;li&gt;Computer Security&lt;/li&gt;
+					&lt;li&gt;Cryptography&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+		&lt;/section&gt;
+
+
+		&lt;section&gt;
+			&lt;div class=&#34;sectionTitle&#34;&gt;
+				&lt;h1&gt;Education&lt;/h1&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&#34;sectionContent&#34;&gt;
+				&lt;article&gt;
+					&lt;h2&gt;University of Montreal // Université de Montréal&lt;/h2&gt;
+					&lt;p class=&#34;subDetails&#34;&gt;Professional MS in Machine Learning // Maîtrise Professionelle en informatique avec stage, 2020&lt;/p&gt;
+					&lt;p&gt;Affiliated with MILA Lab&lt;/p&gt;
+				&lt;/article&gt;
+
+				&lt;article&gt;
+					&lt;h2&gt;University of Toronto&lt;/h2&gt;
+					&lt;p class=&#34;subDetails&#34;&gt;Bachlor of Applied Science&lt;/p&gt;
+					&lt;p&gt;Year 1-2: Electrical Engineering, Year 2-4 Computer Engineering&lt;/p&gt;
+				&lt;/article&gt;
+			&lt;/div&gt;
+			&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+		&lt;/section&gt;
+
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+var gaJsHost = ((&#34;https:&#34; == document.location.protocol) ? &#34;https://ssl.&#34; : &#34;http://www.&#34;);
+document.write(unescape(&#34;%3Cscript src=&#39;&#34; + gaJsHost + &#34;google-analytics.com/ga.js&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&#34;));
+&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+var pageTracker = _gat._getTracker(&#34;UA-3753241-1&#34;);
+pageTracker._initData();
+pageTracker._trackPageview();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

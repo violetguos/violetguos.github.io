@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Y Violet Guo</title>
+    <link>/project/</link>
+    <description>Recent content in Posts on Y Violet Guo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>External Project</title>
+      <link>/project/external-project/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Artificial Intelligence</title>
+      <link>/project/ai/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/project/ai/</guid>
+      <description>Code available at Github repo here
+CSP csp: An abstract class of csp solvers. Used to solve n-queens and soduku. * Forward checking * Backpropagation
+Pacman AI Search  Path finding  Depth first search, path checking Breadth first search, full cycle checking Uniform cost search A star  Corner problem Food heuristic for max reward  multiagent Implemented mini-max game tree with alpha beta pruning and expectimax
+tracking Multi agent probabilistic Hidden Markov Model</description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>/project/ece521/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/project/ece521/</guid>
+      <description>ECE521 Inference Learning Algorithm Code available at Github repo here
+ECE521 was a grad/undergrad intro machine learning course, with an emphasis on tensorflow programming.
+ A1: knn in tensorflow A2: logistic regression in tensorflow A3: fully connected NN in tensorflow  A3: fully connected NN Implemented
+ Dropout - prevent overfitting Xavier Initialization Relu activation function Early stopping vectorized matrix multiplications batch/epoch training  Installation Install Tensorflow with Conda</description>
+    </item>
+    
+  </channel>
+</rss>
