@@ -2,14 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Y Violet Guo</title>
-    <link>/categories/</link>
+    <link>https://violetguos.github.io/categories/</link>
     <description>Recent content in Categories on Y Violet Guo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Sat, 12 Jan 2019 16:10:39 -0500</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://violetguos.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C</title>
+      <link>https://violetguos.github.io/categories/c/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>assembly</title>
+      <link>https://violetguos.github.io/categories/assembly/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/assembly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>os</title>
+      <link>https://violetguos.github.io/categories/os/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://violetguos.github.io/categories/security/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/security/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

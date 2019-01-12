@@ -2,40 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Y Violet Guo</title>
-    <link>/tags/</link>
+    <link>https://violetguos.github.io/tags/</link>
     <description>Recent content in Tags on Y Violet Guo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 -0400</lastBuildDate>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Sat, 12 Jan 2019 16:10:39 -0500</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://violetguos.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Deep Learning</title>
-      <link>/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      <title>C</title>
+      <link>https://violetguos.github.io/tags/c/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
       
-      <guid>/tags/deep-learning/</guid>
+      <guid>https://violetguos.github.io/tags/c/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>ai</title>
-      <link>/tags/ai/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      <title>assembly</title>
+      <link>https://violetguos.github.io/tags/assembly/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
       
-      <guid>/tags/ai/</guid>
+      <guid>https://violetguos.github.io/tags/assembly/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>demo</title>
-      <link>/tags/demo/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      <title>os</title>
+      <link>https://violetguos.github.io/tags/os/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
       
-      <guid>/tags/demo/</guid>
+      <guid>https://violetguos.github.io/tags/os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://violetguos.github.io/tags/security/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/tags/security/</guid>
       <description></description>
     </item>
     

@@ -2,248 +2,173 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Y Violet Guo on Y Violet Guo</title>
-    <link>/</link>
+    <link>https://violetguos.github.io/</link>
     <description>Recent content in Y Violet Guo on Y Violet Guo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2019</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      <title>AccentDL</title>
+      <link>https://violetguos.github.io/post/accentdl/</link>
+      <pubDate>Sat, 12 Jan 2019 17:04:01 -0500</pubDate>
       
-      <guid>/project/external-project/</guid>
+      <guid>https://violetguos.github.io/post/accentdl/</guid>
+      <description>&lt;p&gt;The task of classifying the accent of recorded speech has generally been approached with traditional SVM or UBM-GMM methods (Omar and Pelecanos, 2010; Ge, 2015). However, modern deep learning methods yield the potential to dramatically increase performance. In our report, we train several varieties of Recurrent and Convolutional Neural Networks on three types of features (MFCC, formant, and raw spectrogram) extracted from North American and British English speech recordings in order to predict the accent of the speaker. All deep learning methods examined surpass non-deep baselines, and the approach yielding the best performance was the MFCC-RNN, shortly followed by the Spec-CNN.&lt;/p&gt;
+
+&lt;p&gt;The MFCC-RNN performs best on our accent classification task, likely due to its sufficiently complex and salient features and its ability to take contextual information into account, and its performance is shortly followed by that of the the Spec-CNN (which may outperform the MFCC-RNN given more data and more computational power). The Formant-RNN performs worst of the three, likely due to the excessively low amount of information present in its features.&lt;/p&gt;
+
+&lt;p&gt;A straightforward next step in evaluating these network architectures and feature choices would be to extend them beyond binary classification, including data from many varieties of English. This would allow a more direct comparison with works such as Chu, Lai, and Le (2017), which was unable to classify multiple varieties of accented English well using an MFCC approach.&lt;/p&gt;
+
+&lt;p&gt;Further future work might include expansion on the Spec-CNN, since current research continues to look into new types of convolution to curate filters for audio signals. One successful application of CNNs with raw audio involves using parametrized sinc functions in the convolution layer instead of a traditional convolution, as in SincNet developed by Ravanelli and Bengio (2018). Dilated convolutions have also been shown to be useful for accent correction and audio generation, since they allow the receptive fields to grow longer in a cheaper way than do LSTMs or other RNNs (Oord et al., 2016).&lt;/p&gt;
+
+&lt;p&gt;Though it underperformed in this work, the above-baseline performance of the Formant-RNN also holds potential due to the easy interpretability of its features. Future work might construct a mapping from the features picked out as important by the network back to their original timestamp, which could be the basis of an accent correction system that delivers feedback to a user about which portions of their speech need adjustment in order to imitate a certain accent. This is especially applicable to the Formant-RNN since there is a well-understood relationship between the configuration of the mouth and the first two formants of a vowel. Such a system could provide practical instructions to the user (i.e. to raise or lower the tongue, round the lips, etc.) and could have applications in language learning or speech therapy tools.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PacmanAI</title>
+      <link>https://violetguos.github.io/post/pacmanai/</link>
+      <pubDate>Sat, 12 Jan 2019 17:02:56 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/post/pacmanai/</guid>
+      <description>&lt;p&gt;Introduction
+The classic algorithm for game playing is to program computers to &amp;ldquo;think&amp;rdquo; like a chess master. However, computers are not good at wholistic reasoning which often involves some philosophical ideas about chess. Instead, artificial intelligence programs a computer to search for the best move out of all moves. Right away, you may think that it is exhaustive search where you look for all the combinations of possible solutions. This is where artificial intelligence comes in and improves that search with heuristics and parallel processing to selectively search for the best move.&lt;/p&gt;
+
+&lt;p&gt;Algorithms Used&lt;br /&gt;
+- Programmed path finding algorithms, game tree with alpha-beta, and Hidden
+Markov Model in Berkeley Pacman framework
+- Programmed an abstract constrain satisfaction problem class in Python to solve Sudoku and n-queens
+- Achieved a grade of 94% in this course(CSC384)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Roulette</title>
+      <link>https://violetguos.github.io/project/roulette/</link>
+      <pubDate>Sat, 12 Jan 2019 17:00:09 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/project/roulette/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Artificial Intelligence</title>
-      <link>/project/ai/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      <title>Cpu</title>
+      <link>https://violetguos.github.io/project/cpu/</link>
+      <pubDate>Sat, 12 Jan 2019 17:00:02 -0500</pubDate>
       
-      <guid>/project/ai/</guid>
-      <description>
+      <guid>https://violetguos.github.io/project/cpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cpu</title>
+      <link>https://violetguos.github.io/post/cpu/</link>
+      <pubDate>Sat, 12 Jan 2019 16:58:55 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/post/cpu/</guid>
+      <description>&lt;p&gt;Introduction
+In this project, I have built a multi-cycle processor&amp;rsquo;s instruction set from scratch.&lt;/p&gt;
 
-&lt;p&gt;Code available at Github repo &lt;a href=&#34;https://github.com/violetguos/AI_Pacman&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Technical Details
+- Programmed a multicycle processor in Verilog on a Altera DE-1 FPGA
+- Configured a new Assembly language instruction set with Verilog&lt;/p&gt;
 
-&lt;h1 id=&#34;csp&#34;&gt;CSP&lt;/h1&gt;
-
-&lt;p&gt;&lt;code&gt;csp&lt;/code&gt;: An abstract class of csp solvers. Used to solve n-queens and soduku.
-* Forward checking
-* Backpropagation&lt;/p&gt;
-
-&lt;h1 id=&#34;pacman-ai&#34;&gt;Pacman AI&lt;/h1&gt;
-
-&lt;h2 id=&#34;search&#34;&gt;Search&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Path finding
-
-&lt;ul&gt;
-&lt;li&gt;Depth first search, path checking&lt;/li&gt;
-&lt;li&gt;Breadth first search, full cycle checking&lt;/li&gt;
-&lt;li&gt;Uniform cost search&lt;/li&gt;
-&lt;li&gt;A star&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Corner problem&lt;/li&gt;
-&lt;li&gt;Food heuristic for max reward&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;multiagent&#34;&gt;multiagent&lt;/h2&gt;
-
-&lt;p&gt;Implemented mini-max game tree with alpha beta pruning and expectimax&lt;/p&gt;
-
-&lt;h2 id=&#34;tracking&#34;&gt;tracking&lt;/h2&gt;
-
-&lt;p&gt;Multi agent probabilistic Hidden Markov Model&lt;/p&gt;
+&lt;p&gt;Lessons Learned
+In processor or hardware design, unlike computer software, there is no room for uncertainty. For example, a software engineer may put a button in a not so convenient place for no good reason, but it does not hinder the functionality of the app, just harder to navigate. In hardware, everything must be precise. A small error (0 vs 1) results in something completely different. As you can see below, we have tested our design on paper, drawing out each and every cycle of execution. Everything was planned beforehand.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>/project/ece521/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      <title>Security Project: Exploiting OS using C and Assembly</title>
+      <link>https://violetguos.github.io/post/security/</link>
+      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
       
-      <guid>/project/ece521/</guid>
+      <guid>https://violetguos.github.io/post/security/</guid>
       <description>
 
-&lt;h1 id=&#34;ece521-inference-learning-algorithm&#34;&gt;ECE521 Inference Learning Algorithm&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;Code available at Github repo &lt;a href=&#34;https://github.com/violetguos/inference-learning&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cybersecurity is a branch of study in computer system and algorithm that aims to provide security to data and programs. The two types of work done are
+1. Improve computer system to shield users from attackers
+2. Encrypt data so that when the device is compromised, the attacker cannot decrypt user data&lt;/p&gt;
 
-&lt;p&gt;ECE521 was a grad/undergrad intro machine learning course, with an emphasis on tensorflow programming.&lt;/p&gt;
+&lt;p&gt;The course project is also designed to address these two objective
+1. Given a vulnerable system, implement code to attack the system
+2. Program effective encryption
+I will provide a detailed explanation for both techniques&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/violetguos/inference-learning/blob/master/A1/violetg_branch/a1-q3.ipynb&#34; target=&#34;_blank&#34;&gt;A1&lt;/a&gt;: knn in tensorflow&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/violetguos/inference-learning/blob/master/A2/vg-branch/classification.ipynb&#34; target=&#34;_blank&#34;&gt;A2&lt;/a&gt;: logistic regression in tensorflow&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;(https://github.com/violetguos/inference-learning/blob/master/A3/vg-branch/a3-vg.ipynb)&#34; target=&#34;_blank&#34;&gt;A3&lt;/a&gt;: fully connected NN in tensorflow&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;what-is-code-injection&#34;&gt;What is code injection?&lt;/h2&gt;
 
-&lt;h3 id=&#34;a3-fully-connected-nn&#34;&gt;A3: fully connected NN&lt;/h3&gt;
+&lt;p&gt;Think about how many times a webpage has asked for your input: username, password, your comment on your friend&amp;rsquo;s profile picture. Your input will go into the webpage&amp;rsquo;s server. When your friend&amp;rsquo;s friend read your comment, it will be retrieved from the server, and loaded on their devices. What if your comment is not written in human language? What if it is&lt;/p&gt;
 
-&lt;p&gt;Implemented&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;\xeb\x2a\x5e\x89\x76\x08\xc6\x46\x07\x00\xc7\x46\x0c\x00\x00\x00&amp;quot;
+&amp;quot;\x00\xb8\x0b\x00\x00\x00\x89\xf3\x8d\x4e\x08\x8d\x56\x0c\xcd\x80&amp;quot;
+&amp;quot;\xb8\x01\x00\x00\x00\xbb\x00\x00\x00\x00\xcd\x80\xe8\xd1\xff\xff&amp;quot;
+&amp;quot;\xff\x2f\x62\x69\x6e\x2f\x73\x68\x00\x89\xec\x5d\xc3&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/violetguos/inference-learning/blob/master/A3/vg-branch/a3-vg.ipynb&#34; target=&#34;_blank&#34;&gt;Dropout&lt;/a&gt; - prevent overfitting&lt;/li&gt;
-&lt;li&gt;Xavier Initialization&lt;/li&gt;
-&lt;li&gt;Relu activation function&lt;/li&gt;
-&lt;li&gt;Early stopping&lt;/li&gt;
-&lt;li&gt;vectorized matrix multiplications&lt;/li&gt;
-&lt;li&gt;batch/epoch training&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Don&amp;rsquo;t worry, as you are reading this post, your device is not compromised by this code. It has to be loaded into operating system kernel memory address in order to be exploited.&lt;/p&gt;
 
-&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+&lt;p&gt;However, if it is loaded into operating system [https//en.wikipedia.org/wiki/Kernel_(operating_system)]kernel memory address, this assembly code (Ron&amp;rsquo;s Code, the author Ron is the R in CLRS algorithm book) can get administrator access to everything on your OS!&lt;/p&gt;
 
-&lt;p&gt;Install Tensorflow with Conda&lt;/p&gt;
+&lt;h2 id=&#34;what-is-cryptography&#34;&gt;What is cryptography?&lt;/h2&gt;
 
-&lt;p&gt;run &lt;code&gt;jupyter notebook&lt;/code&gt; or &lt;code&gt;python 3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Cryptography allows users to apply a non-linear transformation on their data. User can encrypt their data with an 128-bit key. Unlike conventional passwords, which is generated by users, is short, and is simple to crack. Many passwords contain birthday, user&amp;rsquo;s initials, important dates and places, etc. The key is random.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in math, skip this note.&lt;/p&gt;
+
+&lt;p&gt;Note: random here is strictly defined as pseudo-random within a space of infinite dimension. In this case, the dimension is defined by how many bits the encryption key has.&lt;/p&gt;
+
+&lt;p&gt;Because cryptography is non-linear and is based on discrete log operations, it take 2^128 trials to crack a key, which is equivalent to 5.4 *10^18 years. For more math about cryptography, please refer to &lt;a href=&#34;http://www-inst.eecs.berkeley.edu/~cs161/sp18/notes/3.4.signatures.pdf&#34; target=&#34;_blank&#34;&gt;http://www-inst.eecs.berkeley.edu/~cs161/sp18/notes/3.4.signatures.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;my-result&#34;&gt;My Result&lt;/h2&gt;
+
+&lt;p&gt;For objective 1:
+- Implemented C language memory exploit to inject code in vulnerable program
+- Implement HTML, Javascript, and SQL attack to program &amp;ldquo;phishing&amp;rdquo; on vulnerable  webpages&lt;/p&gt;
+
+&lt;p&gt;For objective 2:
+- Implemented an encrypted communication network socket in OpenSSL in C
+- Verified encryption using a cryptographic hash (HMAC and SHA1) in C&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title></title>
-      <link>/cv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Security Project Github Repo</title>
+      <link>https://violetguos.github.io/project/security/</link>
+      <pubDate>Sat, 12 Jan 2019 15:47:52 -0500</pubDate>
       
-      <guid>/cv/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Y Violet Guo - Curriculum Vitae&lt;/title&gt;
+      <guid>https://violetguos.github.io/project/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andriod</title>
+      <link>https://violetguos.github.io/post/andriod/</link>
+      <pubDate>Fri, 12 Jan 2018 16:57:28 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/post/andriod/</guid>
+      <description>&lt;p&gt;Android app to reduce clinic wait time&lt;/p&gt;
 
-&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width&#34;/&gt;
-&lt;meta name=&#34;description&#34; content=&#34;The Curriculum Vitae of Joe Bloggs.&#34;/&gt;
-&lt;meta charset=&#34;UTF-8&#34;&gt;
+&lt;p&gt;This is a hackathon project developed outside of school.&lt;/p&gt;
 
-&lt;link type=&#34;text/css&#34; rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&gt;
-&lt;link href=&#39;http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+&lt;p&gt;PROBLEM
+Far too many Canadians facing long wait times for health services experience frustration and wonder if our healthcare system is broken. Literature points to a negative impact of wait time on patients&amp;rsquo; perceptions of health care quality, satisfaction and likeability, patients&amp;rsquo; subsequent behavior, and likelihood of recommendations and repeat visits.&lt;/p&gt;
 
-&lt;!--[if lt IE 9]&gt;
-&lt;script src=&#34;//html5shiv.googlecode.com/svn/trunk/html5.js&#34;&gt;&lt;/script&gt;
-&lt;![endif]--&gt;
-&lt;/head&gt;
-&lt;body id=&#34;top&#34;&gt;
-&lt;div id=&#34;cv&#34; class=&#34;instaFade&#34;&gt;
-	&lt;div class=&#34;mainDetails&#34;&gt;
-		&lt;div id=&#34;headshot&#34; class=&#34;quickFade&#34;&gt;
-			&lt;img src=&#34;headshot.jpg&#34; alt=&#34;Alan Smith&#34; /&gt;
-		&lt;/div&gt;
+&lt;p&gt;HOW IT WORKS
+Patients with our app, who have booked an appointment can check-in remotely 30 min before their appointment, if they’re close enough to the medical clinic. Alternatively, a receptionist can check patients in. However, patients don’t need to wait in the clinic for hours on end if the queue time is long, but can instead go about their day. When they’re next in line to be seen, patients would be notified to go back to the clinic.&lt;/p&gt;
 
-		&lt;div id=&#34;name&#34;&gt;
-			&lt;h1 class=&#34;quickFade delayTwo&#34;&gt;Y Violet Guo&lt;/h1&gt;
-			&lt;h2 class=&#34;quickFade delayThree&#34;&gt;MS Candidate in Machine Learning&lt;/h2&gt;
-		&lt;/div&gt;
+&lt;p&gt;Code
+Angular.js, Express, Node.js, MongoDB, Amazon EC2, Amazon SES, Java, Android&lt;/p&gt;
 
-		&lt;div id=&#34;contactDetails&#34; class=&#34;quickFade delayFour&#34;&gt;
-			&lt;ul&gt;
-				&lt;li&gt;e: &lt;a href=&#34;mailto:violetyueguo@gmail.com&#34; target=&#34;_blank&#34;&gt;violetyueguo@gmail.com&lt;/a&gt;&lt;/li&gt;
-				&lt;li&gt;w: &lt;a href=&#34;https://violetguos.github.io&#34;&gt;violetguos.github.io&lt;/a&gt;&lt;/li&gt;
-				&lt;li&gt;m: Available upon request&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/div&gt;
-		&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-	&lt;/div&gt;
-
-	&lt;div id=&#34;mainArea&#34; class=&#34;quickFade delayFive&#34;&gt;
-		&lt;section&gt;
-			&lt;article&gt;
-				&lt;div class=&#34;sectionTitle&#34;&gt;
-					&lt;h1&gt;Personal Profile&lt;/h1&gt;
-				&lt;/div&gt;
-
-				&lt;div class=&#34;sectionContent&#34;&gt;
-					&lt;p&gt;Computer engineer, machine learning researcher&lt;/p&gt;
-				&lt;/div&gt;
-			&lt;/article&gt;
-			&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-		&lt;/section&gt;
-
-
-		&lt;section&gt;
-			&lt;div class=&#34;sectionTitle&#34;&gt;
-				&lt;h1&gt;Work Experience&lt;/h1&gt;
-			&lt;/div&gt;
-
-			&lt;div class=&#34;sectionContent&#34;&gt;
-				&lt;article&gt;
-					&lt;h2&gt;Test Intern, Under NDA&lt;/h2&gt;
-					&lt;p class=&#34;subDetails&#34;&gt;April 2017 - July 2017&lt;/p&gt;
-					&lt;p&gt;Wrote test cases and technical reports&lt;/p&gt;
-				&lt;/article&gt;
-
-				&lt;article&gt;
-					&lt;h2&gt;Summer Research Student, Sunnybrook Research Institute&lt;/h2&gt;
-					&lt;p class=&#34;subDetails&#34;&gt;May 2016 - August 2016&lt;/p&gt;
-					&lt;p&gt;Programmed in MATLAB to analyze medical data&lt;/p&gt;
-					&lt;p&gt;Built a circuit to mimic in-vivo experiments&lt;/p&gt;
-				&lt;/article&gt;
-
-
-			&lt;/div&gt;
-			&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-		&lt;/section&gt;
-
-
-		&lt;section&gt;
-			&lt;div class=&#34;sectionTitle&#34;&gt;
-				&lt;h1&gt;Key Skills&lt;/h1&gt;
-			&lt;/div&gt;
-
-			&lt;div class=&#34;sectionContent&#34;&gt;
-				&lt;ul class=&#34;keySkills&#34;&gt;
-					&lt;li&gt;Python&lt;/li&gt;
-					&lt;li&gt;C&lt;/li&gt;
-					&lt;li&gt;C++&lt;/li&gt;
-					&lt;li&gt;MATLAB&lt;/li&gt;
-					&lt;li&gt;Tensorflow&lt;/li&gt;
-					&lt;li&gt;Scikit-learn&lt;/li&gt;
-					&lt;li&gt;Signal Processing&lt;/li&gt;
-					&lt;li&gt;Algorithm and Data Structure&lt;/li&gt;
-					&lt;li&gt;Computer Security&lt;/li&gt;
-					&lt;li&gt;Cryptography&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-			&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-		&lt;/section&gt;
-
-
-		&lt;section&gt;
-			&lt;div class=&#34;sectionTitle&#34;&gt;
-				&lt;h1&gt;Education&lt;/h1&gt;
-			&lt;/div&gt;
-
-			&lt;div class=&#34;sectionContent&#34;&gt;
-				&lt;article&gt;
-					&lt;h2&gt;University of Montreal // Université de Montréal&lt;/h2&gt;
-					&lt;p class=&#34;subDetails&#34;&gt;Professional MS in Machine Learning // Maîtrise Professionelle en informatique avec stage, 2020&lt;/p&gt;
-					&lt;p&gt;Affiliated with MILA Lab&lt;/p&gt;
-				&lt;/article&gt;
-
-				&lt;article&gt;
-					&lt;h2&gt;University of Toronto&lt;/h2&gt;
-					&lt;p class=&#34;subDetails&#34;&gt;Bachlor of Applied Science&lt;/p&gt;
-					&lt;p&gt;Year 1-2: Electrical Engineering, Year 2-4 Computer Engineering&lt;/p&gt;
-				&lt;/article&gt;
-			&lt;/div&gt;
-			&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-		&lt;/section&gt;
-
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;script type=&#34;text/javascript&#34;&gt;
-var gaJsHost = ((&#34;https:&#34; == document.location.protocol) ? &#34;https://ssl.&#34; : &#34;http://www.&#34;);
-document.write(unescape(&#34;%3Cscript src=&#39;&#34; + gaJsHost + &#34;google-analytics.com/ga.js&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&#34;));
-&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34;&gt;
-var pageTracker = _gat._getTracker(&#34;UA-3753241-1&#34;);
-pageTracker._initData();
-pageTracker._trackPageview();
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+&lt;ul&gt;
+&lt;li&gt;An Android app that aims to reduce patient waiting time built at Angel Hacks.&lt;/li&gt;
+&lt;li&gt;Built with a web platform for hospital staff and a mobile app for patients&lt;/li&gt;
+&lt;li&gt;Developed a function to calculate distance and configured user interface&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
