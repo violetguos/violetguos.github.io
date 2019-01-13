@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Sat, 12 Jan 2019 16:10:39 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 12 Nov 2017 16:10:39 -0500</lastBuildDate>
     
 	<atom:link href="https://violetguos.github.io/categories/assembly/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,11 +15,21 @@
     <item>
       <title>Security Project: Exploiting OS using C and Assembly</title>
       <link>https://violetguos.github.io/post/security/</link>
-      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      <pubDate>Sun, 12 Nov 2017 16:10:39 -0500</pubDate>
       
       <guid>https://violetguos.github.io/post/security/</guid>
       <description>Introduction Cybersecurity is a branch of study in computer system and algorithm that aims to provide security to data and programs. The two types of work done are 1. Improve computer system to shield users from attackers 2. Encrypt data so that when the device is compromised, the attacker cannot decrypt user data
 The course project is also designed to address these two objective 1. Given a vulnerable system, implement code to attack the system 2.</description>
+    </item>
+    
+    <item>
+      <title>Roulette on FPGA</title>
+      <link>https://violetguos.github.io/post/roulette/</link>
+      <pubDate>Sat, 02 Apr 2016 01:29:17 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/post/roulette/</guid>
+      <description>Introduction This project was built in the same course as the multi-cycle CPU! As the reader can see, low level hardware can be fun. The two projects share similar principles, but this project has additional displays, such as a computer screen, a speaker for audio output, and we made the roulette as pretty as we could. They all run on the same hardware chip(field programmable gate array, FPGA).
+Technical Details  Built a roulette game with PS/2 keyboard, audio output, motor, lego controller, and Altera FPGA Implemented linear feedback shift register in Assembly and C to randomize motor speed and spin time Interfaced keyboard input to prompt user’s bet and display on VGA output with JTAG UART, JPIO ports  Lessons Learned User interface (the screen display, music, and the roulette) makes a difference Creativity matters: engineers should not only focus on the technical details</description>
     </item>
     
   </channel>

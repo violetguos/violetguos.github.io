@@ -4,16 +4,24 @@
     
     <url>
     
-      <loc>https://violetguos.github.io/post/accentdl/</loc>
-      <lastmod>2019-01-12T17:04:01-05:00</lastmod>
+      <loc>https://violetguos.github.io/project/accentdl/</loc>
+      <lastmod>2019-01-12T19:38:20-05:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>https://violetguos.github.io/post/pacmanai/</loc>
-      <lastmod>2019-01-12T17:02:56-05:00</lastmod>
+      <loc>https://violetguos.github.io/project/pacmanai/</loc>
+      <lastmod>2019-01-12T19:22:15-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/post/accentdl/</loc>
+      <lastmod>2019-01-12T17:04:01-05:00</lastmod>
     </url>
     
   
@@ -36,22 +44,6 @@
     
     <url>
     
-      <loc>https://violetguos.github.io/post/cpu/</loc>
-      <lastmod>2019-01-12T16:58:55-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://violetguos.github.io/post/security/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://violetguos.github.io/project/security/</loc>
       <lastmod>2019-01-12T15:47:52-05:00</lastmod>
     </url>
@@ -60,8 +52,16 @@
     
     <url>
     
-      <loc>https://violetguos.github.io/post/andriod/</loc>
-      <lastmod>2018-01-12T16:57:28-05:00</lastmod>
+      <loc>https://violetguos.github.io/post/security/</loc>
+      <lastmod>2017-11-12T16:10:39-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/post/pacmanai/</loc>
+      <lastmod>2017-11-01T07:02:56-05:00</lastmod>
     </url>
     
   
@@ -92,8 +92,32 @@
     
     <url>
     
-      <loc>https://violetguos.github.io/categories/c/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <loc>https://violetguos.github.io/post/andriod/</loc>
+      <lastmod>2016-06-12T16:57:28-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/post/cpu/</loc>
+      <lastmod>2016-04-02T06:28:35-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/post/roulette/</loc>
+      <lastmod>2016-04-02T01:29:17-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/tags/ai/</loc>
+      <lastmod>2019-01-12T19:22:15-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -102,7 +126,16 @@
     <url>
     
       <loc>https://violetguos.github.io/tags/c/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <lastmod>2019-01-12T15:47:52-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/categories/c/</loc>
+      <lastmod>2017-11-12T16:10:39-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -111,7 +144,7 @@
     <url>
     
       <loc>https://violetguos.github.io/categories/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <lastmod>2017-11-12T16:10:39-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -120,7 +153,7 @@
     <url>
     
       <loc>https://violetguos.github.io/project/</loc>
-      <lastmod>2019-01-12T17:00:09-05:00</lastmod>
+      <lastmod>2019-01-12T19:38:20-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -137,7 +170,7 @@
     <url>
     
       <loc>https://violetguos.github.io/tags/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <lastmod>2019-01-12T19:22:15-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -154,8 +187,17 @@
     
     <url>
     
-      <loc>https://violetguos.github.io/categories/assembly/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <loc>https://violetguos.github.io/tags/android/</loc>
+      <lastmod>2016-06-12T16:57:28-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/categories/android/</loc>
+      <lastmod>2016-06-12T16:57:28-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -164,7 +206,7 @@
     <url>
     
       <loc>https://violetguos.github.io/tags/assembly/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <lastmod>2019-01-12T15:47:52-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -172,8 +214,62 @@
     
     <url>
     
-      <loc>https://violetguos.github.io/categories/os/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <loc>https://violetguos.github.io/categories/assembly/</loc>
+      <lastmod>2017-11-12T16:10:39-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/tags/hackathon/</loc>
+      <lastmod>2016-06-12T16:57:28-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/categories/hackathon/</loc>
+      <lastmod>2016-06-12T16:57:28-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/tags/hardware/</loc>
+      <lastmod>2016-04-02T06:28:35-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/categories/hardware/</loc>
+      <lastmod>2016-04-02T06:28:35-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/tags/mips/</loc>
+      <lastmod>2016-04-02T06:28:35-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/categories/mips/</loc>
+      <lastmod>2016-04-02T06:28:35-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -182,7 +278,7 @@
     <url>
     
       <loc>https://violetguos.github.io/tags/os/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <lastmod>2019-01-12T15:47:52-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -190,8 +286,8 @@
     
     <url>
     
-      <loc>https://violetguos.github.io/categories/security/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <loc>https://violetguos.github.io/categories/os/</loc>
+      <lastmod>2017-11-12T16:10:39-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -200,7 +296,43 @@
     <url>
     
       <loc>https://violetguos.github.io/tags/security/</loc>
-      <lastmod>2019-01-12T16:10:39-05:00</lastmod>
+      <lastmod>2019-01-12T15:47:52-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/categories/security/</loc>
+      <lastmod>2017-11-12T16:10:39-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/categories/systems/</loc>
+      <lastmod>2017-11-12T16:10:39-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/tags/verilog/</loc>
+      <lastmod>2016-04-02T06:28:35-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://violetguos.github.io/categories/verilog/</loc>
+      <lastmod>2016-04-02T06:28:35-05:00</lastmod>
       <priority>0</priority>
     </url>
     

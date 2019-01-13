@@ -36,7 +36,7 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://violetguos.github.io/home/about/</guid>
-      <description>Biography I am currently studying Professional MS in Machine Learning (internship option) at University of Montreal, affiliated with MILA lab. I graduated from University of Toronto Electrical and Computer Engineering program in June 2018. I previously interned software positions with electrical and biomedical research context, and have transitioned into computer science with concentration in data science, machine learning, and deep learning.
+      <description>Hello! I am currently studying Professional MS in Machine Learning (internship option) at University of Montreal, affiliated with MILA lab. I graduated from University of Toronto Electrical and Computer Engineering program in June 2018. I previously interned software positions with electrical and biomedical research context, and have transitioned into computer science with concentration in data science, machine learning, and deep learning.
 Coming from ECE background, I am interested in both the statistical inference learning aspect and software/systems/hardware optimization and security of deep learning applications.</description>
     </item>
     
@@ -104,7 +104,7 @@ Coming from ECE background, I am interested in both the statistical inference le
     </item>
     
     <item>
-      <title>Recent Posts</title>
+      <title>Project Posts</title>
       <link>https://violetguos.github.io/home/posts/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
@@ -113,7 +113,7 @@ Coming from ECE background, I am interested in both the statistical inference le
     </item>
     
     <item>
-      <title>Projects</title>
+      <title>Project Repos</title>
       <link>https://violetguos.github.io/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
@@ -128,6 +128,16 @@ Coming from ECE background, I am interested in both the statistical inference le
       
       <guid>https://violetguos.github.io/home/cv/</guid>
       <description>My CV is available in HTML or PDF form.</description>
+    </item>
+    
+    <item>
+      <title>Courses</title>
+      <link>https://violetguos.github.io/home/courses/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://violetguos.github.io/home/courses/</guid>
+      <description> Graduate UdeM  IFT 6135 Deep Learning* IFT 6759 Advanced Projects in Deep Learning*  Projects supported by Mila Lab and Calcul Quebec  IFT6758 Data Science // Science des Données IFT6350 Machine Learning // Apprestisage Automatique  (*: in progress)
+Undergraduate UofT  CSC384 Artificial Intelligence: 94%, A+ ECE345 Algorithm and Data Structure: A- CSC411 Machine Learning: B+ ECE316/216 Signal Processing: A- ECE345 Algorithm and Data Structure: A-  </description>
     </item>
     
     <item>

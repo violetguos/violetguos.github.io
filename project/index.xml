@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Sat, 12 Jan 2019 17:00:09 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 12 Jan 2019 19:38:20 -0500</lastBuildDate>
     
 	<atom:link href="https://violetguos.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AccentDL</title>
+      <link>https://violetguos.github.io/project/accentdl/</link>
+      <pubDate>Sat, 12 Jan 2019 19:38:20 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/project/accentdl/</guid>
+      <description>The task of classifying the accent of recorded speech has generally been approached with traditional SVM or UBM-GMM methods (Omar and Pelecanos, 2010; Ge, 2015). However, modern deep learning methods yield the potential to dramatically increase performance. In our report, we train several varieties of Recurrent and Convolutional Neural Networks on three types of features (MFCC, formant, and raw spectrogram) extracted from North American and British English speech recordings in order to predict the accent of the speaker.</description>
+    </item>
+    
+    <item>
+      <title>Pacman with AI</title>
+      <link>https://violetguos.github.io/project/pacmanai/</link>
+      <pubDate>Sat, 12 Jan 2019 19:22:15 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/project/pacmanai/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Roulette</title>

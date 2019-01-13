@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Sat, 12 Jan 2019 16:10:39 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 12 Nov 2017 16:10:39 -0500</lastBuildDate>
     
 	<atom:link href="https://violetguos.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,25 +15,61 @@
     <item>
       <title>C</title>
       <link>https://violetguos.github.io/categories/c/</link>
-      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      <pubDate>Sun, 12 Nov 2017 16:10:39 -0500</pubDate>
       
       <guid>https://violetguos.github.io/categories/c/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>android</title>
+      <link>https://violetguos.github.io/categories/android/</link>
+      <pubDate>Sun, 12 Jun 2016 16:57:28 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>assembly</title>
       <link>https://violetguos.github.io/categories/assembly/</link>
-      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      <pubDate>Sun, 12 Nov 2017 16:10:39 -0500</pubDate>
       
       <guid>https://violetguos.github.io/categories/assembly/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>hackathon</title>
+      <link>https://violetguos.github.io/categories/hackathon/</link>
+      <pubDate>Sun, 12 Jun 2016 16:57:28 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/hackathon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://violetguos.github.io/categories/hardware/</link>
+      <pubDate>Sat, 02 Apr 2016 06:28:35 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mips</title>
+      <link>https://violetguos.github.io/categories/mips/</link>
+      <pubDate>Sat, 02 Apr 2016 06:28:35 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/mips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>os</title>
       <link>https://violetguos.github.io/categories/os/</link>
-      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      <pubDate>Sun, 12 Nov 2017 16:10:39 -0500</pubDate>
       
       <guid>https://violetguos.github.io/categories/os/</guid>
       <description></description>
@@ -42,9 +78,27 @@
     <item>
       <title>security</title>
       <link>https://violetguos.github.io/categories/security/</link>
-      <pubDate>Sat, 12 Jan 2019 16:10:39 -0500</pubDate>
+      <pubDate>Sun, 12 Nov 2017 16:10:39 -0500</pubDate>
       
       <guid>https://violetguos.github.io/categories/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>systems</title>
+      <link>https://violetguos.github.io/categories/systems/</link>
+      <pubDate>Sun, 12 Nov 2017 16:10:39 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>verilog</title>
+      <link>https://violetguos.github.io/categories/verilog/</link>
+      <pubDate>Sat, 02 Apr 2016 06:28:35 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/verilog/</guid>
       <description></description>
     </item>
     
