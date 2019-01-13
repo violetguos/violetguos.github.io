@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Sun, 12 Nov 2017 16:10:39 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 01 Nov 2017 07:02:56 -0500</lastBuildDate>
     
 	<atom:link href="https://violetguos.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI</title>
+      <link>https://violetguos.github.io/categories/ai/</link>
+      <pubDate>Wed, 01 Nov 2017 07:02:56 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/ai/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>C</title>
@@ -36,6 +45,33 @@
       <pubDate>Sun, 12 Nov 2017 16:10:39 -0500</pubDate>
       
       <guid>https://violetguos.github.io/categories/assembly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>csp</title>
+      <link>https://violetguos.github.io/categories/csp/</link>
+      <pubDate>Wed, 01 Nov 2017 07:02:56 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/csp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep-learning</title>
+      <link>https://violetguos.github.io/categories/deep-learning/</link>
+      <pubDate>Sat, 12 Jan 2019 17:04:01 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>game-tree</title>
+      <link>https://violetguos.github.io/categories/game-tree/</link>
+      <pubDate>Wed, 01 Nov 2017 07:02:56 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/categories/game-tree/</guid>
       <description></description>
     </item>
     

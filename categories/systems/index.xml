@@ -23,6 +23,16 @@ The course project is also designed to address these two objective 1. Given a vu
     </item>
     
     <item>
+      <title>Program MIPS instruction in Verilog</title>
+      <link>https://violetguos.github.io/post/cpu/</link>
+      <pubDate>Sat, 02 Apr 2016 06:28:35 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/post/cpu/</guid>
+      <description>Introduction In this project, I have built a multi-cycle processor&amp;rsquo;s instruction set from scratch.
+Technical Details  Programmed a multicycle processor in Verilog on a Altera DE-1 FPGA Configured a new Assembly language instruction set with Verilog  Lessons Learned In processor or hardware design, unlike computer software, there is no room for uncertainty. For example, a software engineer may put a button in a not so convenient place for no good reason, but it does not hinder the functionality of the app, just harder to navigate.</description>
+    </item>
+    
+    <item>
       <title>Roulette on FPGA</title>
       <link>https://violetguos.github.io/post/roulette/</link>
       <pubDate>Sat, 02 Apr 2016 01:29:17 -0500</pubDate>
