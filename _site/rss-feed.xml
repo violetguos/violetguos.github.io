@@ -7,6 +7,21 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Deep learning project 1</title>
+				
+					<dc:creator>Violet</dc:creator>
+				
+				
+					<description>&lt;p&gt;The task of classifying the accent of recorded speech has generally been approached with traditional SVM or UBM-GMM methods (Omar and Pelecanos, 2010; Ge, 2015). However, modern deep learning methods yield the potential to dramatically increase performance. In our report, we train several varieties of Recurrent and Convolutional Neural Networks on three types of features (MFCC, formant, and raw spectrogram) extracted from North American and British English speech recordings in order to predict the accent of the speaker. All deep learning methods examined surpass non-deep baselines, and the approach yielding the best performance was the MFCC-RNN, shortly followed by the Spec-CNN.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 01 Jan 2019 00:00:00 -0400</pubDate>
+				<link>http://localhost:5005/journal/dl-accent.html</link>
+				<guid isPermaLink="true">http://localhost:5005/journal/dl-accent.html</guid>
+			</item>
+		
+			<item>
 				<title>Welcome to Lagrange!</title>
 				
 					<dc:creator>Paul Le</dc:creator>
