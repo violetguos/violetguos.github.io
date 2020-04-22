@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>assembly on Y Violet Guo</title>
+    <link>https://violetguos.github.io/tags/assembly/</link>
+    <description>Recent content in assembly on Y Violet Guo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Sat, 12 Jan 2019 15:47:52 -0500</lastBuildDate>
+    
+	<atom:link href="https://violetguos.github.io/tags/assembly/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Security Project Github Repo</title>
+      <link>https://violetguos.github.io/project/security/</link>
+      <pubDate>Sat, 12 Jan 2019 15:47:52 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/project/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security Project: Exploiting OS using C and Assembly</title>
+      <link>https://violetguos.github.io/post/security/</link>
+      <pubDate>Sun, 12 Nov 2017 16:10:39 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/post/security/</guid>
+      <description>Introduction Cybersecurity is a branch of study in computer system and algorithm that aims to provide security to data and programs. The two types of work done are 1. Improve computer system to shield users from attackers 2. Encrypt data so that when the device is compromised, the attacker cannot decrypt user data
+The course project is also designed to address these two objective 1. Given a vulnerable system, implement code to attack the system 2.</description>
+    </item>
+    
+  </channel>
+</rss>

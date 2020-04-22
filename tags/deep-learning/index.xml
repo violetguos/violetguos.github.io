@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deep-learning on Y Violet Guo</title>
+    <link>https://violetguos.github.io/tags/deep-learning/</link>
+    <description>Recent content in deep-learning on Y Violet Guo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Sat, 12 Jan 2019 17:04:01 -0500</lastBuildDate>
+    
+	<atom:link href="https://violetguos.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Speaker Accent Classification with Deep Learning</title>
+      <link>https://violetguos.github.io/post/accentdl/</link>
+      <pubDate>Sat, 12 Jan 2019 17:04:01 -0500</pubDate>
+      
+      <guid>https://violetguos.github.io/post/accentdl/</guid>
+      <description>The task of classifying the accent of recorded speech has generally been approached with traditional SVM or UBM-GMM methods (Omar and Pelecanos, 2010; Ge, 2015). However, modern deep learning methods yield the potential to dramatically increase performance. In our report, we train several varieties of Recurrent and Convolutional Neural Networks on three types of features (MFCC, formant, and raw spectrogram) extracted from North American and British English speech recordings in order to predict the accent of the speaker.</description>
+    </item>
+    
+  </channel>
+</rss>
