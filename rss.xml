@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 18 Jul 2021 20:18:00 GMT</lastBuildDate><item><title><![CDATA[Tips for techical interviews]]></title><description><![CDATA[After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I…]]></description><link>https://violetguos.github.io/interview-tips/</link><guid isPermaLink="false">https://violetguos.github.io/interview-tips/</guid><pubDate>Wed, 21 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I felt I ought to inform my fellow leetcoders. I also wanted to follow up on my last post and provide some tips. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jul 2021 00:53:04 GMT</lastBuildDate><item><title><![CDATA[Tips for techical interviews]]></title><description><![CDATA[After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I…]]></description><link>https://violetguos.github.io/interview-tips/</link><guid isPermaLink="false">https://violetguos.github.io/interview-tips/</guid><pubDate>Wed, 21 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I felt I ought to inform my fellow leetcoders. I also wanted to follow up on my last post and provide some tips.&lt;/p&gt;
 &lt;h2&gt;Choose your adventure&lt;/h2&gt;
 &lt;p&gt;I categorize the companies in tech into the following:&lt;/p&gt;
 &lt;ol&gt;
@@ -30,9 +30,7 @@
 &lt;li&gt;
 &lt;p&gt;You need to know the common data structures, but with little to no emphasis on algorithm&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;using the language of your choice, be well versed in the language’s following libraries&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;using the language of your choice, be well versed in the language’s following libraries&lt;/li&gt;
 &lt;li&gt;heap&lt;/li&gt;
 &lt;li&gt;priority queue&lt;/li&gt;
 &lt;li&gt;stack&lt;/li&gt;
@@ -41,8 +39,6 @@
 &lt;li&gt;hash map&lt;/li&gt;
 &lt;li&gt;array&lt;/li&gt;
 &lt;li&gt;basic string manipulation methods&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -83,17 +79,13 @@
 &lt;li&gt;recursion&lt;/li&gt;
 &lt;li&gt;backtracking&lt;/li&gt;
 &lt;li&gt;matrix manipulation&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Tip:&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;Tip:&lt;/li&gt;
 &lt;li&gt;Watch youtube tutorials, then proceed to code.&lt;/li&gt;
 &lt;li&gt;Don’t stare at leetcode for hours on end&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Best Youtube channel I found while deep diving in Leetcode’s comment section&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA&quot;&gt;https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -107,25 +99,13 @@
 &lt;li&gt;
 &lt;p&gt;System design&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;if you are a new grad, you gotta power through it&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;if you are a new grad, you gotta power through it&lt;/li&gt;
 &lt;li&gt;I personally think it’s not reasonable to test new grads on this. Assuming that new grads had internships during their studies, I can tell you with great confidence that no company would ever let an intern touch production stuff. If they do, they’re in trouble.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Watch these youtube channels&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;Watch these youtube channels&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw&quot;&gt;https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCZLJf_R2sWyUtXSKiKlyvAw&quot;&gt;https://www.youtube.com/channel/UCZLJf_R2sWyUtXSKiKlyvAw&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;if you don’t have time, here’s a must watch&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;if you don’t have time, here’s a must watch&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=UzLMhqg3_Wc&quot;&gt;https://www.youtube.com/watch?v=UzLMhqg3_Wc&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -176,6 +156,159 @@
 &lt;/ul&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;With remote hiring, it’s more common for companies to automate testing and they care more about your syntactical accuracy. Smaller companies have a different hiring routine. Make sure that you use your time wisely and prepare for the job you want.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[How virtual hiring transformed the coding interview process]]></title><description><![CDATA[TLDR: unfortunately, virtual hiring is far from perfect and it does not fix many problems tech has had for years. Intro When coding…]]></description><link>https://violetguos.github.io/interview-broken/</link><guid isPermaLink="false">https://violetguos.github.io/interview-broken/</guid><pubDate>Thu, 25 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;TLDR: unfortunately, virtual hiring is far from perfect and it does not fix many problems tech has had for years.&lt;/p&gt;
+&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;When coding interviews were conducted on a whiteboard or a text editor, the process focused more on your thinking process than the final result.&lt;/p&gt;
+&lt;p&gt;If you’ve read Gayle L. MacDowell’s CTCI, you know that she said&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It’s absolutely true that you’d struggle with writing perfect code on a white board. Fortunately, your interviewer doesn’t expect that. Virtually everyone has some bugs or minor syntactical errors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;However, today I’m here to break it to you that it’s not the case anymore. The interview process has become more fixated on bugs and minor syntactical errors than ever after the interview process has become 100% virtual.&lt;/p&gt;
+&lt;h2&gt;Whiteboard alternative #1: no human in the loop coding challenge&lt;/h2&gt;
+&lt;p&gt;This is when a recruiter sends you an invite. You’d usually have 1 to 2 hours to complete 2 to 6 problems. At the end, the coding platform will evaluate your code against hidden test cases and generate a score. The entire process is fully automated end to end and involves zero human in the loop.&lt;/p&gt;
+&lt;h2&gt;Whiteboard alternative #2: interviewer + online compiler&lt;/h2&gt;
+&lt;p&gt;While you’re on a video call, you’d code on an online IDE + compiler. The interviewer would expect you to communicate and also deliver a working solution.&lt;/p&gt;
+&lt;p&gt;Let’s summarize&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Communication&lt;/th&gt;
+&lt;th&gt;Code Evaluation&lt;/th&gt;
+&lt;th&gt;Fault tolerance&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1. Whiteboard&lt;/td&gt;
+&lt;td&gt;required&lt;/td&gt;
+&lt;td&gt;You will walk through it by hand&lt;/td&gt;
+&lt;td&gt;Small syntactical errors are allowed&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2. Coding challenge&lt;/td&gt;
+&lt;td&gt;not required. candidate works in isolation&lt;/td&gt;
+&lt;td&gt;fully automated&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3. Interview + online compiler&lt;/td&gt;
+&lt;td&gt;required&lt;/td&gt;
+&lt;td&gt;fully automated&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;I’m personally skeptical of interviewing format 3. Here’s why.&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Reason 1: Research has shown that it’s very difficult to focus on communication and correctness at the same time.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It’s trying to kill two birds with one stone, aka evaluate the communication in a whiteboard interview and technical correctness in an automated test environment. This interview is essentially trying to merge behaviour and technical screens into one giant interview.&lt;/p&gt;
+&lt;p&gt;Source 1: Gayle from CTCI&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Whiteboards also tend to encourage candidates to speak more […]. When a candidate is given a computer, their communication drops substantially.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The inability to balance the two in fact stems from our psychological and behaviour traits. It’s not because a particular candidate can’t communicate. This format is not a fair mechanism to judge both at the same time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reason 2: the workplace rarely functions like interviewing format #3&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For developers, you mostly code by yourself and attend larger meetings to explain the big picture of your technical project.&lt;/p&gt;
+&lt;p&gt;The closest to interviewing format #3 IRL is pair programming. However, no one in a real pair programming scenario plays the role of interviewers. It’s a lot of looking up Stackoverflow, checking documentations, and trying different solutions together. Other developers usually don’t (and shouldn’t!) watch you struggle with trivial things such as syntax and not offering to help.&lt;/p&gt;
+&lt;p&gt;IRL we work with a plethora of programming languages and it’s common to forget some trivial syntax. Why would you select your future co-workers by simulating an unrealistic working environment with your candidates?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reason 3: Focus solely on results&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Both interview #2 and #3 focus solely on the results. Particularly in interview format #3, interviewers have access to the results from online IDEs. Their judgement would strongly favour candidates who solved the coding problem and put less emphasis on the communication component. Some companies even make it explicit that they focus on the compilation result.&lt;/p&gt;
+&lt;p&gt;Proposed solution&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use a text editor instead of an online compiler&lt;/li&gt;
+&lt;li&gt;Separate type #3 interviews into 2 separate rounds. One purely technical and one purely behaviour.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The tech interview process is broken and &lt;a href=&quot;%5Bhttps://www.wsj.com/articles/tech-companies-say-they-cant-find-good-employees-the-companies-may-be-the-problem-11615212029%5D(https://www.wsj.com/articles/tech-companies-say-they-cant-find-good-employees-the-companies-may-be-the-problem-11615212029)&quot;&gt;everyone knows it&lt;/a&gt;. The remote working/interviewing process did not fix it. It’s time for us to introspect and slim down the interview process. An efficient interviewing process attracts talent and shows respect to both current and future employees.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
