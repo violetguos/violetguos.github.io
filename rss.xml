@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jul 2021 00:53:04 GMT</lastBuildDate><item><title><![CDATA[Tips for techical interviews]]></title><description><![CDATA[After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I…]]></description><link>https://violetguos.github.io/interview-tips/</link><guid isPermaLink="false">https://violetguos.github.io/interview-tips/</guid><pubDate>Wed, 21 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I felt I ought to inform my fellow leetcoders. I also wanted to follow up on my last post and provide some tips.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Jul 2021 00:50:14 GMT</lastBuildDate><item><title><![CDATA[Tips for techical interviews]]></title><description><![CDATA[After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I…]]></description><link>https://violetguos.github.io/interview-tips/</link><guid isPermaLink="false">https://violetguos.github.io/interview-tips/</guid><pubDate>Wed, 21 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I felt I ought to inform my fellow leetcoders. I also wanted to follow up on my last post and provide some tips.&lt;/p&gt;
 &lt;h2&gt;Choose your adventure&lt;/h2&gt;
 &lt;p&gt;I categorize the companies in tech into the following:&lt;/p&gt;
 &lt;ol&gt;
@@ -309,6 +309,144 @@
 &lt;/ul&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;The tech interview process is broken and &lt;a href=&quot;%5Bhttps://www.wsj.com/articles/tech-companies-say-they-cant-find-good-employees-the-companies-may-be-the-problem-11615212029%5D(https://www.wsj.com/articles/tech-companies-say-they-cant-find-good-employees-the-companies-may-be-the-problem-11615212029)&quot;&gt;everyone knows it&lt;/a&gt;. The remote working/interviewing process did not fix it. It’s time for us to introspect and slim down the interview process. An efficient interviewing process attracts talent and shows respect to both current and future employees.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Remote Freelancing isn’t Worth the Hype]]></title><description><![CDATA[The pandemic has pushed for digital adaptation in the workplace, and the market simply isn’t hiring due to the recession. More employees…]]></description><link>https://violetguos.github.io/real-freelancing/</link><guid isPermaLink="false">https://violetguos.github.io/real-freelancing/</guid><pubDate>Tue, 23 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The pandemic has pushed for digital adaptation in the workplace, and the market simply isn’t hiring due to the recession. More employees have to embrace odd and temporary jobs. This combination of temporary work + remote work gives rise to remote contracting/freelancing.&lt;/p&gt;
+&lt;p&gt;Remote freelancing hence received some &lt;a href=&quot;https://www.forbes.com/sites/jonyounger/2020/05/29/remote-is-a-powerful-growth-driver-for-freelancing-32-platform-ceos-explain-why/?sh=79f135b919cd&quot;&gt;raving reviews&lt;/a&gt;. Some even call this new workforce the &lt;em&gt;digital nomad&lt;/em&gt;. I had the experience of being a remote contracting software developer. However, I’m here to tell you that it’s not worth the hype.&lt;/p&gt;
+&lt;h2&gt;Lack of mentorship&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tech doesn’t fundamentally change very often or very fast. You need long term guidance in order to grow as a professional.&lt;/li&gt;
+&lt;li&gt;Experience matters. How did we evolve from one popular language/framework to another? How did the shift happen? What’s to come? A lot of answers require more than a short paragraph on Stack Overflow.&lt;/li&gt;
+&lt;li&gt;Longevity matters. If a piece of software has survived and thrived for 10 years, wouldn’t you want to be mentored by its creators?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Lack of feedback&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Code reviews make better software engineers and better communicators. Chances are you won’t have any.&lt;/li&gt;
+&lt;li&gt;Companies keep you at arm’s length since you’re not an employee.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Lack of networking&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;You benefit from working in an organization with other people (not just the engineers!)&lt;/li&gt;
+&lt;li&gt;We are inherently social and we love to have some support.&lt;/li&gt;
+&lt;li&gt;Digital normad lifestyle limits your opportunity to develop meaningful professional relationships. Here’s an article that backs me up on this (&lt;a href=&quot;https://dev.to/ladybug/thoughts-on-being-a-digital-nomad-55i6&quot;&gt;source&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Lack of institutional recognition&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You’ll need to prove your source of income when applying for a loan, or even just to rent a home.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;These institutions still strongly favour regular paycheques. Sure, you can build up your revenue and show your tax return, but it’s rarely competitive during your first few years of contracting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Legal/tax implications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;You still have to be authorized to work for the remotes jobs if the companies aren’t based in your country&lt;/li&gt;
+&lt;li&gt;You need to do your own taxes (&lt;a href=&quot;https://memegenerator.net/instance/84799616/taxxxxx-i-did-my-own-taxes-today-i-should-be-in-prison-by-friday&quot;&gt;source&lt;/a&gt;). Yes, you can hire a book keeper and a chartered accountant, but it’s still up to you keep track of all your receipts, business transactions, bank statements, etc. Instead, working for a company means that there’s an entire department for that.&lt;/li&gt;
+&lt;li&gt;You may complicate your tax situation by working for a foreign employer. You might end up filing for multiple jurisdictions, as if filing one set of income tax isn’t enough fun already. (&lt;a href=&quot;https://www.reddit.com/r/cantax/comments/klwcij/help_needed_cross_border_taxes_us_citizen/&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Lack of financial incentives&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Some companies low ball you simply because you’re not a regular employee&lt;/li&gt;
+&lt;li&gt;Some clients are jerks. They just don’t pay you after your work’s done. The contractor web devs wrote a &lt;a href=&quot;https://www.reddit.com/r/webdev/comments/anc72t/client_did_not_pay/&quot;&gt;package&lt;/a&gt; for this, so it’s almost routine.&lt;/li&gt;
+&lt;li&gt;Companies don’t offer contractors RRSP (the 401k of Canada) matching, stock options, health insurances, or other benefits.&lt;/li&gt;
+&lt;li&gt;If you don’t believe me, a great article on The Muse literally suggested that you need to be prepared to be broke before you start freelancing. (&lt;a href=&quot;https://www.themuse.com/advice/your-4step-guide-to-launching-a-successful-fulltime-freelance-career&quot;&gt;source&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;No paid time off, including statutory holidays. You might need to work during statutory holidays. Due to the lack of full time status, you technically don’t have any paid days off. Unlike most permanent, full time jobs (in software, health care, etc), even when you do work, you are still compensated at the normal rate. Usually, employers would offer you a little bonus when you have to spend holidays working.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Lack of freedom, or less freedom than you’d expect&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Contracting isn’t entirely self-employment. Although you might fall under similar categories tax wise, a contractor still provides services on a contractual basis for a defined period of time. Being self-employed means that you earn money but don’t work as an employee for someone else ever. Your schedule and project specifications are still up to your contract.&lt;/li&gt;
+&lt;li&gt;Some contracting/freelancing marketplace websites ban you permanently if you proceed further with your clients off their platform. These websites also usually reserve the right to hike their commissions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;If you love contracting and being your own boss, that’s great. If you don’t, there’s no shame in having a regular 9 to 5. There isn’t a one size fits all solution. These are just things to consider.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
