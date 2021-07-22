@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Jul 2021 00:50:14 GMT</lastBuildDate><item><title><![CDATA[Tips for techical interviews]]></title><description><![CDATA[After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I…]]></description><link>https://violetguos.github.io/interview-tips/</link><guid isPermaLink="false">https://violetguos.github.io/interview-tips/</guid><pubDate>Wed, 21 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I felt I ought to inform my fellow leetcoders. I also wanted to follow up on my last post and provide some tips.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 22 Jul 2021 00:00:40 GMT</lastBuildDate><item><title><![CDATA[Tips for techical interviews]]></title><description><![CDATA[After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I…]]></description><link>https://violetguos.github.io/interview-tips/</link><guid isPermaLink="false">https://violetguos.github.io/interview-tips/</guid><pubDate>Wed, 21 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;After going through technical interviews for small, medium, large companies in the post corona world, I’ve noticed enough differences that I felt I ought to inform my fellow leetcoders. I also wanted to follow up on my last post and provide some tips.&lt;/p&gt;
 &lt;h2&gt;Choose your adventure&lt;/h2&gt;
 &lt;p&gt;I categorize the companies in tech into the following:&lt;/p&gt;
 &lt;ol&gt;
@@ -447,6 +447,173 @@
 &lt;/ul&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;If you love contracting and being your own boss, that’s great. If you don’t, there’s no shame in having a regular 9 to 5. There isn’t a one size fits all solution. These are just things to consider.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Looking back on my post-secondary education: an honest reflection]]></title><description><![CDATA[I recently spoke to a U of T alumnus and he wrote a very good piece on his experience at U of T. I look back and realize that I have gone…]]></description><link>https://violetguos.github.io/post-secondary-education/</link><guid isPermaLink="false">https://violetguos.github.io/post-secondary-education/</guid><pubDate>Wed, 10 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently spoke to a &lt;a href=&quot;https://www.utoronto.ca/&quot;&gt;U of T&lt;/a&gt; alumnus and he wrote a very good piece on his experience at U of T. I look back and realize that I have gone through 2 degrees. Perhaps it’s finally time for some reflection.&lt;/p&gt;
+&lt;h2&gt;Undergraudate&lt;/h2&gt;
+&lt;h3&gt;TLDR&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Program: Electrical and computer engineering (why both? More on this later)&lt;/li&gt;
+&lt;li&gt;Duration: 4 years&lt;/li&gt;
+&lt;li&gt;GPA: 3 something. TBH I don’t remember.&lt;/li&gt;
+&lt;li&gt;Overal satisfaction: 1/5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Program&lt;/h3&gt;
+&lt;h4&gt;Fixed course schedules&lt;/h4&gt;
+&lt;p&gt;While most American universities allow EE &amp;#x26; CS &amp;#x26; any major/minor combination of your choice, my program had a fixed structure. In the first 2 years, you must complete both electrical and computer engineering courses. The courses are fixed, too.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If you fail a class in the fall, you have to retake it next fall.&lt;/strong&gt; There is no chance for a do over in the spring or summer. This arrangement almost defaults to putting student on a probation as soon as they fail one class. Too harsh, ain’t it?&lt;/p&gt;
+&lt;h4&gt;Mysterious and confusing academic credit system&lt;/h4&gt;
+&lt;p&gt;In 3rd and 4th year, you’re finally allowed to build your own schedule. However, ECE has an internal academic credit system apart from the school wide system. You are still required to spend half your time on electrical engineering under the internal system. You’ll spend time cramming for tests you don’t care much about. In upper years, your time could be better spent elsewhere, including prepping for job interviews and actually going to the interviews (pre Covid days).&lt;/p&gt;
+&lt;h4&gt;Little to no emphasis on modern software dev&lt;/h4&gt;
+&lt;p&gt;I do not recall any course teaching JavaScript, iOS (Swift), Android (Kotlin), front end design, Docker, micro service, etc. Most courses only teach C or Matlab, which are rarely applicable in industry.&lt;/p&gt;
+&lt;h3&gt;Overall satisfaction&lt;/h3&gt;
+&lt;p&gt;I rated 1/5 for a reason. Five students from CS &amp;#x26; engineering have committed suicide on campus. The state of mental wellness among students is appalling. I was the webmaster of the Engineering Society’s wellness group. It was a great initiative, but we couldn’t accomplish much without the university’s support.&lt;/p&gt;
+&lt;h3&gt;Lessons learned&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Know exactly what you’re getting into&lt;/li&gt;
+&lt;li&gt;If it’s not working out for you, switch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Masters in CS&lt;/h2&gt;
+&lt;p&gt;I completed my Professional Masters in Computer Science at University of Montreal. The program is sponsored by Mila and is designed to speacialize in machine learning. Instead of a thesis, we are required to complete a 6 month internship and a 40 page report.&lt;/p&gt;
+&lt;p&gt;My friend wrote an amazing piece endorsed by Mila and UdeM. Please check out &lt;a href=&quot;https://medium.com/@eeishaan/faq-page-for-professional-msc-programme-at-mila-3e9f959ec7d7&quot;&gt;his post&lt;/a&gt; for a detailed Q&amp;#x26;A. The following is simply my quick bullet journal -ish reflection.&lt;/p&gt;
+&lt;h3&gt;TLDR:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Duration: 2 &amp;#x26; 1/2 years&lt;/li&gt;
+&lt;li&gt;Program: Professional Masters in Computer Science&lt;/li&gt;
+&lt;li&gt;GPA: 3.9 something. TBH I don’t remember.&lt;/li&gt;
+&lt;li&gt;Overall satisfaction 3.5/5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Duration&lt;/h3&gt;
+&lt;p&gt;Graduating into a pandemic and a recession is simply out of my control&lt;/p&gt;
+&lt;h3&gt;Program&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Mandatory machine learning classes followed by optional machine learning classes&lt;/li&gt;
+&lt;li&gt;Every class has an emphasis on machine learning&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lack of SWE skills covered in class&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We never covered spark&lt;/li&gt;
+&lt;li&gt;We never covered some classic models, e.g.&lt;/li&gt;
+&lt;li&gt;GLM&lt;/li&gt;
+&lt;li&gt;ARIMA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Bureaucracy&lt;/h3&gt;
+&lt;p&gt;I was in the 1st official cohort of professional master’s students. Some program requirements were ambiguous or conflicting. We pulled ourselves up by our bootstraps in some scenarios.&lt;/p&gt;
+&lt;h3&gt;Overal Satisfaction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Internship experience&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Made awesome friends&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Students come from different age groups and professional backgrounds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Take away&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Undergrad&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I’d switch to CS completely.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;perhaps overload my schedule and graduate earlier?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Overall, I’m still grateful for my education.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
