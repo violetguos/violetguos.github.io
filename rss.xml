@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 24 Jul 2021 02:01:13 GMT</lastBuildDate><item><title><![CDATA[Why you should always negotiate your salary]]></title><description><![CDATA[I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team…]]></description><link>https://violetguos.github.io/always-negotiate/</link><guid isPermaLink="false">https://violetguos.github.io/always-negotiate/</guid><pubDate>Fri, 23 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team Blind that asks the forum whether the OP should negotiate or not, the replies are still split. After going through the process, my answer is, always negotiate.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 Jul 2021 19:14:57 GMT</lastBuildDate><item><title><![CDATA[Why you should always negotiate your salary]]></title><description><![CDATA[I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team…]]></description><link>https://violetguos.github.io/always-negotiate/</link><guid isPermaLink="false">https://violetguos.github.io/always-negotiate/</guid><pubDate>Fri, 23 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team Blind that asks the forum whether the OP should negotiate or not, the replies are still split. After going through the process, my answer is, always negotiate.&lt;/p&gt;
 &lt;h2&gt;Reasons #0: your negotiation has already begun&lt;/h2&gt;
 &lt;p&gt;You might not realize this. Hiring and interviewing itself is a form of negotiation. When a company puts out a job posting, they usually describe a dream candidate that is superb is every single way. The truth is, nobody’s perfect. That dream candidate would probably not show up.&lt;/p&gt;
 &lt;h3&gt;Scenario #0:&lt;/h3&gt;
@@ -740,6 +740,114 @@ Speaking of the online forums, most authors who wrote about joining a toxic comp
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Overall, I’m still grateful for my education.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Finance vs software development]]></title><description><![CDATA[I recently read Jared Dillian’s Street Freak. Here are some similarities between traders and software developers. Age distribution Both…]]></description><link>https://violetguos.github.io/finance-vs-software/</link><guid isPermaLink="false">https://violetguos.github.io/finance-vs-software/</guid><pubDate>Mon, 08 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently read Jared Dillian’s &lt;em&gt;Street Freak&lt;/em&gt;. Here are some similarities between traders and software developers.&lt;/p&gt;
+&lt;h2&gt;Age distribution&lt;/h2&gt;
+&lt;p&gt;Both fields are flooded with young talents.&lt;/p&gt;
+&lt;h2&gt;Gender distribution&lt;/h2&gt;
+&lt;p&gt;Both fields are male dominated.&lt;/p&gt;
+&lt;h2&gt;Work schedule&lt;/h2&gt;
+&lt;p&gt;Both fields operate in a fast paced environment.&lt;/p&gt;
+&lt;p&gt;In finance, the tickers update almost every second.&lt;/p&gt;
+&lt;p&gt;In software, imagine you’re in a CS school that’s structured after medical school. After you finished years of education and mastered everything about one of the many required Javascript libraries, Kidney JS 2.0, the whole industry has dropped Kidney JS 2.0 and moved on to Kidney JS 3.0.&lt;/p&gt;
+&lt;p&gt;Yes, my Kidney JS satire is based on a real JavaScript library. See &lt;a href=&quot;https://www.simplilearn.com/angularjs-vs-angular-2-vs-angular-4-differences-article&quot;&gt;https://www.simplilearn.com/angularjs-vs-angular-2-vs-angular-4-differences-article&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Writing &amp;#x26; communication&lt;/h2&gt;
+&lt;p&gt;On page 198,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I knew that I wasn’t the greatest financial mind, but I also knew that nobody else on the street could write worth a damn. I gave up reading street research after only a few tries. It was abhorrent. Financial people are the worst writers in the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I’m sure that software developers are strong contestants for the worst writers in the world prize.&lt;/p&gt;
+&lt;p&gt;We’re both trained to be technical and analytical. We’re conditioned to be detail oriented and it’s hard for us to zoom out.&lt;/p&gt;
+&lt;h2&gt;Competition&lt;/h2&gt;
+&lt;p&gt;Both fields are extremely competitive. In Dillian’s book, he described how a trader’s performance gets evaluated and how quickly a trader could get sacked. In software, it’s very similar. Perhaps every white collar worker can more or less relate.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
