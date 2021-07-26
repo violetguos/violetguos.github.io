@@ -1,4 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 Jul 2021 19:14:57 GMT</lastBuildDate><item><title><![CDATA[Why you should always negotiate your salary]]></title><description><![CDATA[I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team…]]></description><link>https://violetguos.github.io/always-negotiate/</link><guid isPermaLink="false">https://violetguos.github.io/always-negotiate/</guid><pubDate>Fri, 23 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team Blind that asks the forum whether the OP should negotiate or not, the replies are still split. After going through the process, my answer is, always negotiate.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 Jul 2021 23:34:55 GMT</lastBuildDate><item><title><![CDATA[Movie Review & How Biology Sneaks Up on You]]></title><description><![CDATA[I remember watching Baby Mama when I was much younger and I had zero understanding of Kate’s struggle. Kate is a career minded woman who’s…]]></description><link>https://violetguos.github.io/baby-mama/</link><guid isPermaLink="false">https://violetguos.github.io/baby-mama/</guid><pubDate>Mon, 26 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I remember watching Baby Mama when I was much younger and I had zero understanding of Kate’s struggle.&lt;/p&gt;
+&lt;p&gt;Kate is a career minded woman who’s chosen promotion over pregnancy. She tried donor sperm, in-vitro treatment, hormone injections, adoptions, all to no avail.&lt;/p&gt;
+&lt;p&gt;Now, pausing right here. I rewatched the move as a young female software engineer who has just joined the industry. The struggles are real. Most women quit their tech jobs because the companies do not accommodate &lt;a href=&quot;https://www.cnbc.com/2019/08/21/why-i-quit-facebook-to-become-a-mother.html&quot;&gt;part time work&lt;/a&gt; after they have children.&lt;/p&gt;
+&lt;p&gt;It is rumoured that SV grants female engineers insurance coverage for fertility treatment, egg freezing, etc. As a woman in tech, I can confirm the rumour is true.&lt;/p&gt;
+&lt;p&gt;It still seems like a cheap fix.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Egg freezing and fertility treatment is &lt;a href=&quot;https://www.google.com/url?sa=t&amp;#x26;rct=j&amp;#x26;q=&amp;#x26;esrc=s&amp;#x26;source=web&amp;#x26;cd=&amp;#x26;cad=rja&amp;#x26;uact=8&amp;#x26;ved=2ahUKEwj1sMiC44HyAhVYa80KHW6_B1sQFjAAegQIBRAD&amp;#x26;url=https%3A%2F%2Fwww.washingtonpost.com%2Fnews%2Fnational%2Fwp%2F2018%2F01%2F27%2Ffeature%2Fshe-championed-the-idea-that-freezing-your-eggs-would-free-your-career-but-things-didnt-quite-work-out%2F&amp;#x26;usg=AOvVaw0YzMM_UzgSeQ1tu7SUEIrb&quot;&gt;NOT a guaranteed success&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Our biology is not like a Youtube video that you can &lt;a href=&quot;https://www.technologyreview.com/2019/08/14/133377/mothers-journey-egg-freezing-parenthood/&quot;&gt;pause and hit repaly whenever we please&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The insurance policy is cheaper than revamping the entire dev cycle for all engineers to make PT work possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although this movie has a very mediocre rating, it at least portrays the 21st century working women struggle on the screen and confronts very real issues head on. I haven’t come across any new release touching the same topics directly. Hollywood productions can’t solve this problem, but it still disappoints me that nobody’s even trying to write about the struggles of working women.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Why you should always negotiate your salary]]></title><description><![CDATA[I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team…]]></description><link>https://violetguos.github.io/always-negotiate/</link><guid isPermaLink="false">https://violetguos.github.io/always-negotiate/</guid><pubDate>Fri, 23 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team Blind that asks the forum whether the OP should negotiate or not, the replies are still split. After going through the process, my answer is, always negotiate.&lt;/p&gt;
 &lt;h2&gt;Reasons #0: your negotiation has already begun&lt;/h2&gt;
 &lt;p&gt;You might not realize this. Hiring and interviewing itself is a form of negotiation. When a company puts out a job posting, they usually describe a dream candidate that is superb is every single way. The truth is, nobody’s perfect. That dream candidate would probably not show up.&lt;/p&gt;
 &lt;h3&gt;Scenario #0:&lt;/h3&gt;
