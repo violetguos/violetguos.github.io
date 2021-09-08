@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Aug 2021 01:23:43 GMT</lastBuildDate><item><title><![CDATA[Movie Review & How Biology Sneaks Up on You]]></title><description><![CDATA[I remember watching Baby Mama when I was much younger and I had zero understanding of Kate’s struggle. Kate is a career minded woman who’s…]]></description><link>https://violetguos.github.io/baby-mama/</link><guid isPermaLink="false">https://violetguos.github.io/baby-mama/</guid><pubDate>Mon, 26 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I remember watching Baby Mama when I was much younger and I had zero understanding of Kate’s struggle.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Sep 2021 01:22:40 GMT</lastBuildDate><item><title><![CDATA[Recipe Normalization]]></title><description><![CDATA[In deep learning, we use normalization to solve gradient vanishing or explosion. It kind of inspired me to apply normalization to a recipe…]]></description><link>https://violetguos.github.io/recipe-norm/</link><guid isPermaLink="false">https://violetguos.github.io/recipe-norm/</guid><pubDate>Tue, 07 Sep 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In deep learning, we use normalization to solve gradient vanishing or explosion. It kind of inspired me to apply normalization to a recipe.&lt;/p&gt;
+&lt;p&gt;Let’s dive in.&lt;/p&gt;
+&lt;p&gt;This is a gluten free, diary free, processed sugar free cake recipe.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1/2 cup coconut flour, or 8 tbs&lt;/li&gt;
+&lt;li&gt;1/2 cup cacao&lt;/li&gt;
+&lt;li&gt;1/2 tsp salt&lt;/li&gt;
+&lt;li&gt;1/2 tsp baking soda&lt;/li&gt;
+&lt;li&gt;1/4 cup coconut oil&lt;/li&gt;
+&lt;li&gt;1 cup raw honey&lt;/li&gt;
+&lt;li&gt;6 eggs
+(&lt;a href=&quot;https://www.youtube.com/watch?v=Hlh1RJ1Tmig&quot;&gt;Link&lt;/a&gt; to recipe &amp;#x26; tutorial)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are making this for yourself, it’s a pretty big cake. You could freeze it, but the texture becomes suboptimal.&lt;/p&gt;
+&lt;p&gt;I decided to apply a similar normalization idea. I’ll normalize the recipe wrt the eggs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1 egg&lt;/strong&gt;, and divide everything by 6.&lt;/li&gt;
+&lt;li&gt;1.3 tbs coconut flour (8 tbs/6 = 1.3 tbs approx.)&lt;/li&gt;
+&lt;li&gt;1.3 tbs caco&lt;/li&gt;
+&lt;li&gt;1/12 tsp salt&lt;/li&gt;
+&lt;li&gt;1/12 tsp baking soda&lt;/li&gt;
+&lt;li&gt;4 tsp coconut oil&lt;/li&gt;
+&lt;li&gt;8 tsp raw honey&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, it yields one serving. You could alternatively normalize wrt the coconut oil or raw honey, just like how we have batch norm, layer norm, etc in deep learning.&lt;/p&gt;
+&lt;p&gt;Happy cooking.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Movie Review & How Biology Sneaks Up on You]]></title><description><![CDATA[I remember watching Baby Mama when I was much younger and I had zero understanding of Kate’s struggle. Kate is a career minded woman who’s…]]></description><link>https://violetguos.github.io/baby-mama/</link><guid isPermaLink="false">https://violetguos.github.io/baby-mama/</guid><pubDate>Mon, 26 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I remember watching Baby Mama when I was much younger and I had zero understanding of Kate’s struggle.&lt;/p&gt;
 &lt;p&gt;Kate is a career minded woman who’s chosen promotion over pregnancy. She tried donor sperm, in-vitro treatment, hormone injections, adoptions, all to no avail.&lt;/p&gt;
 &lt;p&gt;Now, pausing right here. I rewatched the move as a young female software engineer who has just joined the industry. The struggles are real. Most women quit their tech jobs because the companies do not accommodate &lt;a href=&quot;https://www.cnbc.com/2019/08/21/why-i-quit-facebook-to-become-a-mother.html&quot;&gt;part time work&lt;/a&gt; after they have children.&lt;/p&gt;
 &lt;p&gt;It is rumoured that SV grants female engineers insurance coverage for fertility treatment, egg freezing, etc. As a woman in tech, I can confirm the rumour is true.&lt;/p&gt;
@@ -98,7 +213,7 @@
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Why you should always negotiate your salary]]></title><description><![CDATA[I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team…]]></description><link>https://violetguos.github.io/always-negotiate/</link><guid isPermaLink="false">https://violetguos.github.io/always-negotiate/</guid><pubDate>Fri, 23 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team Blind that asks the forum whether the OP should negotiate or not, the replies are still split. After going through the process, my answer is, always negotiate.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Why You Should Always Negotiate Your Salary]]></title><description><![CDATA[I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team…]]></description><link>https://violetguos.github.io/always-negotiate/</link><guid isPermaLink="false">https://violetguos.github.io/always-negotiate/</guid><pubDate>Fri, 23 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I recently went through the salary negotiation process as a new-ish grad out of university. Now, whenever I see a post on Reddit or Team Blind that asks the forum whether the OP should negotiate or not, the replies are still split. After going through the process, my answer is, always negotiate.&lt;/p&gt;
 &lt;h2&gt;Reasons #0: your negotiation has already begun&lt;/h2&gt;
 &lt;p&gt;You might not realize this. Hiring and interviewing itself is a form of negotiation. When a company puts out a job posting, they usually describe a dream candidate that is superb is every single way. The truth is, nobody’s perfect. That dream candidate would probably not show up.&lt;/p&gt;
 &lt;h3&gt;Scenario #0:&lt;/h3&gt;
@@ -624,8 +739,8 @@ Speaking of the online forums, most authors who wrote about joining a toxic comp
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Remote Freelancing isn’t Worth the Hype]]></title><description><![CDATA[The pandemic has pushed for digital adaptation in the workplace, and the market simply isn’t hiring due to the recession. More employees…]]></description><link>https://violetguos.github.io/real-freelancing/</link><guid isPermaLink="false">https://violetguos.github.io/real-freelancing/</guid><pubDate>Tue, 23 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The pandemic has pushed for digital adaptation in the workplace, and the market simply isn’t hiring due to the recession. More employees have to embrace odd and temporary jobs. This combination of temporary work + remote work gives rise to remote contracting/freelancing.&lt;/p&gt;
-&lt;p&gt;Remote freelancing hence received some &lt;a href=&quot;https://www.forbes.com/sites/jonyounger/2020/05/29/remote-is-a-powerful-growth-driver-for-freelancing-32-platform-ceos-explain-why/?sh=79f135b919cd&quot;&gt;raving reviews&lt;/a&gt;. Some even call this new workforce the &lt;em&gt;digital nomad&lt;/em&gt;. I had the experience of being a remote contracting software developer. However, I’m here to tell you that it’s not worth the hype.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Remote Contracting isn’t Worth the Hype]]></title><description><![CDATA[The pandemic has pushed for digital adaptation in the workplace, and the market simply isn’t hiring due to the recession. More employees…]]></description><link>https://violetguos.github.io/real-freelancing/</link><guid isPermaLink="false">https://violetguos.github.io/real-freelancing/</guid><pubDate>Tue, 23 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The pandemic has pushed for digital adaptation in the workplace, and the market simply isn’t hiring due to the recession. More employees have to embrace odd and temporary jobs. This combination of temporary work + remote work gives rise to remote contracting/freelancing.&lt;/p&gt;
+&lt;p&gt;Remote contracting hence received some &lt;a href=&quot;https://www.forbes.com/sites/jonyounger/2020/05/29/remote-is-a-powerful-growth-driver-for-freelancing-32-platform-ceos-explain-why/?sh=79f135b919cd&quot;&gt;raving reviews&lt;/a&gt;. Some even call this new workforce the &lt;em&gt;digital nomad&lt;/em&gt;. I had the experience of being a remote contracting software developer. However, I’m here to tell you that it’s not worth the hype.&lt;/p&gt;
 &lt;h2&gt;Lack of mentorship&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Tech doesn’t fundamentally change very often or very fast. You need long term guidance in order to grow as a professional.&lt;/li&gt;
