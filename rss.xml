@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Sep 2021 01:54:28 GMT</lastBuildDate><item><title><![CDATA[Recipe Normalization]]></title><description><![CDATA[In deep learning, we use normalization to solve gradient vanishing or explosion. It kind of inspired me to apply normalization to a recipe…]]></description><link>https://violetguos.github.io/recipe-norm/</link><guid isPermaLink="false">https://violetguos.github.io/recipe-norm/</guid><pubDate>Tue, 07 Sep 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In deep learning, we use normalization to solve gradient vanishing or explosion. It kind of inspired me to apply normalization to a recipe.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 10 Dec 2021 02:10:24 GMT</lastBuildDate><item><title><![CDATA[The Saga of My Lost Dotfiles]]></title><description><![CDATA[I accidentally deleted my dotfiles… As Twitter is my witness Anyways. I finally figured out that it’s deleted because the script I ran was…]]></description><link>https://violetguos.github.io/draft-dot-file-saga/</link><guid isPermaLink="false">https://violetguos.github.io/draft-dot-file-saga/</guid><pubDate>Thu, 09 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I accidentally deleted my dotfiles…&lt;/p&gt;
+&lt;p&gt;As Twitter is my witness&lt;/p&gt;
+&lt;p&gt;Anyways. I finally figured out that it’s deleted because the script I ran was not &lt;em&gt;idempotent&lt;/em&gt;. In computing, an idempotent operation is one that has no additional effect if it is called more than once with the same input parameters.&lt;/p&gt;
+&lt;p&gt;The rando’s script was not the case. The first time it ran, it copied my dotfiles to a backup fodler and established the symlinks. However, without proper error handling, it failed for one of the files. Then, when I ran it again, it overwrote the backupfiles with symlinks for all the previously executed files in the backup.&lt;/p&gt;
+&lt;p&gt;I thought I’d start simple with my dotfile management. Then I finally decided to use dotbot. The author stated that his script is &lt;em&gt;idempotent&lt;/em&gt; at the very beginning of his README. I was not sure about addiing additional dependencies, but I changed my mind after the previous failure.&lt;/p&gt;
+&lt;h3&gt;The frustration is Real. End&lt;/h3&gt;
+&lt;!-- ![the frustration is real]() --&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 906px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/189adea7dca8951ee5c1bf766bc7d6a5/6029f/frustration.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 133.0612244897959%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAABYlAAAWJQFJUiTwAAADWklEQVRIx5VVaW/bRhDV//8VberIclCgQND0Qz6kBZLGcZw2PnTLkqnDlmWJlMRTy+XydWZIKkFEOukCT7vaY/hm5u1s7aejY/xSf4Gj+gnqxw08Z9QbNJf9P2400Dg5kblnzxs4On4h+38+apSiBmpBpBBqYMOI6b8BFMHeAfc+cOMAvoG0UGkonaKq1fxwh/FkhtbtEn9crPHyHxuvr9a4HDzg1Wcbv53baJyu8IrWFvYGnf4IN7dTbP0QbglqzG4XJ4h1AmMSJMZAa42diqETjZTm6AdJkiDc8Vwq4DOMiBgXPduq8SZmuXF9rNZbPDzaWG99OWyvXdgbDytnS70rh7ZeAIfGNu1dORsZL4k5n+czxJANKsyXNrqDEd59OMds/oiIvjq9X+B2PMNls43B0KLYGTk8pLnByEK7N0Cz08PldVv2MdNaRK4pz0O83UC7W2jPlXEUhpk7XyEiBrx/l7spkLGWeWEoqUlTiZPA5P0PtcNs11IyluZLxTInxqOMCQLKnkfxiXaI44yZFxk4PiUiTqGYGXnjkZeczMzgV+CmKeOTuwdMZnNcUHzOzv/FiGIU0MGZo/BXN8Drpo9PlsLImuDs4zn+fv8BNzfD3OXCgdwgM0ySDMyKoQQxRcRkISJ/eGzMFzK8v9SgJs15JCU3jEifZJR0x70i5mqfiESSsU8M3yDO8rcG0zwhv76s4/fTP2FN53j7/gwXVy20un20On2RyHW7K32z3RMJjcZTWSthSDeB3BgM+xjfz7Amwd6RLlnwrMGlvRbBL0i3di5qh8TPc7xW7jK5VjSOUSEQURfB5MqQPs32FONSgxzsVAJuDta+iCst1eVhDLknQzbVMHdHyYiVZFlY5B95CgcGMw8NTmcprpbA1BqJsA+4fKPfApUuB8pIMWD1x7kGi55lVcW4kuG7aYrPC2D1cI9mq4Nur49ef4DLq2vYtlPJspJhGGcMWZf727Dfh/8fw7eTjKHzOCfB9oRdEARPxu+7DCN6jEzCV0sJnordDzG8eKQYLiiG7Q5uLUuMf69V3hSX3lUv0lTrIqqFSiqy2ledapQUByao8WYY4+OdwWRs0ZtCWe4P6fHypMz79IGgAuX1kFxbefTq+Ro+JYINbdhYzrR4W8rwH7rRHE6SyuxWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;frustration&quot; title=&quot;frustration&quot; src=&quot;/static/189adea7dca8951ee5c1bf766bc7d6a5/6029f/frustration.png&quot; srcset=&quot;/static/189adea7dca8951ee5c1bf766bc7d6a5/86a2e/frustration.png 245w,
+/static/189adea7dca8951ee5c1bf766bc7d6a5/41d3c/frustration.png 490w,
+/static/189adea7dca8951ee5c1bf766bc7d6a5/6029f/frustration.png 906w&quot; sizes=&quot;(max-width: 906px) 100vw, 906px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Recipe Normalization]]></title><description><![CDATA[In deep learning, we use normalization to solve gradient vanishing or explosion. It kind of inspired me to apply normalization to a recipe…]]></description><link>https://violetguos.github.io/recipe-norm/</link><guid isPermaLink="false">https://violetguos.github.io/recipe-norm/</guid><pubDate>Tue, 07 Sep 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In deep learning, we use normalization to solve gradient vanishing or explosion. It kind of inspired me to apply normalization to a recipe.&lt;/p&gt;
 &lt;p&gt;Let’s dive in.&lt;/p&gt;
 &lt;p&gt;This is a gluten free, diary free, processed sugar free cake recipe.&lt;/p&gt;
 &lt;ul&gt;
@@ -22,7 +126,7 @@
 &lt;li&gt;4 tsp coconut oil&lt;/li&gt;
 &lt;li&gt;8 tsp raw honey&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Now, it yields one serving. You could alternatively normalize wrt the coconut oil or raw honey, just like how we have batch norm, layer norm, etc in deep learning.&lt;/p&gt;
+&lt;p&gt;Now, it yields one serving. You could alternatively normalize wrt the coconut oil or raw honey, just like how we have &lt;a href=&quot;https://arxiv.org/abs/1502.03167&quot;&gt;batch norm&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/abs/1607.06450&quot;&gt;layer norm&lt;/a&gt;, etc in deep learning.&lt;/p&gt;
 &lt;p&gt;Happy cooking.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
