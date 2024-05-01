@@ -1,4 +1,272 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 01 May 2024 21:53:42 GMT</lastBuildDate><item><title><![CDATA[Speaker Accent Classification with Deep Learning]]></title><description><![CDATA[Abstract The task of classifying the accent of recorded speech has generally been approached with traditional SVM or UBM-GMM methods (Omar…]]></description><link>https://violetguos.github.io/accent-classification/</link><guid isPermaLink="false">https://violetguos.github.io/accent-classification/</guid><pubDate>Thu, 26 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Abstract&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 01 May 2024 22:26:11 GMT</lastBuildDate><item><title><![CDATA[Identify Street Numbers in Realistic Environments]]></title><description><![CDATA[Introduction In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to…]]></description><link>https://violetguos.github.io/street-number/</link><guid isPermaLink="false">https://violetguos.github.io/street-number/</guid><pubDate>Wed, 26 Apr 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to create an application to identify text and numbers in real time using the camera of a phone. In the previous two blocks, the open source dataset that was used provides a ground truth bounding box of the address number, therefore previous blocks always have access to the digit’s location. However, in order to adapt the application for deployment, we need to consider that street numbers are embedded on many different backgrounds, and the extraction of digit location must be done before digit classification.&lt;/p&gt;
+&lt;p&gt;For the third block of the project, we tried to automate the generation of boundary boxes around a zone of interest containing address numbers. To obtain the bounding boxes, we compared two image segmentation models using the implementation of &lt;em&gt;Faster RCNN&lt;/em&gt; [7] algorithms found in the &lt;em&gt;Facebook&lt;/em&gt; repository[4]. To evaluate the usability of our models as bounding box generators, we used an existing digit recognition model (ResNet [2] from Bounding Box) and compared its accuracy when using the true boxes and our predicted boxes.&lt;/p&gt;
+&lt;p&gt;Our final model is an end-to-end task that uses Faster-RCNN to find the bounding box of an address in an image and feeds it to a ResNet model from Bounding Box for digit recognition. More details about the previous model are given in Section 3.3. We obtained a mean Average Precision of 89.6% with Faster-RCNN, 70.0% validation accuracy on Bounding Box ResNet [2] model using ground-truth boxes, and 70.3% validation accuracy when combining the generated bounding boxes to the ResNet model.&lt;/p&gt;
+&lt;p&gt;The following report is split as follows. Section 2 presents the previous and current datasets and their format. Section 3 includes the methodology and describes the used algorithms and their hyperparameters for detection and sequence recognition. Section 4 presents the final results we obtained with each model and an analysis comparing them to each other and previous results. Section 5 explores new approaches that could enhance the results of our models.&lt;/p&gt;
+&lt;h1&gt;Dataset&lt;/h1&gt;
+&lt;p&gt;In this section, we briefly introduce the SVHN dataset used by Bounding Box and present the synthetic dataset we use in this block.&lt;/p&gt;
+&lt;h2&gt;Street View House Numbers Dataset (SVHN)&lt;/h2&gt;
+&lt;p&gt;The SVHN [5] Dataset contains over 600k images of house numbers obtained from Google Street View. Each image is cropped to focus on the house numbers and individual bounding boxes are given for each digit. This dataset is limited by the lack of negative examples (e.g. no digits present, blocked digits) and lack of background (images are too zoomed in).&lt;/p&gt;
+&lt;h2&gt;Element AI Synthetic dataset&lt;/h2&gt;
+&lt;p&gt;We aim to improve the robustness of Bounding Box models with the synthetic dataset and eliminate the limitations of SVHN. The dataset we used to train the segmentation task is composed of 6000 synthetic images containing a rendering of houses and a house number. The dataset is split in a 5:1 &lt;em&gt;train to validation&lt;/em&gt; ratio and contains different angles and viewpoints that are not present in SVHN, allowing for a better representation of real-world applications. However, this dataset has new flaws that were not seen in SVHN:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The renders are not photorealistic.&lt;/li&gt;
+&lt;li&gt;The dataset is orders of magnitude smaller than SVHN&lt;/li&gt;
+&lt;li&gt;There are only a few different house models.&lt;/li&gt;
+&lt;li&gt;The house numbers are only three or four digit long.&lt;/li&gt;
+&lt;li&gt;There is only one font used for the house numbers.&lt;/li&gt;
+&lt;li&gt;Some digits are hidden by objects (&lt;em&gt;Figure 1a&lt;/em&gt;) and are impossible to classify.&lt;/li&gt;
+&lt;li&gt;Some images contain cropped digits (&lt;em&gt;Figure 1b&lt;/em&gt;) or no address at all (&lt;em&gt;Figure 1c&lt;/em&gt;) and are impossible to classify.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These limitations will affect our models if they were to be used on real world images and the accuracy should drop. However, the dataset is adequate for a proof of concept before translating and adapting the work to real data.&lt;/p&gt;
+&lt;h1&gt;Algorithms and Methodology&lt;/h1&gt;
+&lt;p&gt;In Bounding Box modoeling, the goal was to predict the length of each sequence as well as transcribing digits correctly while the ground truth bounding boxes of address numbers were provided. In the third block, the bounding boxes are not provided, so our first task is to generate the 2 bounding boxes by an object detection model and then send the generated boxes to the sequence digit recognition model in Bounding Box.&lt;/p&gt;
+&lt;p&gt;Object detection is the process of finding and classifying different objects in an image. To do this, we use the architecture named Faster RCNN described in Subsection 3.2.&lt;/p&gt;
+&lt;p&gt;After obtaining the location of the digit sequence, Bounding Box model is used to classify digit sequences in the sub-region of an original image cropped with bounding boxes. Figure 2 shows the architecture of combining two models . We have described the Bounding Box (ResNet) model in the subsection following Faster-RCNN.&lt;/p&gt;
+&lt;h2&gt;Data Preparation&lt;/h2&gt;
+&lt;p&gt;In Bounding Box, since true bounding boxes are given, data preprocessing primarily involves using PyTorch’s transform library to add small perturbations on the fly. The Bounding Box methods include random cropping and border padding. In Block 3, however, the whole Faster-RCNN is essentially a data preprocessing step that produces the bounding box predictions. After obtaining the bounding box predictions, we apply the same random cropping and padding to segmented images. Bounding Box has demonstrated that random cropping reduces overfitting, while border padding helps with convolutions where digits get cut off by bounding boxes.&lt;/p&gt;
+&lt;h2&gt;Faster RCNN overview&lt;/h2&gt;
+&lt;p&gt;In Block 3, we are instructed to use Faster RCNN and adapt it to our data set. The goal of using Faster RCNN is to identify the digit patch inside a larger image with other background objects.&lt;/p&gt;
+&lt;p&gt;Faster RCNN couples a stable convolutional neural network (CNN) model, such as ResNet [7], and the Regional of Interest (ROI) Proposal Net (RPN) to achieve efficient and accurate results in object detection. Figure 3 demonstrates how we adapt Faster-RCNN for ElementAI dataset. The code is implemented in Pytorch by Facebook AI developers and the teaching staff has kindly recommended a stable build for us to use out-of-the-box with Element AI dataset. Faster-RCNN is built on top of C++ backend and due to constraints on the Calcul Quebec cluster, we only retrain the model’s output layers and modify the dataloader for this specific ElementAI dataset. For this project, we tried two different Faster RCNN architectures: R-50-FPN and R-101-FPN.&lt;/p&gt;
+&lt;p&gt;The metric used to compare our bounding boxes to the given boxes for each image is the IoU, or Intersection over Union. This metric first takes the ratio between the area contained in both boxes and the area contained in either box. This ratio is then compared to a threshold between 0 and 1. If the IoU is over the threshold, the predicted box is considered a correct box. The metric used to evaluate the Faster-RCNN models is the mean Average Precision (mAP)[4]. The mAP is the average of the precision values for IoU thresholds from 0.5 to 0.95 (with a step of 0.05).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;IoU&lt;/em&gt; =area of overlap / area of union&lt;/p&gt;
+&lt;p&gt;$mAP = \frac{1}{10}\sum_{j=1}^{10}AP(IoU = 0.45+0.05 \times j)$&lt;/p&gt;
+&lt;h2&gt;Bounding Box Model&lt;/h2&gt;
+&lt;p&gt;ResNet is a type of convolutional neural network with skipping layer residual connections that has proven to excel in ImageNet competitions and other various computer vision tasks [2]. ResNet34 and ResNet50 are two varations of the architecture, where 34 and 50 indicate the number of residual connections respectively. In order to prevent overfitting, we apply early stopping during training with patience ranging from 20 to 1/3 of total epochs (refer to Section 3.3 for details).&lt;/p&gt;
+&lt;p&gt;The bounding box model (see Figure 4) implements feature extraction with ResNet, and after feature extraction, we would obtain a fixed length vector. Then, in order to predict both digit sequence length and digit classification, Bounding Box implements multi-task learning, which connects the feature vector to 6 different branches, where each branch contains a fully connected (FC) layer. Branch 1 is used to predict the sequence length, and the other 5 branches predict the content in each position of the sequence. If we obtain a sequence length less than 5, we simply truncate the final output [1]. This truncation approach ensures that we can apply the same model for sequences with varying lengths.&lt;/p&gt;
+&lt;h2&gt;Faster RCNN and Bounding Box model pipeline&lt;/h2&gt;
+&lt;p&gt;The last and the main part of this block is to make an end-to-end pipeline between the trained model in Bounding Box and Faster-RCNN model. We train Faster-RCNN model and Bounding Box models independently. For evaluation part, we input full sized images to Faster-RCNN model and obtain the predicted bounding boxes. Then, using a dataloader consists of data transformation such as cropping and down scaling (see previous Section 3.1), we preprocess bounding box segmented test data further, and then use Bounding Box ResNet model to identify and predict digits. The pipeline is illustrated in Figure 2.&lt;/p&gt;
+&lt;p&gt;As pointed out by teaching staff, the pipeline is more software-engineering centric rather than a machine learning problem. The pipeline itself does not have any parameter or hyperparamter, and therefore all discussions and results are empirical.&lt;/p&gt;
+&lt;h2&gt;Hyperparameter optimization&lt;/h2&gt;
+&lt;p&gt;Tables 1 and 2 contain the value of hyperparameters we used.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;For Faster-RCNN model, we used the default hyperparameters as instructed by the teaching staff. Instead of exploring a range of hyperparameter search space, we simply pick the values from a given set shown below. The &lt;strong&gt;{}&lt;/strong&gt; symbol indicates a set.&lt;/li&gt;
+&lt;li&gt;For hyperparameter tuning of Bounding Box ResNet model, we used Bayesian Optimization in Scikit-learn. We tuned the learning rate, momentum, and decay parameters for SGD, and only the initial learning rate for Adam since it implements auto-correcting of the rest of its parameters. Table 1 indicates the range of hyperparameter space we choose.&lt;/li&gt;
+&lt;li&gt;The final pipeline is using bash script to connect the output of Faster-RCNN to Bounding Box ResNet. As explained in Section 3.4, no hyperparameters are shown.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Table 1: Hyperparameters for Bounding Box model&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hyperparameter&lt;/th&gt;
+&lt;th&gt;Range&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Learning Rate (LR)&lt;/td&gt;
+&lt;td&gt;[0.0001,0.01]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Momentum&lt;/td&gt;
+&lt;td&gt;[0.90,0.91]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Weight Decay&lt;/td&gt;
+&lt;td&gt;[0.0001, 0.001]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Decay steps&lt;/td&gt;
+&lt;td&gt;[10000, 10001]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Decay Rate&lt;/td&gt;
+&lt;td&gt;[0.89, 0.90]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Features-O-size&lt;/td&gt;
+&lt;td&gt;[3000,6000]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Batch size&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Epochs&lt;/td&gt;
+&lt;td&gt;[50, 400]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Patience&lt;/td&gt;
+&lt;td&gt;[20, 1/3 total epoch]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LR milestones&lt;/td&gt;
+&lt;td&gt;[20, 40, 80]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LR Gamma&lt;/td&gt;
+&lt;td&gt;0.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Table 2: Hyperparameters for Faster RCNN&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hyperparameter&lt;/th&gt;
+&lt;th&gt;Range&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Base Learning Rate(LR)&lt;/td&gt;
+&lt;td&gt;{0.0025, 0.002}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Weight Decay&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Steps&lt;/td&gt;
+&lt;td&gt;(2400, 3200)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Batch size-train&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Batch size-test&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Max-Iterations&lt;/td&gt;
+&lt;td&gt;{3600, 7200, 14400}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1&gt;Results and Analysis&lt;/h1&gt;
+&lt;p&gt;This section presents our results obtained we the different models we trained.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.1&lt;/strong&gt; &lt;strong&gt;Faster RCNN Bounding Box Segmentation results&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The results of the best object detection models are presented in table 3. The different values for the mAP are presented in table 3. We notice that the R-101-FPN model has a higher mAP score than the R-50-FPN model.&lt;/p&gt;
+&lt;p&gt;Table 3: The mean Average Precision (mAP) when using the validation dataset for the two Faster RCNN models we trained for 14400 iterations.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;mAP&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;R-50-FPN&lt;/td&gt;
+&lt;td&gt;86.7%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;R-101-FPN&lt;/td&gt;
+&lt;td&gt;89.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We notice that the training loss for R-101-FPN is generally slightly lower than the loss for R-50-FPN. Both these losses reach a plateau around 0.01 after 10000 iterations, as shown in figure 5.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original Block 2 model vs modified Block 2 model&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The experimented models in Block2 are VGG19, ResNet18, ResNet34, Resnet50, and we decided to compare ResNet34 and ResNet50 in our project because Block 2 team concludes that they are the best performing models. The model architectures remain the same, while the input is altered larger/deeper models have higher capacity that works well with SVHN (over 600, 000 digit images), but less suitable with the setup of Bounding Box models.&lt;/p&gt;
+&lt;p&gt;Attempted transfer learning&lt;/p&gt;
+&lt;p&gt;We attempted loading checkpoint weights as an initialization. The results show no significant improvement, largely due to particularities of the ElementAI dataset described in Section 2.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Faster RCNN and Block 2 Pipeline Results: Impacts of Bounding Box&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The sequence transcription accuracy is expected to drop when using predicted bounding box from Faster-RCNN versus using ground truth bounding box for Block 2 ResNet. After inspecting the vali-dation accuracy, the difference is merely 0.3%, therefore the pipeline does not hinder the performance significantly.&lt;/p&gt;
+&lt;h1&gt;Conclusion and further directions&lt;/h1&gt;
+&lt;p&gt;In previous block the task was to predict the sequence of digits on the SVHN [5] dataset. In this block the task is to segment the images in the Element AI dataset and predict house number sequences. To solve this task, we first apply an object detection model (Faster-RCCN) [7] to obtain the bounding boxes. These bounding boxes are then used as inputs for the classification model (ResNet34 [2]) to predict the house number.&lt;/p&gt;
+&lt;p&gt;Our model has 70.3% accuracy on Element AI validation set. We experiment with two versions of Faster-RCNN [7] and the one with R-101-FPN outperforms the one with R-50-FPN. We also observe that ResNet34 [2] works better than ResNet50 [2] for the sequence prediction task.&lt;/p&gt;
+&lt;p&gt;We notice that the performance of same architecture on ElementAI dataset drops by 20% compared to performance on SVHN. The presence of negative samples and background noise in ElementAI dataset contributes to the drop. If granted another dataset with similar variety, such as angle, noise, and background, this model could serve as a baseline. Apart from performance issues, we also noticed that the whole model takes a lot of time to make predictions.&lt;/p&gt;
+&lt;p&gt;To increase performance and robustness of our model, semi-supervised representation learning techniques such as the ones proposed by Salimans et al. [8] can be used. To reduce the prediction time, real-time models such as YOLO [6] and SSD [3] can be used.&lt;/p&gt;
+&lt;h1&gt;Authors (alphabetical order)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Saber Benchalel&lt;/li&gt;
+&lt;li&gt;Violet Guo&lt;/li&gt;
+&lt;li&gt;Marzieh Mehdlzadeh&lt;/li&gt;
+&lt;li&gt;Ishaan Kumar&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Citations are available upon request.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Speaker Accent Classification with Deep Learning]]></title><description><![CDATA[Abstract The task of classifying the accent of recorded speech has generally been approached with traditional SVM or UBM-GMM methods (Omar…]]></description><link>https://violetguos.github.io/accent-classification/</link><guid isPermaLink="false">https://violetguos.github.io/accent-classification/</guid><pubDate>Thu, 26 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Abstract&lt;/h1&gt;
 &lt;p&gt;The task of classifying the accent of recorded speech has generally been approached with traditional SVM or UBM-GMM methods (Omar and Pelecanos, 2010; Ge, 2015). However, modern deep learning methods yield the potential to dramatically increase performance. In our report, we train several varieties of Recurrent and Convolutional Neural Networks on three types of features (MFCC, formant, and raw spectrogram) extracted from North American and British English speech recordings in order to predict the accent of the speaker. All deep learning methods examined surpass non-deep baselines, and the approach yielding the best performance was the MFCC-RNN, shortly followed by the Spec-CNN.&lt;/p&gt;
 &lt;h1&gt;Background&lt;/h1&gt;
 &lt;p&gt;Treating speech audio using automatic techniques has long been a staple of the machine learning field. These techniques culminate in the construction of Automatic Speech Recognition (ASR) systems, which have a wide variety of applications including speech-to-text utilities, electronic personal assistants, and automatic translation systems. While ability to recognize speech automatically has increased dramatically over the past decade due to the advent of deep neural networks, ASR systems still are at the mercy of their input data: human speech is highly variable, influenced by recording noise and by the age, sex, accent, and other characteristics of the speaker.&lt;/p&gt;
@@ -462,6 +730,7 @@ For each feature, in addition to the relevant trained network, we also test a Mo
 &lt;li&gt;Violet Guo&lt;/li&gt;
 &lt;li&gt;Louis-François Préville-Ratelle&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Citations and figures are available upon request.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
