@@ -1,4 +1,248 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 01 May 2024 22:26:11 GMT</lastBuildDate><item><title><![CDATA[Identify Street Numbers in Realistic Environments]]></title><description><![CDATA[Introduction In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to…]]></description><link>https://violetguos.github.io/street-number/</link><guid isPermaLink="false">https://violetguos.github.io/street-number/</guid><pubDate>Wed, 26 Apr 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 02 May 2024 01:00:51 GMT</lastBuildDate><item><title><![CDATA[Fact or Fake News: Applying NLP in an unbalanced dataset]]></title><description><![CDATA[Author’s Note I wanted to reflect on this past project. My team decided to join an existing machine learning competition where the source…]]></description><link>https://violetguos.github.io/news-nlp/</link><guid isPermaLink="false">https://violetguos.github.io/news-nlp/</guid><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Author’s Note&lt;/h1&gt;
+&lt;p&gt;I wanted to reflect on this past project. My team decided to join an existing machine learning competition where the source data and a base line model was provided to us. The following was our original report. I have omitted the citations and some diagrams, but they are available upon request.&lt;/p&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;For better or for worse, social media has had a significant impact on content and information distribution.
+Since anyone has the ability to post anything at anytime, there comes the cost of an increase in the spread of fake news articles and claims.
+Detecting whether an article is promoting fake news or not is difficult since the claim’s goal is often to mislead readers to some false conclusion.
+Therefore, being able to fact check claims by analyzing relevant articles can be beneficial as it would allow systems to promote true and relevant news.
+Ideally, this would reduce public exposure to fake news and deter its spread.
+In this project, we examine this challenge and evaluate how natural language processing (NLP) models can be used for the task of fake news classification.
+Our goal is to train a variety of linear, ensemble, and neural network models and use pre-processing techniques that we’ve seen in class to achieve high classification accuracy.
+By training and evaluating models on a news dataset provided by the 2019 online competition `Leaders Prize: Fact or Fake News’, we demonstrate several NLP models’ effectiveness at classifying false, partly true, and true news.
+We show that our methods can successfully detect fake news but would require more work in true news identification.&lt;/p&gt;
+&lt;h1&gt;Data Description&lt;/h1&gt;
+&lt;p&gt;The source of our labelled dataset is from the 2019 online competition called `Leaders Prize: Fact or Fake News?’ \cite{DataCup}.
+The competition involves the task of classifying news claim within its provided dataset as either: False, Partly True, or True.
+The dataset is comprised of labelled claims (i.e. statements), claimants, and related article content. Claimants are related to claims, however not all claims have a claimant.
+The data contains a total of 15,555 claims, and 64,974 related articles.
+Therefore, there is a total of 15,555 examples to train and evaluate our models with.
+The competition has a hidden test set that can only be evaluated on when making a submission.
+We did not make use of this test set because the competition submission closed before we had the chance to make any.&lt;/p&gt;
+&lt;h2&gt;Data Imbalance&lt;/h2&gt;
+&lt;p&gt;Upon further analysis of our data, we noticed a severe class imbalance as illustrated in Figure \ref{fig:label-hist}.
+The majority of our data is of False and Partly True claims.
+More precisely our examples are labelled: 48% False, 41% Partly True and 11% True.
+We believe if this imbalance is not addressed, we expect to see a significantly low recall within our results.
+We discuss a method to circumvent this imbalance in Section 4.7.&lt;/p&gt;
+&lt;h1&gt;4 Methodology&lt;/h1&gt;
+&lt;p&gt;Here we explain the different pre-processing techniques, feature extraction methods and models that we used and evaluated.
+For this project, we are using the Python 3 programming language and several external Python packages: Pandas, SciPy, Matplotlib, Tqdm, Scikit-Learn, Tensorflow, Keras, PyTorch and XGBoost.&lt;/p&gt;
+&lt;h2&gt;4.1 Data Split&lt;/h2&gt;
+&lt;p&gt;Since the competition’s test set is hidden from us, we made use of splitting the training data that was provided.
+The split is a ratio of 70%, 15% and 15% for the training, development and test sets respectively.&lt;/p&gt;
+&lt;h2&gt;4.2 Data Pre-processing&lt;/h2&gt;
+&lt;p&gt;Next we describe the techniques we’ve used for pre-processing our data. The methods used are the following: square bracket removal, non-ASCII character removal, punctuation removal, character lowercasing, numerical character replacement, stemming and lemmatization.&lt;/p&gt;
+&lt;p&gt;These techniques are applied on claims and related article content. The majority of claimants are proper nouns, so we didn’t apply pre-processing on claimants. We applied non-ASCII character removal to clean our corpus from unordinary characters. Character lowercasing is applied because we don’t want our models to differentiate between words of the same spelling but different capitalization. Stemming and lemmatization are both performed to make our feature space dimensionally lower, with the intent of making our models faster to train and more generalizable.&lt;/p&gt;
+&lt;h2&gt;4.3 Training and Evaluation&lt;/h2&gt;
+&lt;p&gt;We tuned our models using the training and development sets to determine optimal hyperparameter configurations.
+Then we trained the optimally parameterized model on the training and validation sets, and finally evaluated it on the held-out test set.
+By doing so, we can empirically determine optimal hyperparameter configurations by detecting overfitting and use the test set to have an unbias evaluation of our models.&lt;/p&gt;
+&lt;h2&gt;4.4 Most Frequent Label Classifier Baseline&lt;/h2&gt;
+&lt;p&gt;For comparison purposes, we have tested a Most Frequent Label Classifier baseline.
+Given a set of test examples, the predictor classifies each example to that of the most frequently occurring label.
+This was implemented using SciKit-Learn’s DummyClassifier application programming interface (API) .
+This is not meant to be used as an effective predictor, yet a critical baseline for an unbalanced dataset.&lt;/p&gt;
+&lt;h2&gt;4.5 Linear Model Baselines&lt;/h2&gt;
+&lt;p&gt;We trained and evaluated three linear models as baselines to compare with more complex models that we eventually train and evaluate.&lt;/p&gt;
+&lt;p&gt;We trained and evaluated three different multi-class linear models: Logistic Regression, Support Vector Machine (SVM) and Naive Bayes.
+Logistic Regression and SVM are discriminative models whereas Naive Bayes is a generative model.
+Generative models estimate the joint distribution of features and labels whereas discriminative models estimate the posterior probability of some label given its features.
+The difference between Logistic Regression and SVM is the different objective functions used at training.
+They both estimate an hyperplane that can separate the training labels’ categories.
+The subtle difference is that SVMs attempt to maximize the margin (i.e. distance) between its estimated hyperplane and the observations from each class \cite{svm} whereas Logistic Regression performs Maximum Likelihood Estimation (MLE) to maximize the likelihood that a random point gets classified correctly.
+The models are trained on Term Frequency-Inverse Document Frequency (TF-IDF) representations of the concatenation of the claim, claimant, and related article content.&lt;/p&gt;
+&lt;p&gt;We fine tuned each linear models’ parameters with Grid Cross Validation of Fold 3.
+The model configurations, validation F1 scores, and test F1 scores are available within Table \ref{table:fine-tune-grid-cv}.
+We trained, fine-tuned and evaluated these models using SciKit-Learn’s relevant predictor, Grid Cross Validation and metric APIs.&lt;/p&gt;
+&lt;h2&gt;4.6 Ensemble Models: Random Forest and Extreme Gradient Boosting (XGBoost)&lt;/h2&gt;
+&lt;p&gt;Ensemble models are popularly used in these sorts of classification challenges and are often considered the state-of-the-art solution.&lt;/p&gt;
+&lt;p&gt;The main premise is that by combining multiple models, the errors of a single base-learner will likely be compensated by other base-learners, as a result the overall prediction performance would be better than that of a single model.&lt;/p&gt;
+&lt;p&gt;A Random Forest is decision-tree-based ensemble model.
+There are two main components to this ensemble.
+The first is that each tree is trained on a random sample from the training data.
+The second is that a random subset of features are selected to generate a split for each node in a tree.&lt;/p&gt;
+&lt;p&gt;Similarly to a Random Forest, XGBoost is a decision-tree-based ensemble model, however it uses a gradient boosting framework.
+XGBoost trains an ensemble of base-learners and boosts weak learners using gradient descent.
+It also uses some system optimizations and algorithmic enhancements to make it faster to train compared to its sister model: Gradient Boosting Machine (GBM).&lt;/p&gt;
+&lt;p&gt;Similarly to the linear models, we fine tuned the ensemble models using a Grid Cross Validation of Fold 3.
+Their results are available within Table 3. The models are trained on TF-IDF representations of the concatenation of the claim, claimant, and related article content.
+We used SciKit-Learn’s and XGBoost’s relevant predictor APIs.&lt;/p&gt;
+&lt;h2&gt;4.7 Fully Connected MLP Neural Network Baseline&lt;/h2&gt;
+&lt;p&gt;We re-implement the simple fully connected neural network, or multi-layer perceptron (MLP) using PyTorch, in order to verify whether their method would transfer to our fake news dataset.&lt;/p&gt;
+&lt;p&gt;The input layer samples from our customized PyTorch &lt;code&gt;Dataset&lt;/code&gt; class, which concatenates a 5,000 dimensional TF vector from claim, and another 5,000 dimensional TF vector from related texts, and a cosine similarity score of the TF-IDF vectors of the two, according to \texAtcite{DBLP:journals/corr/RiedelSR17}‘s hyperparameters. The paper’s architecture only yields around 35% validation accuracy.&lt;/p&gt;
+&lt;p&gt;Upon examining the TF and TF-IDF vectors, only around 500 to 1,000 are non-zero. We then decide to limit the dimensions to 500 in the TF and TF-IDF functions. Then, we apply principal component analysis (PCA) to the 500 dimensional TF vectors, and obtain 64 principle components from claim and text.&lt;/p&gt;
+&lt;p&gt;In order to address the data imbalance problem, we further modify a plain PyTorch &lt;code&gt;Dataset&lt;/code&gt; using a &lt;code&gt;WeightedRandomSampler&lt;/code&gt;. This ensures that each batch samples the rare class with a higher probability, and each batch contains approximately equal number of samples from each class.&lt;/p&gt;
+&lt;p&gt;We also experiment with various loss metrics utilized by computer vision experiments in handling data imbalance, such as dice loss \cite{Wong_2018} and focal loss \cite{lin2017focal}. However, the metrics that are suitable for vision tasks do not transfer to NLP applications. Binary cross entropy loss is the best out of all metrics we tried. Weighted batch sampling and binary cross entropy loss improve our validation set unweighted F1 score from 35% to 45%.&lt;/p&gt;
+&lt;h2&gt;4.7 Sequential Neural Network Model: Bidirectional Long Short-Term Memory (Bi-LSTM)&lt;/h2&gt;
+&lt;p&gt;The final model we test is a custom neural network model inspired from the Bi-LSTM architecture.
+The idea behind this model is to leverage simpler model for metadata features and use more complex model such as LSTM to extract relevant information from more complex features like claim and related articles.&lt;/p&gt;
+&lt;p&gt;Metadata features such as the claimant, the number of articles supporting the claim are features already in a format that can be passed to the model and are passed directly to the model via a standard MLP. For the claim and related articles, we first preprocess the text like described in section data-preprocessing, then convert the preprocessed text to a fixed length vector using the text to sequence and padding implementations of Keras.
+Then, we pass both the claim resulting vector and the related article resulting vector to two embedding layers. The goal of using embedding layers is convert sparse vector to dense vector. Finally, we concatenate the two dense vectors and pass the resulting concatenated vector to a bi-lstm model.
+To obtain a final prediction, we concatenate the output of the bi-lstm and of the MLP and pass everything through a softmax layer. Model architecture is available upon request.&lt;/p&gt;
+&lt;p&gt;We expect that this model, if trained properly, should be the most performing one due to the sequential nature of the model. To train the model, we used the Nadam optimizer. This optimizer is a mix between two well known optimizers: Nesterov and Adam.&lt;/p&gt;
+&lt;h1&gt;Results&lt;/h1&gt;
+&lt;p&gt;To evaluate our models’ performance, we are concerned with Weighted Average F1 and Recall for the `True’ class. We are particularly interested by the Recall of the True category since it tells us how much of the truthful news our system was able to detect within the dataset.
+If some system like this were to be deployed, we would want it to be able to detect ‘True’ news from ‘False’ ones with a high success rate.&lt;br&gt;
+We would not simply censor all news because it was incorrectly deemed as ‘False.’
+A more detailed look at precision, recall and F1 scores are available in the results table.
+It is also the measure that highlights a lack of performance in handling an unbalanced dataset.&lt;/p&gt;
+&lt;p&gt;Next, we compare our different methods and discuss potential reasons behind their performance.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;Weighted Average F1 score (%)&lt;/th&gt;
+&lt;th&gt;Recall of True Class (%)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Most Frequent Classifier&lt;/td&gt;
+&lt;td&gt;31.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Logistic Regression&lt;/td&gt;
+&lt;td&gt;58.0&lt;/td&gt;
+&lt;td&gt;1.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Linear SVM&lt;/td&gt;
+&lt;td&gt;57.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Naive Bayes&lt;/td&gt;
+&lt;td&gt;53.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Random Forest&lt;/td&gt;
+&lt;td&gt;60.0&lt;/td&gt;
+&lt;td&gt;2.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;XGBoost&lt;/td&gt;
+&lt;td&gt;56.0&lt;/td&gt;
+&lt;td&gt;1.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MLP&lt;/td&gt;
+&lt;td&gt;40.1&lt;/td&gt;
+&lt;td&gt;17.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bi-LSTM Custom&lt;/td&gt;
+&lt;td&gt;60.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bi-LSTM Rebalanced&lt;/td&gt;
+&lt;td&gt;57.0&lt;/td&gt;
+&lt;td&gt;5.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1&gt;Author’s Reflection&lt;/h1&gt;
+&lt;p&gt;This project was graded by 2 TAs and our professor. They had very different interpretations of this project.
+I want to pause here and jot down some of my own reflections.&lt;/p&gt;
+&lt;h2&gt;Writing&lt;/h2&gt;
+&lt;p&gt;In my opinion, we spent too much time explaining how the various machine learning models work. The explanations should be reduced by 30%.&lt;/p&gt;
+&lt;h2&gt;Lack of NLP domain expertise&lt;/h2&gt;
+&lt;p&gt;The project should spend more time in the data preprocessing and exploration stage. For NLP, there are many old-school NLP algorithms that would extract word level, sentence leve, paragraph level, and corpus level features.&lt;/p&gt;
+&lt;p&gt;The data contained the news article, as well as the source. It is highly likely that the source itself is a more influential indicator of the reliability of the claim.&lt;/p&gt;
+&lt;h2&gt;Attempted too many ML models&lt;/h2&gt;
+&lt;p&gt;For someone with more computational linguistics backgorund, this project could sound like a bookkeeping record of different machine learning models we tried. Some models, such as Bi-LSTM Rebalanced, does not provide much more advantage over other methods we have tried. More isn’t always better.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Identify Street Numbers in Realistic Environments]]></title><description><![CDATA[Introduction In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to…]]></description><link>https://violetguos.github.io/street-number/</link><guid isPermaLink="false">https://violetguos.github.io/street-number/</guid><pubDate>Wed, 26 Apr 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to create an application to identify text and numbers in real time using the camera of a phone. In the previous two blocks, the open source dataset that was used provides a ground truth bounding box of the address number, therefore previous blocks always have access to the digit’s location. However, in order to adapt the application for deployment, we need to consider that street numbers are embedded on many different backgrounds, and the extraction of digit location must be done before digit classification.&lt;/p&gt;
 &lt;p&gt;For the third block of the project, we tried to automate the generation of boundary boxes around a zone of interest containing address numbers. To obtain the bounding boxes, we compared two image segmentation models using the implementation of &lt;em&gt;Faster RCNN&lt;/em&gt; [7] algorithms found in the &lt;em&gt;Facebook&lt;/em&gt; repository[4]. To evaluate the usability of our models as bounding box generators, we used an existing digit recognition model (ResNet [2] from Bounding Box) and compared its accuracy when using the true boxes and our predicted boxes.&lt;/p&gt;
 &lt;p&gt;Our final model is an end-to-end task that uses Faster-RCNN to find the bounding box of an address in an image and feeds it to a ResNet model from Bounding Box for digit recognition. More details about the previous model are given in Section 3.3. We obtained a mean Average Precision of 89.6% with Faster-RCNN, 70.0% validation accuracy on Bounding Box ResNet [2] model using ground-truth boxes, and 70.3% validation accuracy when combining the generated bounding boxes to the ResNet model.&lt;/p&gt;
@@ -176,7 +420,7 @@
 &lt;li&gt;Marzieh Mehdlzadeh&lt;/li&gt;
 &lt;li&gt;Ishaan Kumar&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Citations are available upon request.&lt;/p&gt;
+&lt;p&gt;Citations and figures are available upon request.&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;
