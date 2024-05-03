@@ -1,4 +1,151 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 02 May 2024 01:00:51 GMT</lastBuildDate><item><title><![CDATA[Fact or Fake News: Applying NLP in an unbalanced dataset]]></title><description><![CDATA[Author’s Note I wanted to reflect on this past project. My team decided to join an existing machine learning competition where the source…]]></description><link>https://violetguos.github.io/news-nlp/</link><guid isPermaLink="false">https://violetguos.github.io/news-nlp/</guid><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Author’s Note&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 May 2024 01:09:01 GMT</lastBuildDate><item><title><![CDATA[Writing Good Code vs Training More Models]]></title><description><![CDATA[Writing Good Code vs Training More Models In this project, we had relatively poor model performance. I would like to do a little…]]></description><link>https://violetguos.github.io/tree-data/</link><guid isPermaLink="false">https://violetguos.github.io/tree-data/</guid><pubDate>Thu, 02 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Writing Good Code vs Training More Models&lt;/h1&gt;
+&lt;p&gt;In this project, we had relatively poor model performance. I would like to do a little introspection below.&lt;/p&gt;
+&lt;h1&gt;Original Project Report Introduction&lt;/h1&gt;
+&lt;p&gt;In many real world settings, having access to a rich labelled data set is challenging. There are several situations in which one has a large corpus of unlabelled data, and a relatively small amount of labelled data, which is often laboriously obtained by manual effort. In order to build scalable machine learning systems, the task of labelling data should be automated. This problem broadly falls under the category of unsupervised or semi-supervised learning.&lt;/p&gt;
+&lt;p&gt;In this project, there is a large store of unlabelled images of forest canopies, and a small set of labelled data. The labels indicate the ‘species’, ‘density’ and ‘height’ of the tree. The goal is to predict the species, height, and density from aerial images of forest canopies. Labelling this data set is performed by manual intervention, which proves to be expensive and time consuming. Therefore, the goal is to build an automated system to label the large corpus of unlabelled data using labelled and unlabelled data.&lt;/p&gt;
+&lt;p&gt;We aim to build a baseline algorithm to perform this task. Baselines are an often ignored and critical part of a machine learning project; they provide a reference point to compare the performance of more sophisticated models. We use the k-means algorithm to cluster the large corpus of training data, and assign labels to these learned centroids by dividing the labelled data set into non overlapping sets. The high dimensional nature of the data (4096 dimensions per data point) makes this problem challenging. &lt;strong&gt;Therefore, as a pre-processing step, we use PCA (Principal Component Analysis), a dimensionality reduction algorithm, to reduce the redundancy in our data set and get better results using the above mentioned methods.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We obtain a 45.8% validation accuracy with our best model.&lt;/p&gt;
+&lt;h1&gt;Analysis&lt;/h1&gt;
+&lt;p&gt;In the bolded text from the original project report, you can tell that we did not try a variety of dimensionality reduection algorithms or explore other classic computer vision methods without machine learning.&lt;/p&gt;
+&lt;p&gt;We ended up spending a lot of time refactoring our project code base. This was the project’s Github structure&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container quiet-light grvsc-ps-tuw09S&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;.&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;├── data&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   └── synthetic&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;├── evaluation&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;├── models&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── horoma_classifier&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── k_means&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── most_freq_model&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   └── pca&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;├── notebook&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   └── eda&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;├── results&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── dataset_stats&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── plots&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   │   └── pca_before_after&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   └── tsne&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│       ├── no_pca_no_normalization&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│       ├── pca_100_no_normalization&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│       ├── pca_100_with_normalization&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│       └── pca_30_with_normalization&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;├── src&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── algorithms&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── datasets&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── experiments&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   │   └── config&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── scripts&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   ├── transforms&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;│   └── utils&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;└── test&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    ├── algorithms&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    ├── data&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    └── transforms&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It is hard to justify how much work went into the software engineering just to run different variations of the PCA algorithm.&lt;/p&gt;
+&lt;p&gt;In many cases, it is hard to balance writing high quality code and trying as many methods as possible.&lt;/p&gt;
+&lt;p&gt;For more exploratory tasks, it is better to focus on modeling instead of writing production ready code.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .quiet-light { background-color: #F5F5F5; }
+  .quiet-light .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(0, 0, 0, 0.05));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(0, 0, 0, 0.2));
+  }
+  div#dark .grvsc-ps-tuw09S {
+    background-color: #1e1e1e;
+    color: #c5c8c6;
+  }
+  div#dark .grvsc-ps-tuw09S .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Fact or Fake News: Applying NLP in an unbalanced dataset]]></title><description><![CDATA[Author’s Note I wanted to reflect on this past project. My team decided to join an existing machine learning competition where the source…]]></description><link>https://violetguos.github.io/news-nlp/</link><guid isPermaLink="false">https://violetguos.github.io/news-nlp/</guid><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Author’s Note&lt;/h1&gt;
 &lt;p&gt;I wanted to reflect on this past project. My team decided to join an existing machine learning competition where the source data and a base line model was provided to us. The following was our original report. I have omitted the citations and some diagrams, but they are available upon request.&lt;/p&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;For better or for worse, social media has had a significant impact on content and information distribution.
