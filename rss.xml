@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 May 2024 21:14:51 GMT</lastBuildDate><item><title><![CDATA[A World without Tensorflow or Pytorch]]></title><description><![CDATA[Before neural netowrk frameworks were released, there was no effective way to automatically run gradient descent, defined model layer…]]></description><link>https://violetguos.github.io/neural-net-raw/</link><guid isPermaLink="false">https://violetguos.github.io/neural-net-raw/</guid><pubDate>Fri, 03 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Before neural netowrk frameworks were released, there was no effective way to automatically run gradient descent, defined model layer dimension, or initialize weights. All these features are baked into Tensorflow and Pytorch.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Violet Guo]]></title><description><![CDATA[Violet Guo]]></description><link>https://violetguos.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 05 May 2024 19:00:32 GMT</lastBuildDate><item><title><![CDATA[A World without Tensorflow or Pytorch]]></title><description><![CDATA[Before neural netowrk frameworks were released, there was no effective way to automatically run gradient descent, defined model layer…]]></description><link>https://violetguos.github.io/neural-net-raw/</link><guid isPermaLink="false">https://violetguos.github.io/neural-net-raw/</guid><pubDate>Fri, 03 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Before neural netowrk frameworks were released, there was no effective way to automatically run gradient descent, defined model layer dimension, or initialize weights. All these features are baked into Tensorflow and Pytorch.&lt;/p&gt;
 &lt;p&gt;In a world without any neural network frameworks, we need to understand the fundamentals of a fully connected layer (aka MLP, neural network).&lt;/p&gt;
 &lt;p&gt;The following example assumes that we use the MNIST dataset.&lt;/p&gt;
 &lt;h1&gt;fully connected layer&lt;/h1&gt;
@@ -366,7 +366,7 @@ If you are interested in the derivations, visit &lt;a href=&quot;https://www.hig
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[Fact or Fake News: Applying NLP in an unbalanced dataset]]></title><description><![CDATA[Author’s Note I wanted to reflect on this past project. My team decided to join an existing machine learning competition where the source…]]></description><link>https://violetguos.github.io/news-nlp/</link><guid isPermaLink="false">https://violetguos.github.io/news-nlp/</guid><pubDate>Wed, 01 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Author’s Note&lt;/h1&gt;
-&lt;p&gt;I wanted to reflect on this past project. My team decided to join an existing machine learning competition where the source data and a base line model was provided to us. The following was our original report. I have omitted the citations and some diagrams, but they are available upon request.&lt;/p&gt;
+&lt;p&gt;I wanted to reflect on this past project. My team decided to join an existing machine learning competition where the source data and a base line model was provided to us. The following is an excerpt from an original report written by Étienne Girard-Proulx, Violet Guo, and Matthew Lesko-Krleza (in alphabetical order). I have omitted the citations and some diagrams, but they are available upon request.&lt;/p&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;For better or for worse, social media has had a significant impact on content and information distribution.
 Since anyone has the ability to post anything at anytime, there comes the cost of an increase in the spread of fake news articles and claims.
@@ -520,6 +520,208 @@ I want to pause here and jot down some of my own reflections.&lt;/p&gt;
 &lt;p&gt;The data contained the news article, as well as the source. It is highly likely that the source itself is a more influential indicator of the reliability of the claim.&lt;/p&gt;
 &lt;h2&gt;Attempted too many ML models&lt;/h2&gt;
 &lt;p&gt;For someone with more computational linguistics backgorund, this project could sound like a bookkeeping record of different machine learning models we tried. Some models, such as Bi-LSTM Rebalanced, does not provide much more advantage over other methods we have tried. More isn’t always better.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Predicting ECG Signal from Unlabelled Data]]></title><description><![CDATA[Introduction The following project is a classic example on why complicated and novel methods aren’t always the best. OMsignal is a company…]]></description><link>https://violetguos.github.io/ecg-signal/</link><guid isPermaLink="false">https://violetguos.github.io/ecg-signal/</guid><pubDate>Tue, 26 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;The following project is a classic example on why complicated and novel methods aren’t always the best.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OMsignal is a company specializing in analytics on electrocardiogram (ECG) signals. The project requires using raw ECG signal to predict the mean PR interval, the mean RT interval, the standard deviation of the RR interval, and to identify the user. This multitask problem was approached as a supervised learning problem in block 1, using only labeled data. Results show that convolutional neural networks performed better than regular multilayers perceptrons or even recurrent neural networks. Block 2 shifts the focus from supervised to semi-supervised learning, with the addition of around 600k unlabeled samples. While the multitask objective remains essentially the same, the new samples contain precious information relative to the representation of the data. The purpose of this block is to extract this information from the unlabeled samples in order to improve the training of predictive models and increase their performances on the test set.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;Methodology&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In block 1, data preprocessing such as normalization and noise removal were tried. In addition to data preprocessing, data augmentation such as negation of signal sections, temporal shift of the signal and partial noise addition were also tried. We decided to keep these because block 1 reports show significant improvement of the performances while using those methods. In addition to this, we converted the data into frequency space domain using Fast Fourier Transforms (FFT) to use as an additional/alternative input. Data loading functions from block 1 were adapted in order to process unlabeled samples.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Unsupervised Pretraining&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As a form of unsupervised pre-training, we implemented an autoencoder model that learns a latent representation of the data. Autoencoders contain an encoder and decoder. Encoders learn an intermediate representation of the dataset through dimensionality reduction, while decoders try to reconstruct the input with minimal error. Where classification models tend to overfit on small labeled datasets, studies show that autoencoders can increase generalization and stability (\cite{DBLP:journals/corr/abs-1807-11407}). We used an autoencoder to learn a latent representation of the unlabeled data which is then passed to a prediction module.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The first model we have tried with that approach was to use an autoencoder with a single hidden layer neural network for both the encoder and the decoder. For the prediction module, we used the same CNN that was used as the baseline model for the block 1. Hence, the prediction module is a multi-layer CNN with batch-normalization for 1D inputs. Its also a multi-task network that can be trained on any combination of targets.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Semi-supervised Training: Class 1 model&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In class 1 models, a branch is added to the network to handle the unlabeled data. Similarily to the unsupervised pretraining approach, encoders try to learn a low-dimensional representation that helps generalization and reduce overfitting. The major difference is that, instead of first training the autoencoder and then the prediction module, in this approach we train the two simultaneously by feeding a mix of labeled and unlabeled data. This allows the training of the low-dimensional representation to be not only driven by the unlabeled data. The basic architecture of a class 1 model is shown in Figure \ref{class 1 architecture}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Vanilla Class 1 Semi-Supervised Model&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As our first class 1 model, we trained the same multi-layer CNN as before, but we added a branch reconstructing the input when the sample fed is unlabeled. Our encoder here uses the convolutional layers of the CNN, and depending on if the data is labeled or not, the processed sample is passed either to a two-hidden-layer MLP that gives a prediction or to a decoder that reconstructs the input. In both cases, this is followed by back-propagation to update the weights.
+We’ve attempted this with two types of decoder. First, we tried an MLP. We decided to test MLP both to stay closer to the prediction module architecture (also an MLP), and to make sure the hidden representation of our inputs works well with MLP. Second, we built a convolutional autoencoder. Here, the encoder consists of convolutional layers and the decoder of deconvolutional layers. The decoder reconstructs the input with transpose convolution operations. The decoder architecture mirrors the encoder, replacing each &lt;code&gt;nn.Conv1d&lt;/code&gt; with &lt;code&gt;nn.TransposeConv1d&lt;/code&gt; and &lt;code&gt;nn.Maxpool1d&lt;/code&gt; with &lt;code&gt;nn.MaxUnpool1d&lt;/code&gt;. The architecture of the convolutional autoencoder is shown in figure \ref{conv-ae-arch} of the annex.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Ladder Network&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The ladder network is a semi-supervised algorithm that couples supervised loss and unsupervised loss to train both the encoder and decoder. The term ladder refers to this coupling mechanism. The ladder network follows a conventional autoencoder principle, except for the following changes:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Adds a Gaussian noise to the inputs for decoders. Forces the decoder to learn to reconstruct the output from a noisy input.&lt;/li&gt;
+&lt;li&gt;Weighs each decoder layer’s reconstruction error. Usually the deeper encoders are weighted higher because they are closer to the final output prediction layer.&lt;/li&gt;
+&lt;li&gt;For the gradient path, it combines both classification layer’s cross entropy loss and each decoder layer’s reconstruction loss to back propagate. Ideally, through this combination scheme, a single optimizer should be able to find the optimal weights for both tasks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;However, one major downside of the ladder network in this specific project is that it has not been proven to work on regression tasks. Neither the original paper (\cite{DBLP:journals/corr/RasmusVHBR15}) nor others (\cite{DBLP:journals/corr/PezeshkiFBCB15}) present any experiment on regression tasks. This limits the network’s scope to the user_id classification only.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Semi-supervised Training: Class 2 model&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The “Mean Teacher” model, developed by the Curious AI Company [\cite{DBLP:journals/corr/TarvainenV17}], is a consistency regularization method. This semi-supervised training method consists of using two instances of an architecture: the Student model and the Teacher model. Training through gradient descent is only performed on the Student model. The parameters for the Teacher model are obtained via an exponential moving average (EMA) of the actual and previous weights and biases of the Student model. During training, the sample fed to the models is noised differently in order to create a slightly different version of it for each model. We used all data pre-processing and augmentation methods described in section 2.1. Both the Student and Teacher models make predictions for these samples. The final loss function combines two terms: a classification cost between the Student model prediction and the actual label of the sample (if the sample originally has a label) and a consistency cost between the Student and Teacher model prediction (for both labeled and unlabeled). The structure is described in Figure \ref{mean&lt;em&gt;teacher&lt;/em&gt;struc} in Appendix. For Student and Teacher model we opted for a 2-layer convolutionnal neural network using max pooling and dropout, based on the performances from previous block teams. Further details about the architecture can be found in the repository.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We decided to implement this model because of the promising results it shown in semi-supervised learning and its novelty. The measure of its performance can be found in the orignal paper by Tarvainen. The EMA weight sharing between the Student and the Teacher model allow a transfer of information that gives the Teacher a better intermediate representation of the sample, and it has been shown that averaging model weights over training steps can produce more accurate results than using final weights directly (Polyak et al.[1992]). Source code for this model was taken from Curious AI’s Github repository (\url{&lt;a href=&quot;https://github.com/CuriousAI/mean-teacher%7D&quot;&gt;https://github.com/CuriousAI/mean-teacher}&lt;/a&gt;). The code can be found in the legacy folder of our project. All modified files and functions were copied into our project first in order to keep the legacy files intact.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;Model Results&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;Overall score&lt;/th&gt;
+&lt;th&gt;prMeanTau&lt;/th&gt;
+&lt;th&gt;rtMeanTau&lt;/th&gt;
+&lt;th&gt;rrStdDevTau&lt;/th&gt;
+&lt;th&gt;userIdAcc&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Baseline Block1&lt;/td&gt;
+&lt;td&gt;0.403&lt;/td&gt;
+&lt;td&gt;0.591&lt;/td&gt;
+&lt;td&gt;0.761&lt;/td&gt;
+&lt;td&gt;0.328&lt;/td&gt;
+&lt;td&gt;0.181&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Unsupervised Pretraining&lt;/td&gt;
+&lt;td&gt;0.000&lt;/td&gt;
+&lt;td&gt;0.000&lt;/td&gt;
+&lt;td&gt;0.219&lt;/td&gt;
+&lt;td&gt;0.079&lt;/td&gt;
+&lt;td&gt;0.012&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Class 1 MLP autodencoder&lt;/td&gt;
+&lt;td&gt;0.410&lt;/td&gt;
+&lt;td&gt;0.658&lt;/td&gt;
+&lt;td&gt;0.766&lt;/td&gt;
+&lt;td&gt;0.321&lt;/td&gt;
+&lt;td&gt;0.174&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Mean teacher&lt;/td&gt;
+&lt;td&gt;0.228&lt;/td&gt;
+&lt;td&gt;0.23&lt;/td&gt;
+&lt;td&gt;0.26&lt;/td&gt;
+&lt;td&gt;0.25&lt;/td&gt;
+&lt;td&gt;0.18&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ladder Network&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;td&gt;0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Class 1 CONVae&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;td&gt;NA&lt;/td&gt;
+&lt;td&gt;0.131&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1&gt;Reflection&lt;/h1&gt;
+&lt;p&gt;Every team that tried deep learning models got similar results, with the user prediction accuracy around 20%. Only one team was able to obtain nearly 98% accuracy. They did so with a simple model inspired by a medical journal, involving handcrafted features from medical researchers who specialized in ECG signals. Obviously, the feature based model was also much faster to train compared to neural network based models.&lt;/p&gt;
+&lt;p&gt;This is a classic example where deep learning is not always superior. As machine learning engineers working in industry, it is extremely important to take domain expertise and constraints into consideration.&lt;/p&gt;
+&lt;p&gt;The quotes are excerpts from an original report written by Étienne Girard-Proulx, Violet Guo, and Jean-Philippe Letendre (in alphabetical order).&lt;/p&gt;
 &lt;style class=&quot;grvsc-styles&quot;&gt;
   .grvsc-container {
     overflow: auto;

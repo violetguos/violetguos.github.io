@@ -14,185 +14,119 @@
       
       
       
-      }</script><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=945dd495b5aa32271b63b1960971d41c" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#e4561b"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=945dd495b5aa32271b63b1960971d41c"/><title data-react-helmet="true">Identify Street Numbers in Realistic Environments | Violet Guo</title><link data-react-helmet="true" rel="webmention" href="https://webmention.io/violetguos.github.io/webmention"/><link data-react-helmet="true" rel="pingback" href="https://webmention.io/violetguos.github.io/xmlrpc"/><link data-react-helmet="true" href="https://twitter.com/yvioletguo" rel="me"/><link data-react-helmet="true" href="https://github.com/violetguos" rel="me"/><link data-react-helmet="true" rel="webmention" href="https://webmention.io/beratbozkurt.net/webmention"/><link data-react-helmet="true" rel="pingback" href="https://webmention.io/beratbozkurt.net/xmlrpc"/><meta data-react-helmet="true" name="description" content="Introduction In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to create an application…"/><meta data-react-helmet="true" property="og:title" content="Identify Street Numbers in Realistic Environments"/><meta data-react-helmet="true" property="og:image" content="https://og-image.beratbozkurt0.vercel.app/**Identify Street Numbers in Realistic Environments**.png?md=1&amp;theme=dark"/><meta data-react-helmet="true" property="og:image:width"/><meta data-react-helmet="true" property="og:image:height"/><meta data-react-helmet="true" property="og:description" content="Introduction In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to create an application…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="https://twitter.com/yvioletguo"/><meta data-react-helmet="true" name="twitter:title" content="Identify Street Numbers in Realistic Environments"/><meta data-react-helmet="true" name="twitter:description" content="Introduction In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to create an application…"/><link as="script" rel="preload" href="/webpack-runtime-1a2efb12bccdb77f068f.js"/><link as="script" rel="preload" href="/framework-741ade27086b2708e961.js"/><link as="script" rel="preload" href="/styles-55e82d6ff5158c00b714.js"/><link as="script" rel="preload" href="/app-f097e1bd746b26e55084.js"/><link as="script" rel="preload" href="/commons-3f500f3de415807ee78f.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-4f2b0f5fb629af21f8b1.js"/><link as="fetch" rel="preload" href="/page-data/blog/street-number/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2652830850.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2841359383.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/287504094.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3255793931.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><section id="page"><div id="white"><section class="container"><header id="top"><h1><a href="/">Violet Guo</a></h1><nav id="navigation"><a href="/about">about</a><a href="/blog">blog</a><a href="/project">projects</a><button><svg width="20" fill="#656565" stroke="#656565" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></nav></header><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><div class="top-of-post-image"><h1 class="display-font" itemProp="headline">Identify Street Numbers in Realistic Environments</h1><div class="top-of-header"><small>26 April 2023<!-- --> - <!-- -->12 min read</small><ul><li>machine learning</li></ul></div></div></header><section itemProp="articleBody"><h1>Introduction</h1>
-<p>In order to alleviate the hardships of people with vision loss when navigating through a city, the Humanware project aims to create an application to identify text and numbers in real time using the camera of a phone. In the previous two blocks, the open source dataset that was used provides a ground truth bounding box of the address number, therefore previous blocks always have access to the digit’s location. However, in order to adapt the application for deployment, we need to consider that street numbers are embedded on many different backgrounds, and the extraction of digit location must be done before digit classification.</p>
-<p>For the third block of the project, we tried to automate the generation of boundary boxes around a zone of interest containing address numbers. To obtain the bounding boxes, we compared two image segmentation models using the implementation of <em>Faster RCNN</em> [7] algorithms found in the <em>Facebook</em> repository[4]. To evaluate the usability of our models as bounding box generators, we used an existing digit recognition model (ResNet [2] from Bounding Box) and compared its accuracy when using the true boxes and our predicted boxes.</p>
-<p>Our final model is an end-to-end task that uses Faster-RCNN to find the bounding box of an address in an image and feeds it to a ResNet model from Bounding Box for digit recognition. More details about the previous model are given in Section 3.3. We obtained a mean Average Precision of 89.6% with Faster-RCNN, 70.0% validation accuracy on Bounding Box ResNet [2] model using ground-truth boxes, and 70.3% validation accuracy when combining the generated bounding boxes to the ResNet model.</p>
-<p>The following report is split as follows. Section 2 presents the previous and current datasets and their format. Section 3 includes the methodology and describes the used algorithms and their hyperparameters for detection and sequence recognition. Section 4 presents the final results we obtained with each model and an analysis comparing them to each other and previous results. Section 5 explores new approaches that could enhance the results of our models.</p>
-<h1>Dataset</h1>
-<p>In this section, we briefly introduce the SVHN dataset used by Bounding Box and present the synthetic dataset we use in this block.</p>
-<h2>Street View House Numbers Dataset (SVHN)</h2>
-<p>The SVHN [5] Dataset contains over 600k images of house numbers obtained from Google Street View. Each image is cropped to focus on the house numbers and individual bounding boxes are given for each digit. This dataset is limited by the lack of negative examples (e.g. no digits present, blocked digits) and lack of background (images are too zoomed in).</p>
-<h2>Element AI Synthetic dataset</h2>
-<p>We aim to improve the robustness of Bounding Box models with the synthetic dataset and eliminate the limitations of SVHN. The dataset we used to train the segmentation task is composed of 6000 synthetic images containing a rendering of houses and a house number. The dataset is split in a 5:1 <em>train to validation</em> ratio and contains different angles and viewpoints that are not present in SVHN, allowing for a better representation of real-world applications. However, this dataset has new flaws that were not seen in SVHN:</p>
+      }</script><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=945dd495b5aa32271b63b1960971d41c" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#e4561b"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=945dd495b5aa32271b63b1960971d41c"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=945dd495b5aa32271b63b1960971d41c"/><title data-react-helmet="true">Predicting ECG Signal from Unlabelled Data | Violet Guo</title><link data-react-helmet="true" rel="webmention" href="https://webmention.io/violetguos.github.io/webmention"/><link data-react-helmet="true" rel="pingback" href="https://webmention.io/violetguos.github.io/xmlrpc"/><link data-react-helmet="true" href="https://twitter.com/yvioletguo" rel="me"/><link data-react-helmet="true" href="https://github.com/violetguos" rel="me"/><link data-react-helmet="true" rel="webmention" href="https://webmention.io/beratbozkurt.net/webmention"/><link data-react-helmet="true" rel="pingback" href="https://webmention.io/beratbozkurt.net/xmlrpc"/><meta data-react-helmet="true" name="description" content="Introduction The following project is a classic example on why complicated and novel methods aren’t always the best. OMsignal is a company specializing in…"/><meta data-react-helmet="true" property="og:title" content="Predicting ECG Signal from Unlabelled Data"/><meta data-react-helmet="true" property="og:image" content="https://og-image.beratbozkurt0.vercel.app/**Predicting ECG Signal from Unlabelled Data**.png?md=1&amp;theme=dark"/><meta data-react-helmet="true" property="og:image:width"/><meta data-react-helmet="true" property="og:image:height"/><meta data-react-helmet="true" property="og:description" content="Introduction The following project is a classic example on why complicated and novel methods aren’t always the best. OMsignal is a company specializing in…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="https://twitter.com/yvioletguo"/><meta data-react-helmet="true" name="twitter:title" content="Predicting ECG Signal from Unlabelled Data"/><meta data-react-helmet="true" name="twitter:description" content="Introduction The following project is a classic example on why complicated and novel methods aren’t always the best. OMsignal is a company specializing in…"/><link as="script" rel="preload" href="/webpack-runtime-1a2efb12bccdb77f068f.js"/><link as="script" rel="preload" href="/framework-741ade27086b2708e961.js"/><link as="script" rel="preload" href="/styles-55e82d6ff5158c00b714.js"/><link as="script" rel="preload" href="/app-f097e1bd746b26e55084.js"/><link as="script" rel="preload" href="/commons-3f500f3de415807ee78f.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-4f2b0f5fb629af21f8b1.js"/><link as="fetch" rel="preload" href="/page-data/blog/ecg-signal/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2652830850.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2841359383.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/287504094.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3255793931.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><section id="page"><div id="white"><section class="container"><header id="top"><h1><a href="/">Violet Guo</a></h1><nav id="navigation"><a href="/about">about</a><a href="/blog">blog</a><a href="/project">projects</a><button><svg width="20" fill="#656565" stroke="#656565" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></nav></header><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><div class="top-of-post-image"><h1 class="display-font" itemProp="headline">Predicting ECG Signal from Unlabelled Data</h1><div class="top-of-header"><small>26 September 2023<!-- --> - <!-- -->8 min read</small><ul><li>machine learning</li></ul></div></div></header><section itemProp="articleBody"><h1>Introduction</h1>
+<p>The following project is a classic example on why complicated and novel methods aren’t always the best.</p>
+<blockquote>
+<p>OMsignal is a company specializing in analytics on electrocardiogram (ECG) signals. The project requires using raw ECG signal to predict the mean PR interval, the mean RT interval, the standard deviation of the RR interval, and to identify the user. This multitask problem was approached as a supervised learning problem in block 1, using only labeled data. Results show that convolutional neural networks performed better than regular multilayers perceptrons or even recurrent neural networks. Block 2 shifts the focus from supervised to semi-supervised learning, with the addition of around 600k unlabeled samples. While the multitask objective remains essentially the same, the new samples contain precious information relative to the representation of the data. The purpose of this block is to extract this information from the unlabeled samples in order to improve the training of predictive models and increase their performances on the test set.</p>
+</blockquote>
+<h1>Methodology</h1>
+<blockquote>
+<p>In block 1, data preprocessing such as normalization and noise removal were tried. In addition to data preprocessing, data augmentation such as negation of signal sections, temporal shift of the signal and partial noise addition were also tried. We decided to keep these because block 1 reports show significant improvement of the performances while using those methods. In addition to this, we converted the data into frequency space domain using Fast Fourier Transforms (FFT) to use as an additional/alternative input. Data loading functions from block 1 were adapted in order to process unlabeled samples.</p>
+</blockquote>
+<h2>Unsupervised Pretraining</h2>
+<blockquote>
+<p>As a form of unsupervised pre-training, we implemented an autoencoder model that learns a latent representation of the data. Autoencoders contain an encoder and decoder. Encoders learn an intermediate representation of the dataset through dimensionality reduction, while decoders try to reconstruct the input with minimal error. Where classification models tend to overfit on small labeled datasets, studies show that autoencoders can increase generalization and stability (\cite{DBLP:journals/corr/abs-1807-11407}). We used an autoencoder to learn a latent representation of the unlabeled data which is then passed to a prediction module.</p>
+</blockquote>
+<blockquote>
+<p>The first model we have tried with that approach was to use an autoencoder with a single hidden layer neural network for both the encoder and the decoder. For the prediction module, we used the same CNN that was used as the baseline model for the block 1. Hence, the prediction module is a multi-layer CNN with batch-normalization for 1D inputs. Its also a multi-task network that can be trained on any combination of targets.</p>
+</blockquote>
+<h2>Semi-supervised Training: Class 1 model</h2>
+<blockquote>
+<p>In class 1 models, a branch is added to the network to handle the unlabeled data. Similarily to the unsupervised pretraining approach, encoders try to learn a low-dimensional representation that helps generalization and reduce overfitting. The major difference is that, instead of first training the autoencoder and then the prediction module, in this approach we train the two simultaneously by feeding a mix of labeled and unlabeled data. This allows the training of the low-dimensional representation to be not only driven by the unlabeled data. The basic architecture of a class 1 model is shown in Figure \ref{class 1 architecture}</p>
+</blockquote>
+<h3>Vanilla Class 1 Semi-Supervised Model</h3>
+<blockquote>
+<p>As our first class 1 model, we trained the same multi-layer CNN as before, but we added a branch reconstructing the input when the sample fed is unlabeled. Our encoder here uses the convolutional layers of the CNN, and depending on if the data is labeled or not, the processed sample is passed either to a two-hidden-layer MLP that gives a prediction or to a decoder that reconstructs the input. In both cases, this is followed by back-propagation to update the weights.
+We’ve attempted this with two types of decoder. First, we tried an MLP. We decided to test MLP both to stay closer to the prediction module architecture (also an MLP), and to make sure the hidden representation of our inputs works well with MLP. Second, we built a convolutional autoencoder. Here, the encoder consists of convolutional layers and the decoder of deconvolutional layers. The decoder reconstructs the input with transpose convolution operations. The decoder architecture mirrors the encoder, replacing each <code>nn.Conv1d</code> with <code>nn.TransposeConv1d</code> and <code>nn.Maxpool1d</code> with <code>nn.MaxUnpool1d</code>. The architecture of the convolutional autoencoder is shown in figure \ref{conv-ae-arch} of the annex.</p>
+</blockquote>
+<h3>Ladder Network</h3>
+<blockquote>
+<p>The ladder network is a semi-supervised algorithm that couples supervised loss and unsupervised loss to train both the encoder and decoder. The term ladder refers to this coupling mechanism. The ladder network follows a conventional autoencoder principle, except for the following changes:</p>
+</blockquote>
+<blockquote>
 <ul>
-<li>The renders are not photorealistic.</li>
-<li>The dataset is orders of magnitude smaller than SVHN</li>
-<li>There are only a few different house models.</li>
-<li>The house numbers are only three or four digit long.</li>
-<li>There is only one font used for the house numbers.</li>
-<li>Some digits are hidden by objects (<em>Figure 1a</em>) and are impossible to classify.</li>
-<li>Some images contain cropped digits (<em>Figure 1b</em>) or no address at all (<em>Figure 1c</em>) and are impossible to classify.</li>
+<li>Adds a Gaussian noise to the inputs for decoders. Forces the decoder to learn to reconstruct the output from a noisy input.</li>
+<li>Weighs each decoder layer’s reconstruction error. Usually the deeper encoders are weighted higher because they are closer to the final output prediction layer.</li>
+<li>For the gradient path, it combines both classification layer’s cross entropy loss and each decoder layer’s reconstruction loss to back propagate. Ideally, through this combination scheme, a single optimizer should be able to find the optimal weights for both tasks.</li>
 </ul>
-<p>These limitations will affect our models if they were to be used on real world images and the accuracy should drop. However, the dataset is adequate for a proof of concept before translating and adapting the work to real data.</p>
-<h1>Algorithms and Methodology</h1>
-<p>In Bounding Box modoeling, the goal was to predict the length of each sequence as well as transcribing digits correctly while the ground truth bounding boxes of address numbers were provided. In the third block, the bounding boxes are not provided, so our first task is to generate the 2 bounding boxes by an object detection model and then send the generated boxes to the sequence digit recognition model in Bounding Box.</p>
-<p>Object detection is the process of finding and classifying different objects in an image. To do this, we use the architecture named Faster RCNN described in Subsection 3.2.</p>
-<p>After obtaining the location of the digit sequence, Bounding Box model is used to classify digit sequences in the sub-region of an original image cropped with bounding boxes. Figure 2 shows the architecture of combining two models . We have described the Bounding Box (ResNet) model in the subsection following Faster-RCNN.</p>
-<h2>Data Preparation</h2>
-<p>In Bounding Box, since true bounding boxes are given, data preprocessing primarily involves using PyTorch’s transform library to add small perturbations on the fly. The Bounding Box methods include random cropping and border padding. In Block 3, however, the whole Faster-RCNN is essentially a data preprocessing step that produces the bounding box predictions. After obtaining the bounding box predictions, we apply the same random cropping and padding to segmented images. Bounding Box has demonstrated that random cropping reduces overfitting, while border padding helps with convolutions where digits get cut off by bounding boxes.</p>
-<h2>Faster RCNN overview</h2>
-<p>In Block 3, we are instructed to use Faster RCNN and adapt it to our data set. The goal of using Faster RCNN is to identify the digit patch inside a larger image with other background objects.</p>
-<p>Faster RCNN couples a stable convolutional neural network (CNN) model, such as ResNet [7], and the Regional of Interest (ROI) Proposal Net (RPN) to achieve efficient and accurate results in object detection. Figure 3 demonstrates how we adapt Faster-RCNN for ElementAI dataset. The code is implemented in Pytorch by Facebook AI developers and the teaching staff has kindly recommended a stable build for us to use out-of-the-box with Element AI dataset. Faster-RCNN is built on top of C++ backend and due to constraints on the Calcul Quebec cluster, we only retrain the model’s output layers and modify the dataloader for this specific ElementAI dataset. For this project, we tried two different Faster RCNN architectures: R-50-FPN and R-101-FPN.</p>
-<p>The metric used to compare our bounding boxes to the given boxes for each image is the IoU, or Intersection over Union. This metric first takes the ratio between the area contained in both boxes and the area contained in either box. This ratio is then compared to a threshold between 0 and 1. If the IoU is over the threshold, the predicted box is considered a correct box. The metric used to evaluate the Faster-RCNN models is the mean Average Precision (mAP)[4]. The mAP is the average of the precision values for IoU thresholds from 0.5 to 0.95 (with a step of 0.05).</p>
-<p><em>IoU</em> =area of overlap / area of union</p>
-<p>$mAP = \frac{1}{10}\sum_{j=1}^{10}AP(IoU = 0.45+0.05 \times j)$</p>
-<h2>Bounding Box Model</h2>
-<p>ResNet is a type of convolutional neural network with skipping layer residual connections that has proven to excel in ImageNet competitions and other various computer vision tasks [2]. ResNet34 and ResNet50 are two varations of the architecture, where 34 and 50 indicate the number of residual connections respectively. In order to prevent overfitting, we apply early stopping during training with patience ranging from 20 to 1/3 of total epochs (refer to Section 3.3 for details).</p>
-<p>The bounding box model (see Figure 4) implements feature extraction with ResNet, and after feature extraction, we would obtain a fixed length vector. Then, in order to predict both digit sequence length and digit classification, Bounding Box implements multi-task learning, which connects the feature vector to 6 different branches, where each branch contains a fully connected (FC) layer. Branch 1 is used to predict the sequence length, and the other 5 branches predict the content in each position of the sequence. If we obtain a sequence length less than 5, we simply truncate the final output [1]. This truncation approach ensures that we can apply the same model for sequences with varying lengths.</p>
-<h2>Faster RCNN and Bounding Box model pipeline</h2>
-<p>The last and the main part of this block is to make an end-to-end pipeline between the trained model in Bounding Box and Faster-RCNN model. We train Faster-RCNN model and Bounding Box models independently. For evaluation part, we input full sized images to Faster-RCNN model and obtain the predicted bounding boxes. Then, using a dataloader consists of data transformation such as cropping and down scaling (see previous Section 3.1), we preprocess bounding box segmented test data further, and then use Bounding Box ResNet model to identify and predict digits. The pipeline is illustrated in Figure 2.</p>
-<p>As pointed out by teaching staff, the pipeline is more software-engineering centric rather than a machine learning problem. The pipeline itself does not have any parameter or hyperparamter, and therefore all discussions and results are empirical.</p>
-<h2>Hyperparameter optimization</h2>
-<p>Tables 1 and 2 contain the value of hyperparameters we used.</p>
-<ol>
-<li>For Faster-RCNN model, we used the default hyperparameters as instructed by the teaching staff. Instead of exploring a range of hyperparameter search space, we simply pick the values from a given set shown below. The <strong>{}</strong> symbol indicates a set.</li>
-<li>For hyperparameter tuning of Bounding Box ResNet model, we used Bayesian Optimization in Scikit-learn. We tuned the learning rate, momentum, and decay parameters for SGD, and only the initial learning rate for Adam since it implements auto-correcting of the rest of its parameters. Table 1 indicates the range of hyperparameter space we choose.</li>
-<li>The final pipeline is using bash script to connect the output of Faster-RCNN to Bounding Box ResNet. As explained in Section 3.4, no hyperparameters are shown.</li>
-</ol>
-<p>Table 1: Hyperparameters for Bounding Box model</p>
-<table>
-<thead>
-<tr>
-<th>Hyperparameter</th>
-<th>Range</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Learning Rate (LR)</td>
-<td>[0.0001,0.01]</td>
-</tr>
-<tr>
-<td>Momentum</td>
-<td>[0.90,0.91]</td>
-</tr>
-<tr>
-<td>Weight Decay</td>
-<td>[0.0001, 0.001]</td>
-</tr>
-<tr>
-<td>Decay steps</td>
-<td>[10000, 10001]</td>
-</tr>
-<tr>
-<td>Decay Rate</td>
-<td>[0.89, 0.90]</td>
-</tr>
-<tr>
-<td>Features-O-size</td>
-<td>[3000,6000]</td>
-</tr>
-<tr>
-<td>Batch size</td>
-<td>32</td>
-</tr>
-<tr>
-<td>Epochs</td>
-<td>[50, 400]</td>
-</tr>
-<tr>
-<td>Patience</td>
-<td>[20, 1/3 total epoch]</td>
-</tr>
-<tr>
-<td>LR milestones</td>
-<td>[20, 40, 80]</td>
-</tr>
-<tr>
-<td>LR Gamma</td>
-<td>0.1</td>
-</tr>
-</tbody>
-</table>
-<p>Table 2: Hyperparameters for Faster RCNN</p>
-<table>
-<thead>
-<tr>
-<th>Hyperparameter</th>
-<th>Range</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Base Learning Rate(LR)</td>
-<td>{0.0025, 0.002}</td>
-</tr>
-<tr>
-<td>Weight Decay</td>
-<td>0.0001</td>
-</tr>
-<tr>
-<td>Steps</td>
-<td>(2400, 3200)</td>
-</tr>
-<tr>
-<td>Batch size-train</td>
-<td>2</td>
-</tr>
-<tr>
-<td>Batch size-test</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Max-Iterations</td>
-<td>{3600, 7200, 14400}</td>
-</tr>
-</tbody>
-</table>
-<h1>Results and Analysis</h1>
-<p>This section presents our results obtained we the different models we trained.</p>
-<p><strong>4.1</strong> <strong>Faster RCNN Bounding Box Segmentation results</strong></p>
-<p>The results of the best object detection models are presented in table 3. The different values for the mAP are presented in table 3. We notice that the R-101-FPN model has a higher mAP score than the R-50-FPN model.</p>
-<p>Table 3: The mean Average Precision (mAP) when using the validation dataset for the two Faster RCNN models we trained for 14400 iterations.</p>
+</blockquote>
+<blockquote>
+<p>However, one major downside of the ladder network in this specific project is that it has not been proven to work on regression tasks. Neither the original paper (\cite{DBLP:journals/corr/RasmusVHBR15}) nor others (\cite{DBLP:journals/corr/PezeshkiFBCB15}) present any experiment on regression tasks. This limits the network’s scope to the user_id classification only.</p>
+</blockquote>
+<h3>Semi-supervised Training: Class 2 model</h3>
+<blockquote>
+<p>The “Mean Teacher” model, developed by the Curious AI Company [\cite{DBLP:journals/corr/TarvainenV17}], is a consistency regularization method. This semi-supervised training method consists of using two instances of an architecture: the Student model and the Teacher model. Training through gradient descent is only performed on the Student model. The parameters for the Teacher model are obtained via an exponential moving average (EMA) of the actual and previous weights and biases of the Student model. During training, the sample fed to the models is noised differently in order to create a slightly different version of it for each model. We used all data pre-processing and augmentation methods described in section 2.1. Both the Student and Teacher models make predictions for these samples. The final loss function combines two terms: a classification cost between the Student model prediction and the actual label of the sample (if the sample originally has a label) and a consistency cost between the Student and Teacher model prediction (for both labeled and unlabeled). The structure is described in Figure \ref{mean<em>teacher</em>struc} in Appendix. For Student and Teacher model we opted for a 2-layer convolutionnal neural network using max pooling and dropout, based on the performances from previous block teams. Further details about the architecture can be found in the repository.</p>
+</blockquote>
+<blockquote>
+<p>We decided to implement this model because of the promising results it shown in semi-supervised learning and its novelty. The measure of its performance can be found in the orignal paper by Tarvainen. The EMA weight sharing between the Student and the Teacher model allow a transfer of information that gives the Teacher a better intermediate representation of the sample, and it has been shown that averaging model weights over training steps can produce more accurate results than using final weights directly (Polyak et al.[1992]). Source code for this model was taken from Curious AI’s Github repository (\url{<a href="https://github.com/CuriousAI/mean-teacher%7D">https://github.com/CuriousAI/mean-teacher}</a>). The code can be found in the legacy folder of our project. All modified files and functions were copied into our project first in order to keep the legacy files intact.</p>
+</blockquote>
+<h1>Model Results</h1>
 <table>
 <thead>
 <tr>
 <th>Model</th>
-<th>mAP</th>
+<th>Overall score</th>
+<th>prMeanTau</th>
+<th>rtMeanTau</th>
+<th>rrStdDevTau</th>
+<th>userIdAcc</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>R-50-FPN</td>
-<td>86.7%</td>
+<td>Baseline Block1</td>
+<td>0.403</td>
+<td>0.591</td>
+<td>0.761</td>
+<td>0.328</td>
+<td>0.181</td>
 </tr>
 <tr>
-<td>R-101-FPN</td>
-<td>89.6%</td>
+<td>Unsupervised Pretraining</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0.219</td>
+<td>0.079</td>
+<td>0.012</td>
+</tr>
+<tr>
+<td>Class 1 MLP autodencoder</td>
+<td>0.410</td>
+<td>0.658</td>
+<td>0.766</td>
+<td>0.321</td>
+<td>0.174</td>
+</tr>
+<tr>
+<td>Mean teacher</td>
+<td>0.228</td>
+<td>0.23</td>
+<td>0.26</td>
+<td>0.25</td>
+<td>0.18</td>
+</tr>
+<tr>
+<td>Ladder Network</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>Class 1 CONVae</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>0.131</td>
 </tr>
 </tbody>
 </table>
-<p>We notice that the training loss for R-101-FPN is generally slightly lower than the loss for R-50-FPN. Both these losses reach a plateau around 0.01 after 10000 iterations, as shown in figure 5.</p>
-<p><strong>Original Block 2 model vs modified Block 2 model</strong></p>
-<p>The experimented models in Block2 are VGG19, ResNet18, ResNet34, Resnet50, and we decided to compare ResNet34 and ResNet50 in our project because Block 2 team concludes that they are the best performing models. The model architectures remain the same, while the input is altered larger/deeper models have higher capacity that works well with SVHN (over 600, 000 digit images), but less suitable with the setup of Bounding Box models.</p>
-<p>Attempted transfer learning</p>
-<p>We attempted loading checkpoint weights as an initialization. The results show no significant improvement, largely due to particularities of the ElementAI dataset described in Section 2.</p>
-<p><strong>Faster RCNN and Block 2 Pipeline Results: Impacts of Bounding Box</strong></p>
-<p>The sequence transcription accuracy is expected to drop when using predicted bounding box from Faster-RCNN versus using ground truth bounding box for Block 2 ResNet. After inspecting the vali-dation accuracy, the difference is merely 0.3%, therefore the pipeline does not hinder the performance significantly.</p>
-<h1>Conclusion and further directions</h1>
-<p>In previous block the task was to predict the sequence of digits on the SVHN [5] dataset. In this block the task is to segment the images in the Element AI dataset and predict house number sequences. To solve this task, we first apply an object detection model (Faster-RCCN) [7] to obtain the bounding boxes. These bounding boxes are then used as inputs for the classification model (ResNet34 [2]) to predict the house number.</p>
-<p>Our model has 70.3% accuracy on Element AI validation set. We experiment with two versions of Faster-RCNN [7] and the one with R-101-FPN outperforms the one with R-50-FPN. We also observe that ResNet34 [2] works better than ResNet50 [2] for the sequence prediction task.</p>
-<p>We notice that the performance of same architecture on ElementAI dataset drops by 20% compared to performance on SVHN. The presence of negative samples and background noise in ElementAI dataset contributes to the drop. If granted another dataset with similar variety, such as angle, noise, and background, this model could serve as a baseline. Apart from performance issues, we also noticed that the whole model takes a lot of time to make predictions.</p>
-<p>To increase performance and robustness of our model, semi-supervised representation learning techniques such as the ones proposed by Salimans et al. [8] can be used. To reduce the prediction time, real-time models such as YOLO [6] and SSD [3] can be used.</p>
-<h1>Authors (alphabetical order)</h1>
-<ul>
-<li>Saber Benchalel</li>
-<li>Violet Guo</li>
-<li>Marzieh Mehdlzadeh</li>
-<li>Ishaan Kumar</li>
-</ul>
-<p>Citations and figures are available upon request.</p>
+<h1>Reflection</h1>
+<p>Every team that tried deep learning models got similar results, with the user prediction accuracy around 20%. Only one team was able to obtain nearly 98% accuracy. They did so with a simple model inspired by a medical journal, involving handcrafted features from medical researchers who specialized in ECG signals. Obviously, the feature based model was also much faster to train compared to neural network based models.</p>
+<p>This is a classic example where deep learning is not always superior. As machine learning engineers working in industry, it is extremely important to take domain expertise and constraints into consideration.</p>
+<p>The quotes are excerpts from an original report written by Étienne Girard-Proulx, Violet Guo, and Jean-Philippe Letendre (in alphabetical order).</p>
 <style class="grvsc-styles">
   .grvsc-container {
     overflow: auto;
@@ -282,16 +216,16 @@
     opacity: 0.7;
   }
   
-</style></section></article><div class="bottom-article"><div class="share-post"><a href="https://twitter.com/intent/tweet?url=https://violetguos.github.io/blog/street-number/&amp;via=yvioletguo&amp;text=Identify Street Numbers in Realistic Environments" target="_blank" rel="noreferrer"><svg width="21" height="21" fill="#3294da" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g><path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+</style></section></article><div class="bottom-article"><div class="share-post"><a href="https://twitter.com/intent/tweet?url=https://violetguos.github.io/blog/ecg-signal/&amp;via=yvioletguo&amp;text=Predicting ECG Signal from Unlabelled Data" target="_blank" rel="noreferrer"><svg width="21" height="21" fill="#3294da" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g><path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
 			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
 			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
 			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
 			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
 			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
 			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
-			C480.224,136.96,497.728,118.496,512,97.248z"></path></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://violetguos.github.io/blog/street-number/" target="_blank" rel="noreferrer"><svg width="21" height="21" fill="#1966c2" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g><rect y="160" width="114.496" height="352"></rect></g></g><g><g><path d="M426.368,164.128c-1.216-0.384-2.368-0.8-3.648-1.152c-1.536-0.352-3.072-0.64-4.64-0.896
+			C480.224,136.96,497.728,118.496,512,97.248z"></path></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://violetguos.github.io/blog/ecg-signal/" target="_blank" rel="noreferrer"><svg width="21" height="21" fill="#1966c2" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g><rect y="160" width="114.496" height="352"></rect></g></g><g><g><path d="M426.368,164.128c-1.216-0.384-2.368-0.8-3.648-1.152c-1.536-0.352-3.072-0.64-4.64-0.896
 			c-6.08-1.216-12.736-2.08-20.544-2.08c-66.752,0-109.088,48.544-123.04,67.296V160H160v352h114.496V320
-			c0,0,86.528-120.512,123.04-32c0,79.008,0,224,0,224H512V274.464C512,221.28,475.552,176.96,426.368,164.128z"></path></g></g><g><g><circle cx="56" cy="56" r="56"></circle></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a><a href="https://www.facebook.com/sharer/sharer.php?u=https://violetguos.github.io/blog/street-number/" target="_blank" rel="noreferrer"><svg width="21" height="21" fill="#1B77F2" xmlnsSvgjs="http://svgjs.com/svgjs" version="1.1" x="0" y="0" viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g><path id="f_1_" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z" fill="#1b77f2" data-original="#010002" class=""></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></g></svg></a><svg width="21" height="21" class="copy-icon" viewBox="-40 0 512 512"><path d="m271 512h-191c-44.113281 0-80-35.886719-80-80v-271c0-44.113281 35.886719-80 80-80h191c44.113281 0 80 35.886719 80 80v271c0 44.113281-35.886719 80-80 80zm-191-391c-22.054688 0-40 17.945312-40 40v271c0 22.054688 17.945312 40 40 40h191c22.054688 0 40-17.945312 40-40v-271c0-22.054688-17.945312-40-40-40zm351 261v-302c0-44.113281-35.886719-80-80-80h-222c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h222c22.054688 0 40 17.945312 40 40v302c0 11.046875 8.953125 20 20 20s20-8.953125 20-20zm0 0"></path></svg></div><div class="like-count"><button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>0</button></div></div><nav class="blog-post-nav"><li><a rel="prev" href="/blog/accent-classification/">← <!-- -->Speaker Accent Classification with Deep Learning</a></li><li><a rel="next" href="/blog/ecg-signal/">Predicting ECG Signal from Unlabelled Data<!-- --> →</a></li></nav><div id="webmentions" class="container" style="display:block"><h2><a href="https://mobile.twitter.com/search?q=https://violetguos.github.io/blog/street-number/" target="_blank" class="discuss-twitter" rel="noreferrer"><svg width="21" height="21" fill="white" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g><path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+			c0,0,86.528-120.512,123.04-32c0,79.008,0,224,0,224H512V274.464C512,221.28,475.552,176.96,426.368,164.128z"></path></g></g><g><g><circle cx="56" cy="56" r="56"></circle></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a><a href="https://www.facebook.com/sharer/sharer.php?u=https://violetguos.github.io/blog/ecg-signal/" target="_blank" rel="noreferrer"><svg width="21" height="21" fill="#1B77F2" xmlnsSvgjs="http://svgjs.com/svgjs" version="1.1" x="0" y="0" viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g><path id="f_1_" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z" fill="#1b77f2" data-original="#010002" class=""></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></g></svg></a><svg width="21" height="21" class="copy-icon" viewBox="-40 0 512 512"><path d="m271 512h-191c-44.113281 0-80-35.886719-80-80v-271c0-44.113281 35.886719-80 80-80h191c44.113281 0 80 35.886719 80 80v271c0 44.113281-35.886719 80-80 80zm-191-391c-22.054688 0-40 17.945312-40 40v271c0 22.054688 17.945312 40 40 40h191c22.054688 0 40-17.945312 40-40v-271c0-22.054688-17.945312-40-40-40zm351 261v-302c0-44.113281-35.886719-80-80-80h-222c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h222c22.054688 0 40 17.945312 40 40v302c0 11.046875 8.953125 20 20 20s20-8.953125 20-20zm0 0"></path></svg></div><div class="like-count"><button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>0</button></div></div><nav class="blog-post-nav"><li><a rel="prev" href="/blog/street-number/">← <!-- -->Identify Street Numbers in Realistic Environments</a></li><li><a rel="next" href="/blog/news-nlp/">Fact or Fake News: Applying NLP in an unbalanced dataset<!-- --> →</a></li></nav><div id="webmentions" class="container" style="display:block"><h2><a href="https://mobile.twitter.com/search?q=https://violetguos.github.io/blog/ecg-signal/" target="_blank" class="discuss-twitter" rel="noreferrer"><svg width="21" height="21" fill="white" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g><path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
 			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
 			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
 			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
@@ -315,4 +249,4 @@
 			c0,98.72-59.84,120.448-116.864,126.816c9.184,7.936,17.376,23.616,17.376,47.584c0,34.368-0.32,62.08-0.32,70.496
 			c0,6.88,4.608,14.88,17.6,12.352C438.72,472.145,512,375.857,512,262.353C512,120.401,397.376,5.329,255.968,5.329z"></path></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a><a href="https://www.linkedin.com/in/yvioletguo/" target="_blank" rel="noreferrer"><svg width="21" height="21" fill="#1966c2" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g><rect y="160" width="114.496" height="352"></rect></g></g><g><g><path d="M426.368,164.128c-1.216-0.384-2.368-0.8-3.648-1.152c-1.536-0.352-3.072-0.64-4.64-0.896
 			c-6.08-1.216-12.736-2.08-20.544-2.08c-66.752,0-109.088,48.544-123.04,67.296V160H160v352h114.496V320
-			c0,0,86.528-120.512,123.04-32c0,79.008,0,224,0,224H512V274.464C512,221.28,475.552,176.96,426.368,164.128z"></path></g></g><g><g><circle cx="56" cy="56" r="56"></circle></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a></nav><div class="email">Please reach out:<!-- --> <a href="obfuscated" style="unicode-bidi:bidi-override;display:inline-block;direction:rtl">em.notorp@ougteloiv</a></div></footer></section></div></section></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/street-number/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f89c5f37b65dee400010.js"],"app":["/app-f097e1bd746b26e55084.js"],"component---src-pages-404-js":["/component---src-pages-404-js-66793b366ba8825a4e7e.js"],"component---src-pages-about-js":["/component---src-pages-about-js-76cee8e9f40f2681fcae.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-a5c43f68589501bdc415.js"],"component---src-pages-index-js":["/component---src-pages-index-js-207ab0f4f9e2eb070c28.js"],"component---src-pages-project-js":["/component---src-pages-project-js-a970741421c1dc40462f.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-4f2b0f5fb629af21f8b1.js"]};/*]]>*/</script><script src="/polyfill-f89c5f37b65dee400010.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-4f2b0f5fb629af21f8b1.js" async=""></script><script src="/commons-3f500f3de415807ee78f.js" async=""></script><script src="/app-f097e1bd746b26e55084.js" async=""></script><script src="/styles-55e82d6ff5158c00b714.js" async=""></script><script src="/framework-741ade27086b2708e961.js" async=""></script><script src="/webpack-runtime-1a2efb12bccdb77f068f.js" async=""></script></body></html>
+			c0,0,86.528-120.512,123.04-32c0,79.008,0,224,0,224H512V274.464C512,221.28,475.552,176.96,426.368,164.128z"></path></g></g><g><g><circle cx="56" cy="56" r="56"></circle></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a></nav><div class="email">Please reach out:<!-- --> <a href="obfuscated" style="unicode-bidi:bidi-override;display:inline-block;direction:rtl">em.notorp@ougteloiv</a></div></footer></section></div></section></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/ecg-signal/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f89c5f37b65dee400010.js"],"app":["/app-f097e1bd746b26e55084.js"],"component---src-pages-404-js":["/component---src-pages-404-js-66793b366ba8825a4e7e.js"],"component---src-pages-about-js":["/component---src-pages-about-js-76cee8e9f40f2681fcae.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-a5c43f68589501bdc415.js"],"component---src-pages-index-js":["/component---src-pages-index-js-207ab0f4f9e2eb070c28.js"],"component---src-pages-project-js":["/component---src-pages-project-js-a970741421c1dc40462f.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-4f2b0f5fb629af21f8b1.js"]};/*]]>*/</script><script src="/polyfill-f89c5f37b65dee400010.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-4f2b0f5fb629af21f8b1.js" async=""></script><script src="/commons-3f500f3de415807ee78f.js" async=""></script><script src="/app-f097e1bd746b26e55084.js" async=""></script><script src="/styles-55e82d6ff5158c00b714.js" async=""></script><script src="/framework-741ade27086b2708e961.js" async=""></script><script src="/webpack-runtime-1a2efb12bccdb77f068f.js" async=""></script></body></html>
