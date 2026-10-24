@@ -1,0 +1,21 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import IndexList from '../components/IndexList.astro';
+import { getArticles, articleHref } from '../lib';
+
+// The home page is the About page: src/content/about.md, then the writing list once there are articles.
+const about = (await getEntry('pages', 'about'))!;
+const { Content } = await render(about);
+const settings = (await getEntry('settings', 'site'))!.data;
+const articles = await getArticles();
+---
+<Base description={about.data.description}>
+  <article class="prose">
+    <h1 class="visually-hidden">{settings.name}</h1>
+    <Content />
+  </article>
+  {articles.length > 0 && (
+    <IndexList title="Writing" items={articles.map((a) => ({ title: a.data.title, href: articleHref(a), date: a.data.date }))} />
+  )}
+</Base>

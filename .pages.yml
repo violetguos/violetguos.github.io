@@ -1,0 +1,114 @@
+# Pages CMS configuration: tells https://pagescms.org which files you can edit and what fields they have.
+media:
+  input: public/art
+  output: /art
+
+content:
+  - name: writing
+    label: Writing
+    type: collection
+    path: src/content/writing
+    filename: "{primary}.md"
+    format: yaml-frontmatter
+    view:
+      primary: title
+      fields: [title, date]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Published
+        type: date
+        required: true
+      - name: updated
+        label: Last updated
+        type: date
+      - name: evergreen
+        label: Evergreen (kept current)
+        type: boolean
+      - name: link
+        label: Lives elsewhere (URL)
+        type: string
+      - name: series
+        label: Series
+        type: string
+      - name: draft
+        label: Draft (hidden from the site)
+        type: boolean
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: about
+    label: About (home page)
+    type: file
+    path: src/content/about.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Short description, type: string }
+      - { name: updated, label: Last updated, type: date }
+      - { name: body, label: Body, type: rich-text }
+
+  - name: recommendations
+    label: Recommendations
+    type: file
+    path: src/content/recommendations.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Short description, type: string }
+      - { name: updated, label: Last updated, type: date }
+      - { name: body, label: Body, type: rich-text }
+
+  - name: links
+    label: Links
+    type: file
+    path: src/content/links.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Short description, type: string }
+      - { name: body, label: Links, type: rich-text }
+
+  - name: settings
+    label: Site settings
+    type: file
+    path: src/settings.yaml
+    format: yaml
+    fields:
+      - name: site
+        label: Site
+        type: object
+        fields:
+          - { name: name, label: Your name (site title), type: string, required: true }
+          - { name: tagline, label: Tagline, type: string, required: true }
+          - name: nav
+            label: Navigation
+            type: object
+            list: true
+            fields:
+              - { name: label, type: string }
+              - { name: href, label: Address, type: string }
+          - name: social
+            label: Header icons
+            type: object
+            list: true
+            fields:
+              - { name: label, type: string }
+              - { name: href, label: Address, type: string }
+              - { name: icon, type: select, options: { values: [rss, mail, link] } }
+          - name: footerLinks
+            label: Footer links
+            type: object
+            list: true
+            fields:
+              - { name: label, type: string }
+              - { name: href, label: Address, type: string }
+          - { name: buttondownUsername, label: Buttondown username, type: string }

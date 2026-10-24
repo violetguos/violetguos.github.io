@@ -1,0 +1,14 @@
+---
+// One quiet email line. Posts straight to Buttondown; no script, no pop-up.
+interface Props { username?: string; id: string; label?: string }
+const { username, id, label = 'Get new posts by email.' } = Astro.props;
+---
+{username && (
+  <form class="signup" action={`https://buttondown.com/api/emails/embed-subscribe/${username}`} method="post" target="_blank">
+    <label for={id}>{label}</label>
+    <div class="signup-row">
+      <input id={id} type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </div>
+  </form>
+)}

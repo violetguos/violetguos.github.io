@@ -1,0 +1,14 @@
+---
+// Small solid glyphs drawn inline; color follows the surrounding text.
+interface Props { name: 'search' | 'rss' | 'mail' | 'link' | 'sun' | 'moon'; class?: string }
+const paths = {
+  search: 'M10.5 4a6.5 6.5 0 1 0 4 11.6l4.2 4.2 1.4-1.4-4.2-4.2A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z',
+  rss: 'M5 4v2.2c7 0 12.8 5.8 12.8 12.8H20C20 10.7 13.3 4 5 4Zm0 4.4v2.2a8.4 8.4 0 0 1 8.4 8.4h2.2A10.6 10.6 0 0 0 5 8.4ZM6.8 15.4a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6Z',
+  mail: 'M4 6h16v12H4V6Zm2 2v.5l6 4 6-4V8l-6 4-6-4Zm0 2.9V16h12v-5.1l-6 4-6-4Z',
+  link: 'M10.6 13.4a3 3 0 0 0 4.2 0l3-3a3 3 0 0 0-4.2-4.2l-1 1 1.4 1.4 1-1a1 1 0 0 1 1.4 1.4l-3 3a1 1 0 0 1-1.4 0l-1.4 1.4Zm2.8-2.8a3 3 0 0 0-4.2 0l-3 3a3 3 0 0 0 4.2 4.2l1-1-1.4-1.4-1 1a1 1 0 0 1-1.4-1.4l3-3a1 1 0 0 1 1.4 0l1.4-1.4Z',
+  sun: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-1-5h2v3h-2V3Zm0 15h2v3h-2v-3ZM3 11h3v2H3v-2Zm15 0h3v2h-3v-2ZM5.6 4.2l2.1 2.1-1.4 1.4-2.1-2.1 1.4-1.4Zm10.7 10.7 2.1 2.1-1.4 1.4-2.1-2.1 1.4-1.4ZM4.2 18.4l2.1-2.1 1.4 1.4-2.1 2.1-1.4-1.4ZM14.9 7.7 17 5.6l1.4 1.4-2.1 2.1-1.4-1.4Z',
+  moon: 'M14.5 3.5a8.5 8.5 0 1 0 6 14.5A7 7 0 0 1 14.5 3.5Z',
+};
+const { name, class: cls } = Astro.props;
+---
+<svg class:list={['icon', cls]} viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d={paths[name]} /></svg>

@@ -1,0 +1,20 @@
+# Site-wide facts. Change wording here; you never need to open a template for these.
+site:
+  name: Violet Guo
+  tagline: One honest index of everything I make.
+  nav:
+    - label: Recommendations
+      href: /recommendations/
+    - label: Links
+      href: /links/
+  social:
+    - label: RSS feed
+      href: /rss.xml
+      icon: rss
+  footerLinks:
+    - label: RSS
+      href: /rss.xml
+    - label: Links
+      href: /links/
+  # Your Buttondown username. Leave it empty and the email form stays hidden.
+  buttondownUsername: "violetyg"

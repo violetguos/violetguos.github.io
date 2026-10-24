@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://violetguos.github.io/sitemap-index.xml

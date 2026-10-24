@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Search">
+  <section class="prose" data-pagefind-ignore>
+    <h1>Search</h1>
+    <label for="q" class="meta">Search everything on this site</label>
+    <input id="q" class="search-field" type="search" autocomplete="off" placeholder="Try “folate”" />
+    <ul id="results" class="search-results" aria-live="polite"></ul>
+    <noscript><p>Search needs JavaScript. Everything is also listed on the <a href="/">home page</a>.</p></noscript>
+  </section>
+  <script is:inline type="module">
+    const input = document.getElementById('q');
+    const list = document.getElementById('results');
+    let pagefind;
+    try { pagefind = await import('/pagefind/pagefind.js'); } catch (e) {
+      list.innerHTML = '<li><p>Search is built when the site is built. Run <code>npm run build</code> and <code>npm run preview</code> to try it locally.</p></li>';
+    }
+    input.focus();
+    let timer;
+    input.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(async () => {
+        if (!pagefind) return;
+        const q = input.value.trim();
+        if (!q) { list.innerHTML = ''; return; }
+        const search = await pagefind.search(q);
+        const results = await Promise.all(search.results.slice(0, 10).map((r) => r.data()));
+        list.innerHTML = results.length
+          ? results.map((r) => `<li><a href="${r.url}">${r.meta.title || r.url}</a><p>${r.excerpt}</p></li>`).join('')
+          : '<li><p>No matches. Try a shorter word.</p></li>';
+      }, 150);
+    });
+  </script>
+</Base>

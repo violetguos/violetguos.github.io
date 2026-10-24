@@ -1,0 +1,80 @@
+/* Personal Site tokens. Generated from the design system's tokens.json; change values here to change the look. */
+
+@font-face { font-family: 'Source Serif 4'; src: url('/fonts/source-serif-4-latin.woff2') format('woff2'); font-weight: 200 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Dancing Script'; src: url('/fonts/dancing-script-latin.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
+
+:root {
+  --bg: #fafaf8;
+  --surface: #f0efec;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --border: #e2e0dc;
+  --border-control: #8a8780;
+  --accent: #6a52b3;
+  --accent-hover: #4f3a91;
+  --on-accent: #fafaf8;
+  --accent-soft: #ece7f8;
+  --lavender: #b9a8e6;
+  --wordmark-top: #8f78d6;
+  --wordmark-deep: #4f3a91;
+  --glass-highlight: rgba(255, 255, 255, 0.85);
+  --glass-shadow: rgba(79, 58, 145, 0.28);
+  color-scheme: light;
+  --font-serif: "Source Serif 4", Charter, "Iowan Old Style", Georgia, serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-script: "Dancing Script", "Snell Roundhand", "Apple Chancery", cursive;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-pill: 999px;
+  --measure: 640px;
+  --control-height: 36px;
+}
+
+/* Dark values are defined once and used by both the system setting and the toggle. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #141416;
+    --surface: #1c1c1e;
+    --text: #ececec;
+    --muted: #9a9aa0;
+    --border: #2c2c2e;
+    --border-control: #6e6e75;
+    --accent: #b9a8ee;
+    --accent-hover: #d9cff8;
+    --on-accent: #141416;
+    --accent-soft: #2a2438;
+    --lavender: #9d88e0;
+    --wordmark-top: #ece6fc;
+    --wordmark-deep: #9d88e0;
+    --glass-highlight: rgba(255, 255, 255, 0.35);
+    --glass-shadow: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --bg: #141416;
+  --surface: #1c1c1e;
+  --text: #ececec;
+  --muted: #9a9aa0;
+  --border: #2c2c2e;
+  --border-control: #6e6e75;
+  --accent: #b9a8ee;
+  --accent-hover: #d9cff8;
+  --on-accent: #141416;
+  --accent-soft: #2a2438;
+  --lavender: #9d88e0;
+  --wordmark-top: #ece6fc;
+  --wordmark-deep: #9d88e0;
+  --glass-highlight: rgba(255, 255, 255, 0.35);
+  --glass-shadow: rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}

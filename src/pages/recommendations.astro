@@ -1,0 +1,15 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const page = (await getEntry('pages', 'recommendations'))!;
+const { Content } = await render(page);
+const fmt = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+<Base title={page.data.title} description={page.data.description}>
+  <article class="prose">
+    <h1>{page.data.title}</h1>
+    {page.data.updated && <p class="meta">Updated {fmt.format(page.data.updated)}</p>}
+    <Content />
+  </article>
+</Base>

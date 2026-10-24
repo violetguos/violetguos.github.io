@@ -1,0 +1,24 @@
+---
+// A plain list: title plus month and year, nothing else.
+interface Props {
+  title?: string;
+  items: { title: string; href: string; date: Date }[];
+}
+const { title, items } = Astro.props;
+const fmt = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+---
+<section class="index">
+  {title && <h2 class="index-title">{title}</h2>}
+  {items.length === 0 ? (
+    <p class="empty">Nothing here yet.</p>
+  ) : (
+    <ul>
+      {items.map((it) => (
+        <li>
+          <a href={it.href}>{it.title}</a>
+          <time class="meta" datetime={it.date.toISOString().slice(0, 7)}>{fmt.format(it.date)}</time>
+        </li>
+      ))}
+    </ul>
+  )}
+</section>

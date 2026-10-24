@@ -1,0 +1,26 @@
+---
+import Icon from './Icon.astro';
+import ThemeToggle from './ThemeToggle.astro';
+
+interface Props {
+  name: string;
+  nav: { label: string; href: string }[];
+  social: { label: string; href: string; icon: 'rss' | 'mail' | 'link' }[];
+}
+const { name, nav, social } = Astro.props;
+const here = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isCurrent = (href: string) => (href.replace(/\/$/, '') || '/') === here;
+---
+<header class="header">
+  <div class="header-row">
+    <a class="wordmark" href="/" data-text={name}>{name}</a>
+    <div class="header-tools">
+      <a class="iconbtn" href="/search/" aria-label="Search (press /)"><Icon name="search" /><kbd>/</kbd></a>
+      {social.map((s) => <a class="iconbtn" href={s.href} aria-label={s.label}><Icon name={s.icon} /></a>)}
+      <ThemeToggle />
+    </div>
+  </div>
+  <nav class="nav" aria-label="Main">
+    {nav.map((n) => <a href={n.href} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label}</a>)}
+  </nav>
+</header>

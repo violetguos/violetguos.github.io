@@ -1,0 +1,35 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import EmailSignup from '../components/EmailSignup.astro';
+import { getArticles } from '../lib';
+
+// Articles live at short, flat URLs like /folate-first-trimester/. Pieces hosted elsewhere get no page here.
+export async function getStaticPaths() {
+  const articles = await getArticles();
+  return articles.filter((a) => !a.data.link).map((a) => ({ params: { slug: a.id }, props: { article: a } }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const settings = (await getEntry('settings', 'site'))!.data;
+const fmt = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const { title, date, updated, evergreen, series } = article.data;
+---
+<Base title={title}>
+  <article class="prose">
+    <header class="article-head">
+      <h1 class="page-title">{title}</h1>
+      <p class="meta">
+        <time datetime={date.toISOString().slice(0, 10)}>{fmt.format(date)}</time>
+        {updated && <> · Updated <time datetime={updated.toISOString().slice(0, 10)}>{fmt.format(updated)}</time></>}
+        {evergreen && <> · Evergreen</>}
+        {series && <> · Part of {series}</>}
+      </p>
+    </header>
+    <Content />
+  </article>
+  <div class="article-end">
+    <EmailSignup username={settings.buttondownUsername} id="article-email" label="Liked this? Get new posts by email." />
+  </div>
+</Base>
