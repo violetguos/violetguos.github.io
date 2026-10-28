@@ -1,6 +1,6 @@
 # Personal site
 
-A minimal, static personal site built with [Astro](https://astro.build). Three pages: Home (your About text, plus a writing list once you publish articles), Recommendations and Links. Every word lives in Markdown; the look lives in `src/styles/tokens.css`.
+A minimal, static personal site built with [Astro](https://astro.build). Four pages: Home (your About text, plus a writing list once you publish articles), Projects (one tile per project), Recommendations and Links. Every word lives in Markdown; the look lives in `src/styles/tokens.css`.
 
 To edit content, read [EDITING.md](EDITING.md). This file is for setup and upkeep.
 
@@ -9,7 +9,7 @@ To edit content, read [EDITING.md](EDITING.md). This file is for setup and upkee
 | Folder or file | What it holds | Who touches it |
 | --- | --- | --- |
 | `src/content/writing/` | One `.md` file per article | You, often |
-| `src/content/*.md` | About (shown as the home page), Recommendations, Links | You |
+| `src/content/*.md` | About (shown as the home page), Projects, Recommendations, Links | You |
 | `src/settings.yaml` | Name, tagline, nav, footer links, email username | You, rarely |
 | `public/art/` | Margin art SVGs | You, rarely |
 | `src/styles/tokens.css` | Colors, fonts, spacing (light and dark) | Only to change the look |

@@ -56,6 +56,16 @@ content:
       - { name: updated, label: Last updated, type: date }
       - { name: body, label: Body, type: rich-text }
 
+  - name: projects
+    label: Projects
+    type: file
+    path: src/content/projects.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Short description, type: string }
+      - { name: body, label: "Projects (a ## heading, a one-liner, then a bullet per technology)", type: rich-text }
+
   - name: recommendations
     label: Recommendations
     type: file

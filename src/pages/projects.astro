@@ -1,0 +1,21 @@
+---
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+// projects.md is written as plain sections: a ## heading, a one-liner, then a bullet per technology.
+// Split the rendered HTML at each <h2> so every section becomes its own tile. Text before the
+// first heading is the intro. No packages and no browser JavaScript involved.
+const page = (await getEntry('pages', 'projects'))!;
+const [intro, ...tiles] = (page.rendered?.html ?? '').split(/(?=<h2[\s>])/);
+---
+<Base title={page.data.title} description={page.data.description}>
+  <div class="projects">
+    <div class="prose">
+      <h1>{page.data.title}</h1>
+      <Fragment set:html={intro} />
+    </div>
+    <div class="tiles">
+      {tiles.map((html) => <section class="tile" set:html={html} />)}
+    </div>
+  </div>
+</Base>

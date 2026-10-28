@@ -3,6 +3,8 @@ site:
   name: Violet Guo
   tagline: One honest index of everything I make.
   nav:
+    - label: Projects
+      href: /projects/
     - label: Recommendations
       href: /recommendations/
     - label: Links
