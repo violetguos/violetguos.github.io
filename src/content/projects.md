@@ -3,7 +3,7 @@ title: Projects
 description: Things I've built, at work and for fun.
 ---
 
-Things I've built, at work and for fun.
+A selection of projects I've built in the past
 
 <!--
 Each project is a ## heading, a one-line description, then one bullet per technology.
@@ -54,3 +54,4 @@ This site. Plain Markdown in, static HTML out, no JavaScript by default.
 - Astro
 - CSS
 - GitHub Actions
+- Designed with Claude
