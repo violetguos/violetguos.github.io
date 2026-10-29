@@ -121,3 +121,19 @@ a:hover { color: var(--accent-hover); }
 
 /* Read by screen readers, hidden on screen */
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Projects: each ## section of projects.md becomes a tile, like GitHub's pinned repositories.
+   Name, one-liner, then the first bullet list as the tech row. */
+.projects { display: flex; flex-direction: column; gap: var(--space-6); }
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+@media (max-width: 600px) { .tiles { grid-template-columns: minmax(0, 1fr); } }
+.tile { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; padding: 14px var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.tile h2 { margin: 0; font: 600 15px/20px var(--font-sans); overflow-wrap: anywhere; }
+.tile h2 a { text-decoration: none; }
+.tile h2 a:hover { text-decoration: underline; }
+.tile p { margin: 0; font: 400 14px/20px var(--font-sans); color: var(--muted); }
+.tile p:first-of-type { flex: 1; }
+.tile ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); font: 400 13px/18px var(--font-sans); color: var(--muted); }
+.tile ul:first-of-type { margin-top: var(--space-1); }
+.tile ul:first-of-type li:first-child { display: inline-flex; align-items: center; gap: 6px; }
+.tile ul:first-of-type li:first-child::before { content: ""; width: 9px; height: 9px; border-radius: var(--radius-pill); background: var(--lavender); }

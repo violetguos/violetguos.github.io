@@ -16,9 +16,9 @@ const writing = defineCollection({
   }),
 });
 
-// About (shown on the home page), Recommendations and Links: one free-form Markdown file each.
+// About (shown on the home page), Projects, Recommendations and Links: one free-form Markdown file each.
 const pages = defineCollection({
-  loader: glob({ pattern: '{about,recommendations,links}.md', base: './src/content' }),
+  loader: glob({ pattern: '{about,projects,recommendations,links}.md', base: './src/content' }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),

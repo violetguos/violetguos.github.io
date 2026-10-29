@@ -6,7 +6,7 @@ You can change everything people read without touching any code. Pick whichever 
 
 1. Go to https://pagescms.org and sign in with GitHub.
 2. Open this repository.
-3. Choose **Writing** to add or edit an article, or **About (home page)**, **Recommendations** or **Links** to edit a page.
+3. Choose **Writing** to add or edit an article, or **About (home page)**, **Projects**, **Recommendations** or **Links** to edit a page.
 4. Press **Save**. That saves to GitHub, and the live site updates a minute or two later.
 
 ## 2. On github.com (good for a one-word fix)
@@ -24,6 +24,7 @@ Open the folder in VS Code or Obsidian, run `npm run dev` to preview at http://l
 | An article | `src/content/writing/<name>.md` |
 | A new article | Add a new `.md` file in `src/content/writing/` |
 | The home page (your bio and CV) | `src/content/about.md` |
+| Projects | `src/content/projects.md` |
 | Recommendations | `src/content/recommendations.md` |
 | Your Linktree page | `src/content/links.md` |
 | Your name, tagline, nav or footer links | `src/settings.yaml` |
@@ -46,6 +47,20 @@ Your text starts here.
 - `title` and `date` are required. If one is missing, the site will not publish and the build log says which file.
 - The file name becomes the address: `folate-first-trimester.md` is published at `/folate-first-trimester/`. Choose it once and do not rename it, so links keep working.
 - Optional: `updated` (date you revised it), `evergreen: true`, `series: Name`, `draft: true` (hidden), and `link:` with a URL when the piece is published somewhere else.
+
+## Projects
+
+Each project in `src/content/projects.md` is shown as a tile. Write each one the same way:
+
+```markdown
+## [project-name](https://github.com/violetguos/project-name)
+One sentence on what it does.
+
+- TypeScript
+- SQLite
+```
+
+The heading is the tile's name, the first sentence is its description, and the first bullet list is the tech row. Text above the first heading is the page intro.
 
 ## Other pages
 
